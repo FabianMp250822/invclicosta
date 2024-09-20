@@ -11,6 +11,7 @@ import HeroBanner from "./hero-banner";
 import ServiceArea from "./service-area";
 import Specialists from "../../../common/specialists";
 import Team from "../../../common/team";
+import ProcessArea from "@/components/services/service-three/process-area";
 
 const HomeOne = () => {
   return (
@@ -20,6 +21,7 @@ const HomeOne = () => {
       <About />
       <Counter />
       <Gallery />
+      <ProcessArea />
       <Specialists />
       <Appointment />
       <Team />

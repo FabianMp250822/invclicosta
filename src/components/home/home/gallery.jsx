@@ -144,7 +144,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        {/* <div className="container">
           <div className="row text-center">
             <div className="col-lg-12">
               <Link className="tp-btn-second" href="/portfolio-details">
@@ -152,7 +152,7 @@ const Gallery = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* image light box start */}
