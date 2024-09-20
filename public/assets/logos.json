@@ -1,0 +1,367 @@
+{
+    "universities": [
+      {
+        "name": "Universidad del Norte",
+        "logo": "https://www.uninorte.edu.co/image/layout_set_logo?img_id=19855734&t=1719573930145",
+        "url": "https://www.uninorte.edu.co"
+      },
+      {
+        "name": "Ediciones universidad simon bolivar",
+       "logo": "https://www.unisimon.edu.co/recursos/img/unisimon-logo-50-year.png",
+        "url": "https://www.unisimon.edu.co/"
+      },
+      {
+        "name": "FUNDACIÓN UNIVERSIDAD DEL NORTE",
+        "logo": "https://www.uninorte.edu.co/image/layout_set_logo?img_id=19855734&t=1719573930145",
+        "url": "https://www.uninorte.edu.co"
+      },
+      {
+        "name": "Asociación Colombiana de Neurología",
+        "logo": "https://portal.acnweb.org/templates/yootheme/cache/logo-acn-tm-723178ff.webp",
+        "url": "https://portal.acnweb.org/acn"
+      },
+      {
+        "name": "UNIVERSIDAD LIBRE DE COLOMBIA",
+        "logo": "https://th.bing.com/th/id/R.d9f76f5ef97875bc171436c823afaa1c?rik=LxtWN%2f8uI1UAqw&riu=http%3a%2f%2fwww.unilibre.edu.co%2fori%2fimages%2fescudonew2.png&ehk=d8vdxBWr0LyQbe6VoMKYK2rhA%2fbrEG82R3r637DuJ8o%3d&risl=&pid=ImgRaw&r=0",
+        "url": "https://www.unilibre.edu.co/"
+      },
+      {
+        "name": "Universidad Nacional de Colombia",
+        "logo": "path/to/unal_logo.png",
+        "url": "https://unal.edu.co"
+      },
+      {
+        "name": "Pontificia Universidad Javeriana",
+        "logo": "path/to/javeriana_logo.png",
+        "url": "https://javeriana.edu.co"
+      },
+      {
+        "name": "Universidad del Rosario",
+        "logo": "path/to/rosario_logo.png",
+        "url": "https://urosario.edu.co"
+      },
+      {
+        "name": "Universidad de Antioquia",
+        "logo": "path/to/udea_logo.png",
+        "url": "https://udea.edu.co"
+      },
+      {
+        "name": "Universidad del Valle",
+        "logo": "path/to/univalle_logo.png",
+        "url": "https://univalle.edu.co"
+      },
+      {
+        "name": "Universidad Industrial de Santander",
+        "logo": "path/to/uis_logo.png",
+        "url": "https://uis.edu.co"
+      },
+      {
+        "name": "Universidad CES",
+        "logo": "path/to/ces_logo.png",
+        "url": "https://ces.edu.co"
+      },
+      {
+        "name": "Universidad de Caldas",
+        "logo": "path/to/ucaldas_logo.png",
+        "url": "https://ucaldas.edu.co"
+      },
+      {
+        "name": "Universidad simón bolívar",
+        "logo": "https://www.unisimon.edu.co/recursos/img/unisimon-logo-50-year.png",
+        "url": "https://www.unisimon.edu.co/"
+      },
+      {
+        "name": "universidad simón bolívar - sede barranquilla y sede cúcuta",
+        "logo": "https://www.unisimon.edu.co/recursos/img/unisimon-logo-50-year.png",
+        "url": "https://www.unisimon.edu.co/"
+      },
+      {
+        "name": "university of texas health science center, san antonio",
+        "logo": "https://uthscsa.edu/sites/default/files/2022-11/UTHSA_logo.svg",
+        "url": "https://uthscsa.edu//"
+      }
+      ,
+      {
+        "name": "ASOCIACIÓN COLOMBIANA DE NEFROLOGIA E HIPERTENSION ARTERIAL",
+        "logo": "https://i0.wp.com/asocolnef.com/wp-content/uploads/2023/03/logo-asocolnef-1.png?fit=696%2C144&ssl=1",
+        "url": "https://asocolnef.com/"
+      }
+    ],
+    "hospitals": [
+      {
+        "name": "Hospital Universitario San Ignacio",
+        "logo": "path/to/san_ignacio_logo.png",
+        "url": "https://husi.org.co"
+      },
+      {
+        "name": "Fundación Santa Fe de Bogotá",
+        "logo": "path/to/santa_fe_logo.png",
+        "url": "https://fsfb.org.co"
+      },
+      {
+        "name": "Clínica del Country",
+        "logo": "path/to/country_logo.png",
+        "url": "https://clinicadelcountry.com"
+      },
+      {
+        "name": "Hospital Universitario del Valle",
+        "logo": "path/to/hu_valle_logo.png",
+        "url": "https://hvalle.gov.co"
+      },
+      {
+        "name": "Clínica Universidad de La Sabana",
+        "logo": "path/to/la_sabana_logo.png",
+        "url": "https://clinicadelauniversidaddelasabana.com"
+      },
+      {
+        "name": "Hospital Pablo Tobón Uribe",
+        "logo": "path/to/pablo_tobon_logo.png",
+        "url": "https://hptu.org.co"
+      },
+      {
+        "name": "Clínica Reina Sofía",
+        "logo": "path/to/reina_sofia_logo.png",
+        "url": "https://clinicareinasofia.com"
+      },
+      {
+        "name": "Hospital Militar Central",
+        "logo": "https://www.hospitalmilitar.gov.co/_templates/HOSMIL-PORTAL-2021/recursos/images/cabezote/LogoHomilCabezote.png",
+        "url": "https://hmc.mil.co"
+      },
+      {
+        "name": "Clínica del Occidente",
+        "logo": "path/to/occidente_logo.png",
+        "url": "https://clinicadeloccidente.com"
+      },
+      {
+        "name": "Hospital San José",
+        "logo": "path/to/san_jose_logo.png",
+        "url": "https://hospitalsanjose.org"
+      },
+      {
+        "name": "Clinica de la costa",
+        "logo": "http://45.183.247.227:8080/Pagweb/wp-content/uploads/2019/12/logo-clinica-de-la-costa-barranquilla.fw_.png",
+        "url": "http://45.183.247.227:8080/Pagweb"
+      },
+      {
+        "name": "clínica de la costa",
+       "logo": "http://45.183.247.227:8080/Pagweb/wp-content/uploads/2019/12/logo-clinica-de-la-costa-barranquilla.fw_.png",
+        "url": "http://45.183.247.227:8080/Pagweb"
+      },
+      {
+        "name": "corporación educativa mayor del desarrollo simón bolívar",
+       "logo": "https://historiagrafica.unisimon.edu.co/wp-content/uploads/2021/06/Medalla-insitutcional-2021-02-1.png",
+        "url": "https://www.unisimon.edu.co/"
+      }
+      ,
+      {
+        "name": "asociación colombiana de medicina interna acmi",
+       "logo": "https://acmi.org.co/wp-content/uploads/2020/05/logo-acmi-final.png",
+        "url": "https://acmi.org.co/"
+      }
+      ,
+      {
+        "name": "asociación colombiana de nefrología e hipertensión arterial",
+       "logo": "https://i0.wp.com/asocolnef.com/wp-content/uploads/2023/03/logo-asocolnef-1.png?fit=696%2C144&ssl=1",
+        "url": "https://asocolnef.com/"
+      }
+      ,
+      {
+        "name": "sociedad chilena de nefrología",
+       "logo": "https://i.ibb.co/9TPjptB/image.png",
+        "url": "https://nefro.cl/web/"
+      }
+      ,
+      {
+        "name": "congreso panamericano",
+       "logo": "https://paao.org/wp-content/uploads/2022/02/paao.logo-01-1.svg",
+        "url": "https://paao.org/es/meetings/el-congreso-panamericano/ universidad de philadelphia"
+      }
+      ,
+      {
+        "name": "universidad de philadelphia",
+       "logo": "https://th.bing.com/th/id/R.bae2af2c0a53313906e4e6978c65b947?rik=h%2bSRp%2fSlx%2fV5dA&riu=http%3a%2f%2fwww.gsra.org.uk%2fwp-content%2fuploads%2f2016%2f09%2fphillyu_0.png&ehk=tX3IPDNjEPEq6oYT30KIcazIcyTZjapUMqb86XGqjh8%3d&risl=&pid=ImgRaw&r=0",
+        "url": "#"
+      }
+      ,
+      {
+        "name": "nefrólogos del caribe, hotel estelar",
+       "logo": "https://nefrocolombia.com/wp-content/uploads/2020/09/Logo-Nefrocaribe-White.png",
+        "url": "https://nefrocolombia.com/contactos/"
+      }
+    ],
+    "journals": [
+      {
+        "name": "Salud uninorte",
+         "logo": "https://www.uninorte.edu.co/image/layout_set_logo?img_id=19855734&t=1719573930145",
+        "url": "https://www.uninorte.edu.co"
+      },
+      {
+        "name": "Journal of clinical and cellular immunology",
+        "logo": "https://www.longdom.org/assets/img/longdom-logo.svg",
+        "url": "https://www.longdom.org/"
+      },
+      {
+        "name": "Medicina",
+        "logo": "https://www.fm.usp.br/fmusp/assets/images/LOGO%20OFICIAL_fmusp_oficial_2017-04.svg",
+        "url": "https://www.fm.usp.br/"
+      },
+      {
+        "name": "New england journal of medicine",
+        "logo": "https://www.nejm.org/specs/products/mms-nextgen/mms/releasedAssets/images/other-images/nejm-logo-166667e91992a5212bc723b03e45d39f.svg",
+        "url": "https://www.nejm.org/"
+      },
+      {
+        "name": "Irish journal of medical science",
+        "logo": "https://link.springer.com/oscar-static/images/darwin/header/img/logo-springerlink-39ee2a28d8.svg",
+        "url": "https://link.springer.com"
+      },
+      {
+        "name": "Revista colombiana de nefrologia",
+        "logo": "https://revistanefrologia.org/public/journals/1/pageHeaderLogoImage_es_ES.png",
+        "url": "https://revistanefrologia.org"
+      },
+      {
+        "name": "Kidney medicine",
+        "logo": "https://www.kidneymedicinejournal.org/pb-assets/ux3/logos/ha/NKF-1640630565893.svg",
+        "url": "https://www.kidneymedicinejournal.org"
+      },
+      {
+        "name": "Archivos venezolanos de farmacologia y terapeutica",
+        "logo": "https://ojsavft.revistaavft.com/public/journals/1/pageHeaderLogoImage_es_ES.jpg",
+        "url": "https://ojsavft.revistaavft.com"
+      },
+      {
+        "name": "Journal: lancet",
+        "logo": "https://www.thelancet.com/pb-assets/ux3/logos/lancet/lancet-1665147351037.svg",
+        "url": "https://www.thelancet.com"
+      },
+      {
+        "name": "Gaceta medica de caracas",
+        "logo": "https://www.interacademies.org/sites/default/files/styles/large/public/2020-11/ANM-LOGO.png?itok=ytJ2563d",
+        "url": "hhttps://academianacionaldemedicina.org"
+      },
+      {
+        "name": "Revista colombiana de nefrologia",
+        "logo": "https://revistanefrologia.org/public/journals/1/pageHeaderLogoImage_es_ES.png",
+        "url": "https://revistanefrologia.org"
+      },
+      {
+        "name": "Diabetes care",
+        "logo": "https://ada.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/logo-umbrella.svg",
+        "url": "https://ada.silverchair-cdn.com"
+      },
+      {
+        "name": "Revista medicina",
+        "logo": "https://www.medicinabuenosaires.com/wp-content/uploads/2013/08/logo_medicina160.png",
+        "url": "https://www.medicinabuenosaires.com"
+      },
+      {
+        "name": "Lancet infectious diseases",
+        "logo": "https://www.thelancet.com/pb-assets/ux3/logos/lancet/laninf-1665147370503.svg",
+        "url": "https://www.thelancet.com"
+      },
+      {
+        "name": "Jornal brasileiro de nefrologia orga amp x0303 o oficial de sociedades brasileira e latino americana de nefrologia",
+        "logo": "https://www.bjnephrology.org/wp-content/uploads/2019/05/logo-header.png",
+        "url": "https://www.bjnephrology.org"
+      },
+      {
+        "name": "International journal of molecular sciences",
+        "logo": "https://pub.mdpi-res.com/img/design/mdpi-pub-logo-black-small1.svg?da3a8dcae975a41c?1719920548",
+        "url": "https://pub.mdpi-res.com"
+      },
+      {
+        "name": "International urology and nephrology",
+        "logo": "https://link.springer.com/oscar-static/images/darwin/header/img/logo-springerlink-39ee2a28d8.svg",
+        "url": "https://link.springer.com"
+      },
+      {
+        "name": "Biomedica",
+        "logo": "https://revistabiomedica.org/public/journals/1/pageHeaderLogoImage_es_ES.png",
+        "url": "https://revistabiomedica.org"
+      },
+      {
+        "name": "Clinical rheumatology",
+        "logo": "https://link.springer.com/oscar-static/images/darwin/header/img/logo-springerlink-39ee2a28d8.svg",
+        "url": "hthttps://link.springer.com"
+      }, 
+        {
+        "name": "Journal of rheumatology supplement the",
+        "logo": "https://www.jrheum.org/sites/default/files/JR%20logo.png",
+        "url": "https://www.jrheum.org"
+      },
+      {
+        "name": "Saudi journal of kidney diseases and transplantation",
+        "logo": "https://i.ibb.co/qnTpckX/Untitled.png",
+        "url": "https://journals.lww.com/SJKD/pages/default.aspx"
+      },
+      {
+        "name": "Biorxiv",
+        "logo": "https://www.biorxiv.org/sites/default/files/cshl_logo_bioarchives.png",
+        "url": "https://www.biorxiv.org"
+      },
+      {
+        "name": "Acta scientific nutritional health (asnh)",
+        "logo": "https://actascientific.com/img/logo11.webp",
+        "url": "https://actascientific.com"
+      },
+      {
+        "name": "Ciencia e innovaciòn en salud",
+        "logo": "https://3.bp.blogspot.com/-5Pn0WxBDP-4/VO0hahhAKcI/AAAAAAAAAAk/ipEcLGq5vmA/s1600/james-woodcock-villarejo-sena.png",
+        "url": "https://revistas.sena.edu.co"
+      },
+      {
+        "name": "Plos one",
+        "logo": "https://i.ibb.co/0VWkYhD/Screenshot-2024-07-07-195216.png",
+        "url": "https://journals.plos.org/plosone/"
+      },
+      {
+        "name": "Clinical epigenetics",
+        "logo": "https://media.springernature.com/lw725/springer-cms/rest/v1/content/24062430/data/v1",
+        "url": "https://clinicalepigeneticsjournal.biomedcentral.com/"
+      },
+      {
+        "name": "Journal of the american society of nephrology",
+        "logo": "https://ikuji-doctor.com/wp-content/uploads/2021/10/image-4.png",
+        "url": "https://journals.lww.com/jasn/Pages/default.aspx"
+      },
+      {
+        "name": "Kidney international reports",
+        "logo": "https://i.ibb.co/q9FK98d/Screenshot-2024-07-07-200714.png",
+        "url": "https://www.kireports.org/"
+      },
+      {
+        "name": "American journal of nephrology",
+        "logo": "https://karger.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/Karger_RGB.svg",
+        "url": "https://karger.com/AJN"
+      },
+      {
+        "name": "Journal of nephropathology",
+        "logo": " https://www.nephropathol.com/image/logo_jnp.gif",
+        "url": "https://www.nephropathol.com/"
+      },
+      {
+        "name": "Revista facultad de medicina",
+        "logo": "https://revistas.unal.edu.co/public/journals/64/homepageImage_es_ES.jpg",
+        "url": "https://revistas.unal.edu.co"
+      },
+      {
+        "name": "Acta colombiana de cuidado intensivo",
+        "logo": "https://amci.org.co/wp-content/uploads/2023/01/logo_AMCI.svg",
+        "url": "https://amci.org.co/revista-acci/"
+      },
+      {
+        "name": "clínica de la costa",
+       "logo": "http://45.183.247.227:8080/Pagweb/wp-content/uploads/2019/12/logo-clinica-de-la-costa-barranquilla.fw_.png",
+        "url": "http://45.183.247.227:8080/Pagweb"
+      },
+      {
+        "name": "corporación educativa mayor del desarrollo simón bolívar",
+       "logo": "https://historiagrafica.unisimon.edu.co/wp-content/uploads/2021/06/Medalla-insitutcional-2021-02-1.png",
+        "url": "https://www.unisimon.edu.co/"
+      }
+      
+    ]
+  }
+  

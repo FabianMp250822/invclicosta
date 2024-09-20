@@ -105,7 +105,7 @@ const Team = () => {
                             {researcher.informacion_personal?.nombre_completo}
                           </Link>
                         </h5>
-                        <span>{researcher.experiencia_profesional?.[0]?.titulo || "No title available"}</span>
+                        <span>{researcher.nivel || "No title available"}</span>
                         <div className="team-item__social-info">
                           {researcher.redes_sociales_academicas?.facebook && (
                             <a

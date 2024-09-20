@@ -33,7 +33,7 @@ const TeamDetails = () => {
   return (
     <>
       <HeaderTwo />
-      <Banner />
+      <Banner researcherName={researcher.informacion_personal?.nombre_completo} />
       <TeamDetailsArea researcher={researcher} /> {/* Pasamos los datos al componente */}
       <Team />
       <FooterFour />
