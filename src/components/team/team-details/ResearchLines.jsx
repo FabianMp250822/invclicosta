@@ -1,81 +1,86 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid, Paper } from '@mui/material';
-import { styled } from '@mui/system';
 import { FaFlask } from 'react-icons/fa';
-import { researcherService } from '../services/researcherServices';
-import { useTranslation } from 'react-i18next'; 
 
-const SectionHeader = styled(Typography)(({ theme }) => ({
-    backgroundColor: theme.palette.grey[200],
-    color: theme.palette.text.primary,
-    padding: theme.spacing(1),
-    borderRadius: theme.shape.borderRadius,
-    marginBottom: theme.spacing(2),
-    boxShadow: theme.shadows[1],
+// Estilos simples personalizados
+const styles = {
+  container: {
+    padding: '16px',
+    backgroundColor: '#f9f9f9',
+    borderRadius: '8px',
+    boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)',
+    marginBottom: '1.5rem',
+  },
+  header: {
     textAlign: 'center',
-    textTransform: 'capitalize',
     fontWeight: 'bold',
-}));
-
-const ResearchLinesContainer = styled(Box)(({ theme }) => ({
-    padding: theme.spacing(2),
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: theme.shape.borderRadius,
-    boxShadow: theme.shadows[1],
-}));
-
-const ResearchGridItem = styled(Paper)(({ theme }) => ({
-    padding: theme.spacing(2),
+    marginBottom: '16px',
+    fontSize: '18px',
+    color: '#4C3BCF',
+  },
+  researchGridContainer: {
+    maxHeight: '520px', // Limitar la altura a 300px
+    overflowY: 'auto', // Habilitar scroll vertical si el contenido excede la altura
+    paddingRight: '8px', // Agregar un pequeño margen para evitar que el contenido se corte con el scroll
+  },
+  researchGridItem: {
+    padding: '16px',
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: '#fff',
+    marginBottom: '16px',
+    borderRadius: '8px',
+    boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)',
     transition: 'all 0.3s ease-in-out',
-    '&:hover': {
-        backgroundColor: theme.palette.action.hover,
-        boxShadow: theme.shadows[1],
-        transform: 'translateY(-2px)',
-        borderRadius: theme.shape.borderRadius,
-    },
-    borderRadius: theme.shape.borderRadius,
-}));
+  },
+  researchGridItemHover: {
+    backgroundColor: '#f0f0f0',
+    boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)',
+    transform: 'translateY(-2px)',
+  },
+  icon: {
+    marginRight: '8px',
+    color: '#4C3BCF',
+  },
+  subtitle: {
+    fontSize: '16px',
+    fontWeight: 'bold',
+  },
+  bodyText: {
+    fontSize: '14px',
+    color: '#666',
+  },
+};
 
-const ResearchLines = () => {
-    const [lines, setLines] = useState([]);
-    const { t } = useTranslation();
+const ResearchLines = ({ linea_investigacion }) => {
+  const [lines, setLines] = useState([]);
 
-    useEffect(() => {
-        // Suscribirse al observable para recibir actualizaciones cuando cambie el investigador
-        const subscription = researcherService.getResearcherObservable().subscribe((researcher) => {
-            if (researcher) {
-                const fetchedLines = researcherService.getResearchLines();
-                setLines(fetchedLines);
-            }
-        });
+  useEffect(() => {
+    console.log('Líneas de investigación recibidas:', linea_investigacion);
+    if (linea_investigacion) {
+      setLines(linea_investigacion);
+    }
+  }, [linea_investigacion]);
 
-        // Limpiar la suscripción al desmontar el componente
-        return () => subscription.unsubscribe();
-    }, []);
-
-    return (
-        <ResearchLinesContainer>
-            <SectionHeader variant="h6">{t('researchLines')}</SectionHeader>
-            <Grid container spacing={2}>
-                {lines.map((line, index) => (
-                    <Grid item xs={12} sm={6} key={index}>
-                        <ResearchGridItem>
-                            <FaFlask color="#4C3BCF" style={{ marginRight: 8 }} />
-                            <Box>
-                                <Typography variant="subtitle1">{line.linea_investigacion}</Typography>
-                                <Typography variant="body2" color="textSecondary">
-                                    {t('active')}: {line.activa}
-                                </Typography>
-                            </Box>
-                        </ResearchGridItem>
-                    </Grid>
-                ))}
-            </Grid>
-        </ResearchLinesContainer>
-    );
+  return (
+    <div style={styles.container}>
+      <h6 style={styles.header}>Líneas de Investigación</h6>
+      <div style={styles.researchGridContainer}>
+        {lines.length > 0 ? (
+          lines.map((line, index) => (
+            <div key={index} style={styles.researchGridItem}>
+              <FaFlask size={24} style={styles.icon} />
+              <div>
+                <div style={styles.subtitle}>{line.linea_investigacion}</div>
+                <div style={styles.bodyText}>Activa: {line.activa ? 'Sí' : 'No'}</div>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>No hay líneas de investigación disponibles.</p>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default ResearchLines;

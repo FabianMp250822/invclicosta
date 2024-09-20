@@ -10,6 +10,7 @@ import ProximosEventos from "./ProximosEventos.jsx";
 import Languages from "./Languages.jsx";
 import ProduccionBibliografica from "./ProductosResultadoInvestigacion.jsx";
 import OfertaProductosServicios from "./OfertaProductosServicios.jsx";
+import ResearchLines from "./ResearchLines.jsx";
 
 const ScopusIcon = () => (
   <svg
@@ -58,7 +59,8 @@ const GeneralInfo = ({ researcher }) => {
     idiomas,
     proximos_eventos,
     produccion_bibliografica,
-    oferta_productos_servicios
+    oferta_productos_servicios,
+    lineas_investigacion
   } = researcher;
 
   return (
@@ -88,114 +90,119 @@ const GeneralInfo = ({ researcher }) => {
         </div>
       )}
 
-      <div
-        style={{
-          marginBottom: "1.5rem",
-          padding: "0.75rem",
-          backgroundColor: "#fff",
-          borderRadius: "8px",
-          boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.2)"
-        }}
-      >
-        <h6 style={{ marginBottom: "0.8rem" }}>Personal Information</h6>
-        <p>
-          <strong>Citation Name:</strong>{" "}
-          {informacion_personal?.nombre_en_citaciones || "No data"}
-        </p>
-        <p>
-          <strong>Sex:</strong> {informacion_personal?.sexo || "No data"}
-        </p>
-        <p>
-          <strong>Nationality:</strong>{" "}
-          {informacion_personal?.nacionalidad || "No data"}
-        </p>
-        <p>
-          <strong>Place of Birth:</strong>{" "}
-          {informacion_personal?.lugar_nacimiento || "No data"}
-        </p>
-      </div>
+      {/* Sección para colocar Personal Information y Academic Networks uno al lado del otro */}
+      <div style={{ display: "flex", gap: "20px", marginBottom: "1.5rem" }}>
+        {/* Personal Information */}
+        <div
+          style={{
+            flex: 1,
+            padding: "0.75rem",
+            backgroundColor: "#fff",
+            borderRadius: "8px",
+            boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.2)"
+          }}
+        >
+          <h6 style={{ marginBottom: "0.8rem" }}>Personal Information</h6>
+          <p>
+            <strong>Citation Name:</strong>{" "}
+            {informacion_personal?.nombre_en_citaciones || "No data"}
+          </p>
+          <p>
+            <strong>Sex:</strong> {informacion_personal?.sexo || "No data"}
+          </p>
+          <p>
+            <strong>Nationality:</strong>{" "}
+            {informacion_personal?.nacionalidad || "No data"}
+          </p>
+          <p>
+            <strong>Place of Birth:</strong>{" "}
+            {informacion_personal?.lugar_nacimiento || "No data"}
+          </p>
+        </div>
 
-      <div
-        style={{
-          marginBottom: "1.5rem",
-          padding: "0.75rem",
-          backgroundColor: "#fff",
-          borderRadius: "8px",
-          boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.2)"
-        }}
-      >
-        <h6 style={{ marginBottom: "0.8rem" }}>
-          Academic Social Networks and Identifiers
-        </h6>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {Object.entries(redes_sociales_academicas || {}).map(
-            ([key, value]) => {
-              const IconComponent = iconMapping[key] || getIcon(value);
-              return (
-                <div
-                  key={key}
-                  style={{
-                    width: "45px",
-                    height: "45px",
-                    margin: "0.4rem",
-                    backgroundColor: "#f0f0f0",
-                    borderRadius: "50%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                  }}
+        {/* Academic Social Networks */}
+        <div
+          style={{
+            flex: 1,
+            padding: "0.75rem",
+            backgroundColor: "#fff",
+            borderRadius: "8px",
+            boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.2)"
+          }}
+        >
+          <h6 style={{ marginBottom: "0.8rem" }}>
+            Academic Social Networks and Identifiers
+          </h6>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {Object.entries(redes_sociales_academicas || {}).map(
+              ([key, value]) => {
+                const IconComponent = iconMapping[key] || getIcon(value);
+                return (
+                  <div
+                    key={key}
+                    style={{
+                      width: "45px",
+                      height: "45px",
+                      margin: "0.4rem",
+                      backgroundColor: "#f0f0f0",
+                      borderRadius: "50%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center"
+                    }}
+                  >
+                    <a href={value} target="_blank" rel="noopener noreferrer">
+                      {IconComponent && <IconComponent size={22} />}
+                    </a>
+                  </div>
+                );
+              }
+            )}
+            {identificadores_de_autor?.autor_id_scopus && (
+              <div
+                style={{
+                  width: "45px",
+                  height: "45px",
+                  margin: "0.4rem",
+                  backgroundColor: "#f0f0f0",
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <a
+                  href={identificadores_de_autor.autor_id_scopus}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <a href={value} target="_blank" rel="noopener noreferrer">
-                    {IconComponent && <IconComponent size={22} />}
-                  </a>
-                </div>
-              );
-            }
-          )}
-          {identificadores_de_autor?.autor_id_scopus && (
-            <div
-              style={{
-                width: "45px",
-                height: "45px",
-                margin: "0.4rem",
-                backgroundColor: "#f0f0f0",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
-              <a
-                href={identificadores_de_autor.autor_id_scopus}
-                target="_blank"
-                rel="noopener noreferrer"
+                  <ScopusIcon />
+                </a>
+              </div>
+            )}
+            {identificadores_de_autor?.orcid && (
+              <div
+                style={{
+                  width: "45px",
+                  height: "45px",
+                  margin: "0.4rem",
+                  backgroundColor: "#f0f0f0",
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
               >
-                <ScopusIcon />
-              </a>
-            </div>
-          )}
-          {identificadores_de_autor?.orcid && (
-            <div
-              style={{
-                width: "45px",
-                height: "45px",
-                margin: "0.4rem",
-                backgroundColor: "#f0f0f0",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
-              <a
-                href={identificadores_de_autor.orcid}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaOrcid size={22} />
-              </a>
-            </div>
-          )}
+                <a
+                  href={identificadores_de_autor.orcid}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaOrcid size={22} />
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -205,6 +212,7 @@ const GeneralInfo = ({ researcher }) => {
           <OfertaProductosServicios
             oferta_productos_servicios={oferta_productos_servicios}
           />
+          <ResearchLines linea_investigacion={lineas_investigacion} />
         </div>
 
         <div style={{ flex: 1 }}>
