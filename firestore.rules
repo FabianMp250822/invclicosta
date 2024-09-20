@@ -1,0 +1,15 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Permitir la lectura de valueCourses sin autenticación
+    match /valueCourses/{document=**} {
+      allow read;
+    }
+
+    match /{document=**} {
+      allow read;  // Opcionalmente, puedes limitar esto según tus necesidades.
+      allow write: if request.auth != null;
+    }
+  }
+}
