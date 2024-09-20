@@ -1,16 +1,13 @@
 const answer_question_data = [
   {
     id: 1,
-    question: "What payment do you except?",
+    question: "¿Cuál es el objetivo principal del Centro de Investigación?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        El objetivo principal del Centro de Investigación de la Clínica de la
+        Costa es promover la innovación en el campo de la salud mediante la
+        investigación científica, con un enfoque en mejorar la atención médica
+        y desarrollar nuevos tratamientos.
       </>
     ),
     accordion_id: "headingOne",
@@ -22,16 +19,12 @@ const answer_question_data = [
   },
   {
     id: 2,
-    question: "Who performs the testing on laboratory specimens?",
+    question: "¿En qué áreas de la salud se centran las investigaciones?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        Las investigaciones abarcan diversas áreas de la salud, incluyendo
+        cardiología, reumatología, oncología, medicina interna y el manejo de
+        enfermedades crónicas como la diabetes.
       </>
     ),
     accordion_id: "headingTwo",
@@ -40,20 +33,15 @@ const answer_question_data = [
     aria_expanded: false,
     aria_controls: "collapseTwo",
     show: ""
-
   },
   {
     id: 3,
-    question: "What are laboratory tests?",
+    question: "¿Qué tipos de ensayos clínicos se realizan?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        El Centro de Investigación realiza ensayos clínicos de varias fases para
+        evaluar la efectividad y seguridad de nuevos tratamientos y medicamentos
+        en distintas áreas de la salud.
       </>
     ),
     accordion_id: "headingThree",
@@ -62,20 +50,15 @@ const answer_question_data = [
     aria_expanded: false,
     aria_controls: "collapseThree",
     show: ""
-
   },
   {
     id: 4,
-    question: "Who performs the testing on laboratory specimens?",
+    question: "¿Cómo puedo participar en un ensayo clínico?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        Los pacientes interesados en participar en ensayos clínicos pueden
+        comunicarse directamente con el Centro de Investigación para obtener
+        información sobre los estudios activos y los requisitos de participación.
       </>
     ),
     accordion_id: "headingFour",
@@ -84,20 +67,15 @@ const answer_question_data = [
     aria_expanded: false,
     aria_controls: "collapseFour",
     show: ""
-
   },
   {
     id: 5,
-    question: "How can I be sure that my property is in good hands?",
+    question: "¿Con qué instituciones colabora el Centro de Investigación?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        El Centro de Investigación colabora con universidades, laboratorios
+        farmacéuticos y organizaciones internacionales para llevar a cabo
+        investigaciones de alto impacto en el campo de la salud.
       </>
     ),
     accordion_id: "headingFive",
@@ -106,20 +84,15 @@ const answer_question_data = [
     aria_expanded: false,
     aria_controls: "collapseFive",
     show: ""
-
   },
   {
     id: 6,
-    question: "Do I have tp fast before my laboratory",
+    question: "¿Cómo se garantiza la seguridad y el bienestar de los pacientes?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        El Centro de Investigación sigue estrictos estándares éticos y cumple
+        con regulaciones nacionales e internacionales para garantizar la
+        seguridad y el bienestar de los pacientes durante los estudios clínicos.
       </>
     ),
     accordion_id: "headingSix",
@@ -128,20 +101,15 @@ const answer_question_data = [
     aria_expanded: false,
     aria_controls: "collapseSix",
     show: ""
-
   },
   {
     id: 7,
-    question: "How to Create account and login Regularly??",
+    question: "¿Cómo puedo obtener más información sobre los estudios en curso?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        Para obtener más información sobre los estudios en curso, los pacientes
+        pueden visitar el sitio web del Centro de Investigación o contactar
+        directamente al equipo de investigación para detalles adicionales.
       </>
     ),
     accordion_id: "headingSeven",
@@ -150,29 +118,6 @@ const answer_question_data = [
     aria_expanded: false,
     aria_controls: "collapseSeven",
     show: ""
-
-  },
-  {
-    id: 8,
-    question: "What forms of payment do you accept?",
-    answer: (
-      <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
-      </>
-    ),
-    accordion_id: "headingEight",
-    collapsed: "collapsed",
-    data_bs_target: "#collapseEight",
-    aria_expanded: false,
-    aria_controls: "collapseEight",
-    show: ""
-
   },
 ];
 export default answer_question_data;

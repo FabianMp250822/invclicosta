@@ -103,19 +103,7 @@ const ServiceArea = () => {
         style={{ backgroundImage: `url(/assets/img/shape/shape-bg-01.png)` }}
       >
         <div className="container">
-          <div className="row mb-125">
-            <div className="col-lg-12">
-              <div className="search-form">
-                <form action="#">
-                  <input type="text" placeholder="¿Qué estás buscando?" />
-                  <button className="tp-btn search-btn" type="submit">
-                    Buscar
-                    <i className="fa-light fa-magnifying-glass ml-5"></i>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
+          
           <div className="row align-items-center">
             <div className="col-lg-8 col-md-8 col-12">
               <div className="tp-section">
