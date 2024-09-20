@@ -32,7 +32,7 @@ const ResearchArea = () => {
             ))}
           </div>
           <div className="row">
-            <div className="col-12">
+            {/* <div className="col-12">
               <div className="basic-pagination text-center mt-30">
                 <nav>
                   <ul>
@@ -61,7 +61,7 @@ const ResearchArea = () => {
                   </ul>
                 </nav>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

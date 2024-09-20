@@ -7,21 +7,34 @@ const Banner = () => {
       <section
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
-          backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
+          backgroundImage: `url("/assets/img/banner/breadcrumb-01.jpg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100%",
+          height: "250px", // Ajusta la altura según sea necesario
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 col-md-6 col-12">
+          <div className="row">
+            <div className="col-lg-12 text-center">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">Research</h2>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-12">
-              <div className="tp-breadcrumb__link d-flex">
-                <span>
-                  Bioxlab : <Link href="/research"> Project</Link>
-                </span>
+                <h1
+                  className="tp-breadcrumb__title"
+                  style={{
+                    fontSize: "36px",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    textTransform: "uppercase",
+                    width: "100%",
+                  }}
+                >
+                  Centro de Innovación, Desarrollo e Inteligencia Artificial de
+                  la Clínica de la Costa
+                </h1>
               </div>
             </div>
           </div>

@@ -1,9 +1,4 @@
 const menu_data = [
-
-
-
-
-
   {
     id: 1,
     mega_menu: false,
@@ -23,6 +18,14 @@ const menu_data = [
   {
     id: 3,
     mega_menu: false,
+    has_dropdown: false,
+    title: "CIDEACC",
+    link: "/research",
+    active: "",
+  },
+  {
+    id: 4,
+    mega_menu: false,
     has_dropdown: true,
     title: "Service",
     link: "/service-3",
@@ -30,18 +33,11 @@ const menu_data = [
     sub_menus: [
       { link: "/project-details", title: "Comité de Ética" },
       { link: "/service-3", title: "Estudios" },
-     
+
       { link: "/service-details", title: "Service Details" },
     ],
   },
-  // {
-  //   id: 4,
-  //   mega_menu: false,
-  //   has_dropdown: false,
-  //   title: "Research",
-  //   link: "/research",
-  //   active: "",
-  // },
+
   {
     id: 5,
     mega_menu: false,
@@ -49,7 +45,7 @@ const menu_data = [
     title: "Equipo Invclincosta",  // Menu from the image
     link: "/", // External URL
     active: "",
-   
+
     sub_menus: [
       { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Investigación", target: "_blank" },
       { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Monitores", target: "_blank" },
