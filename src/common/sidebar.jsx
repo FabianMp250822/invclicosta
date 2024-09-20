@@ -3,7 +3,6 @@ import ImagePopup from '@/modals/ImagePopup';
 import Link from 'next/link';
 import React, { useState } from "react";
 
-
 const images = [
   {
     img: "/assets/img/blog/blog-in-01.jpg",
@@ -16,10 +15,8 @@ const images = [
   }
 ];
 
-
 const Sidebar = ({ isActive, setIsActive }) => {
 
- 
   // photoIndex
   const [photoIndex, setPhotoIndex] = useState(null);
   // image open state
@@ -32,13 +29,10 @@ const Sidebar = ({ isActive, setIsActive }) => {
   //  images
   const img = images.map((item) => item.img);
 
- 
   return (
     <>
       <div
-        className={`tpsideinfo tp-side-info-area ${
-          isActive ? "tp-sidebar-opened" : ""
-        }`}
+        className={`tpsideinfo tp-side-info-area ${isActive ? "tp-sidebar-opened" : ""}`}
       >
         <button
           onClick={() => setIsActive(false)}
@@ -48,7 +42,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
         </button>
         <div className="tpsideinfo__logo mb-40">
           <Link href="/">
-            <img src="/assets/img/logo/white-logo.png" alt="logo" />
+            <img src="/assets/img/logo/logo.png" alt="logo" />
           </Link>
         </div>
 
@@ -60,25 +54,24 @@ const Sidebar = ({ isActive, setIsActive }) => {
 
         <div className="tpsideinfo__content mb-60">
           <p className=" d-none d-xl-block">
-            Our mission is to ensure the generation of accurate and precise
-            findings.
+            Nuestra misión es consolidar un espacio de innovación tecnológica en salud, donde la inteligencia artificial juegue un rol clave en la creación de soluciones que mejoren la atención médica.
           </p>
-          <span>Contact Us</span>
-          <a href="#">
-            <i className="fa-solid fa-star"></i>Ta-134/A, Gulshan Badda Link
+          <span>Contáctanos</span>
+          <a href="mailto:infoestudiosclinicos@clinicadelacosta.co">
+            <i className="fa-solid fa-star"></i> infoestudiosclinicos@clinicadelacosta.co
           </a>
-          <a href="tel:61383766284">
-            <i className="fa-solid fa-star"></i>61 383 766 284
+          <a href="tel:+576053369999">
+            <i className="fa-solid fa-star"></i> +57 605 3369999 Ext. 0 (cero)
           </a>
-          <a href="mailto:noreply@envato.com">
-            <i className="fa-solid fa-star"></i>noreply@envato.com
+          <a href="mailto:juridica@clinicadelacosta.co">
+            <i className="fa-solid fa-star"></i> juridica@clinicadelacosta.co
           </a>
         </div>
         <div className="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
-          <span>Get Update</span>
+          <span>Obtén Actualizaciones</span>
           <div className="tpsideinfo__content-inputarea-input">
             <form action="#">
-              <input type="email" placeholder="Enter Mail" />
+              <input type="email" placeholder="Introduce tu correo" />
               <button className="tpsideinfo__content-inputarea-input-btn">
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
@@ -86,12 +79,11 @@ const Sidebar = ({ isActive, setIsActive }) => {
           </div>
         </div>
         <div className="tpsideinfo__gallery mb-35 d-none d-xl-block">
-          <span>Cheack Instagram Post</span>
+          <span>Publicaciones en Instagram</span>
           <div className="tpsideinfo__gallery-item">
             {images.map((item, i) => (
               <a
                 key={i}
-               
                 style={{ cursor: "pointer" }}
                 onClick={() => handleImagePopup(i)}
                 className="popup-image"
@@ -102,14 +94,14 @@ const Sidebar = ({ isActive, setIsActive }) => {
           </div>
         </div>
         <div className="tpsideinfo__socialicon">
-          <a href="#">
-            <i className="fa-brands fa-youtube"></i>
+          <a href="https://www.facebook.com/clinicadelacostabq">
+            <i className="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="#">
+          <a href="https://twitter.com/clinicadelacost">
             <i className="fa-brands fa-twitter"></i>
           </a>
-          <a href="#">
-            <i className="fa-brands fa-facebook-f"></i>
+          <a href="https://www.youtube.com/channel/UCnQ9QHC43hg-kV8hNtwZ1Bg">
+            <i className="fa-brands fa-youtube"></i>
           </a>
           <a href="#">
             <i className="fa-brands fa-skype"></i>
