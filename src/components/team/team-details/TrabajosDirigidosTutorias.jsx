@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FaSearch, FaUniversity, FaClipboardCheck, FaUserMd, FaCalendarAlt, FaUserTie, FaUsers, FaUserGraduate } from 'react-icons/fa';
-import InfoModal from './modal.jsx';
+import { FaSearch, FaUniversity, FaClipboardCheck, FaUserMd, FaCalendarAlt } from 'react-icons/fa';
+import InfoModal from './modal.jsx';  // Manteniendo el modal
 
-// Estilos personalizados reutilizados
+// Estilos personalizados
 const styles = {
   container: {
     padding: '20px',
@@ -51,6 +51,13 @@ const styles = {
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
+  },
+  titleBoxHover: {
+    whiteSpace: 'normal',
+    overflow: 'visible',
+    textOverflow: 'clip',
   },
   footer: {
     display: 'flex',
@@ -67,7 +74,7 @@ const styles = {
   },
 };
 
-const TrabajosDirigidosTutorias = ({ normalizedResearcher, searchTerm, handleSearchChange }) => {
+const TrabajosDirigidosTutorias = ({ trabajosDirigidos, searchTerm, handleSearchChange }) => {
   const [logos, setLogos] = useState([]);
   const [pdfLinks, setPdfLinks] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
@@ -109,17 +116,12 @@ const TrabajosDirigidosTutorias = ({ normalizedResearcher, searchTerm, handleSea
     setModalOpen(false);
   };
 
-  // Verificar si `trabajos_dirigidos_tutorias` está definido
-  if (!normalizedResearcher || !normalizedResearcher.trabajos_dirigidos_tutorias) {
-    return <p>No hay trabajos dirigidos o tutorías disponibles.</p>;
-  }
-
   // Ordenar los trabajos por fecha
-  const sortedWorks = [...normalizedResearcher.trabajos_dirigidos_tutorias].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  const sortedWorks = [...trabajosDirigidos].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
   // Filtrar los trabajos por el término de búsqueda
   const filteredWorks = sortedWorks.filter((work) =>
-    work.titulo.toLowerCase().includes(searchTerm.toLowerCase())
+    work.titulo?.toLowerCase().includes(searchTerm?.toLowerCase() || '')
   );
 
   const getInstitutionData = (name) => {
@@ -152,7 +154,7 @@ const TrabajosDirigidosTutorias = ({ normalizedResearcher, searchTerm, handleSea
       {filteredWorks.length > 0 ? (
         <div style={styles.gridContainer}>
           {filteredWorks.map((work, index) => {
-            // Verificación si todos los campos necesarios están vacíos o inválidos
+            // Check if all required fields are empty or invalid
             const isEmpty = !work.titulo && !work.institucion && !work.estado && !work.especialidad && !work.fecha && !work.rol && work.orientados.length === 0 && work.tutores.length === 0;
             if (isEmpty) return null;
 
@@ -175,15 +177,23 @@ const TrabajosDirigidosTutorias = ({ normalizedResearcher, searchTerm, handleSea
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = styles.cardItemHover.boxShadow;
                   e.currentTarget.style.transform = styles.cardItemHover.transform;
+                  const titleElement = e.currentTarget.querySelector('.titleBox');
+                  titleElement.style.whiteSpace = styles.titleBoxHover.whiteSpace;
+                  titleElement.style.overflow = styles.titleBoxHover.overflow;
+                  titleElement.style.textOverflow = styles.titleBoxHover.textOverflow;
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
                   e.currentTarget.style.transform = 'none';
+                  const titleElement = e.currentTarget.querySelector('.titleBox');
+                  titleElement.style.whiteSpace = styles.titleBox.whiteSpace;
+                  titleElement.style.overflow = styles.titleBox.overflow;
+                  titleElement.style.textOverflow = styles.titleBox.textOverflow;
                 }}
                 onClick={handleClick}
               >
                 {/* Título */}
-                <div style={styles.titleBox}>
+                <div className="titleBox" style={styles.titleBox}>
                   {work.titulo ? work.titulo.charAt(0).toUpperCase() + work.titulo.slice(1).toLowerCase() : 'No disponible'}
                 </div>
 

@@ -5,29 +5,25 @@ const FaqBanner = () => {
     return (
       <>
         <section
-          className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
-          data-background=""
-          style={{
-            backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
-          }}
-        >
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-xl-7 col-lg-12 col-md-12 col-12">
-                <div className="tp-breadcrumb">
-                  <h2 className="tp-breadcrumb__title">FAQ</h2>
-                </div>
-              </div>
-              <div className="col-xl-5 col-lg-12 col-md-12 col-12">
-                <div className="tp-breadcrumb__link text-xl-end">
-                  <span>
-                    Bioxlab : <Link href="/faq">Asking Question</Link>
-                  </span>
-                </div>
+        className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
+        style={{
+          backgroundImage: `url("/assets/img/banner/breadcrumb-01.jpg")`,
+          maxWidth: "auto", 
+          maxHeight: "200px",  // Establece un ancho máximo de 300px
+          margin: "0 auto",   // Centra el contenedor horizontalmente
+        }}
+      >
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6 col-md-7 col-12">
+              <div className="tp-breadcrumb">
+                <h2 className="tp-breadcrumb__title">FAQ</h2>
               </div>
             </div>
+          
           </div>
-        </section>
+        </div>
+      </section>
       </>
     );
 };

@@ -49,37 +49,36 @@ const Team = () => {
         const data = await getResearchers();
         console.log("Datos de investigadores obtenidos:", data);
 
-        // Ordenar los datos
-        const sortedData = data.sort((a, b) => {
-          // Priorizar Gustavo, Andrés y Alberto
-          const nombresPrioritarios = [
-            "Gustavo Aroca Martínez",
-            "Andres Angelo Cadena Bonfanti",
-            "Alberto Jose Cadena Bonfanti",
-          ];
+        // Filtrar investigadores con visual: true y luego ordenar los datos
+        const filteredAndSortedData = data
+          .filter((researcher) => researcher.visual) // Solo mostrar investigadores con visual: true
+          .sort((a, b) => {
+            const nombresPrioritarios = [
+              "Gustavo Aroca Martínez",
+              "Andres Angelo Cadena Bonfanti",
+              "Alberto Jose Cadena Bonfanti",
+            ];
 
-          // Si alguno de los dos es Gustavo, Andrés o Alberto, mover al principio
-          if (nombresPrioritarios.includes(a.informacion_personal?.nombre_completo)) {
-            return -1; // Estos deben estar al principio
-          }
-          if (nombresPrioritarios.includes(b.informacion_personal?.nombre_completo)) {
-            return 1;
-          }
+            if (nombresPrioritarios.includes(a.informacion_personal?.nombre_completo)) {
+              return -1;
+            }
+            if (nombresPrioritarios.includes(b.informacion_personal?.nombre_completo)) {
+              return 1;
+            }
 
-          // Ordenar por nivel de investigador
-          const levelsOrder = {
-            "Investigador Senior": 1,
-            "Investigador Asociado": 2,
-            "Sub Investigador": 3,
-          };
+            const levelsOrder = {
+              "Investigador Senior": 1,
+              "Investigador Asociado": 2,
+              "Sub Investigador": 3,
+            };
 
-          const nivelA = levelsOrder[a.nivel] || 4; // Si el nivel no está definido, dar una prioridad baja
-          const nivelB = levelsOrder[b.nivel] || 4;
+            const nivelA = levelsOrder[a.nivel] || 4;
+            const nivelB = levelsOrder[b.nivel] || 4;
 
-          return nivelA - nivelB; // Ordenar de menor a mayor según el nivel
-        });
+            return nivelA - nivelB;
+          });
 
-        setTeamData(sortedData); // Actualiza el estado con los datos ordenados
+        setTeamData(filteredAndSortedData); // Actualiza el estado con los datos filtrados y ordenados
       } catch (error) {
         console.error("Error al obtener los investigadores: ", error);
       }
@@ -177,12 +176,11 @@ const Team = () => {
                             ? item.biografia?.texto
                             : `${item.biografia?.texto?.substring(0, 150)}...`}
                         </p>
-                        <button
-                          className="tp-btn-link"
-                          onClick={() => toggleBiography(item.id)}
-                        >
-                          {expandedBiography[item.id] ? "Leer menos" : "Leer más"}
-                        </button>
+                        <Link href={`/team-details/${item.id}`}>
+                          <button className="tp-btn-link">
+                            Leer más
+                          </button>
+                        </Link>
                         <div className="tp-team__social">
                           <Link href="#">
                             <i className="fa-brands fa-facebook-f"></i>

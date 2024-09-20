@@ -33,19 +33,16 @@ const menu_data = [
     sub_menus: [
       { link: "/project-details", title: "Comité de Ética" },
       { link: "/service-3", title: "Estudios" },
-
       { link: "/service-details", title: "Service Details" },
     ],
   },
-
   {
     id: 5,
     mega_menu: false,
     has_dropdown: true,
-    title: "Equipo Invclincosta",  // Menu from the image
-    link: "/", // External URL
+    title: "Equipo Invclincosta",
+    link: "/",
     active: "",
-
     sub_menus: [
       { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Investigación", target: "_blank" },
       { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Monitores", target: "_blank" },
@@ -56,10 +53,10 @@ const menu_data = [
     id: 6,
     mega_menu: false,
     has_dropdown: false,
-    title: "Clínica de la Costa",  // Another menu from the image
-    link: "http://clinicadelacosta.co/",  // External URL
+    title: "Clínica de la Costa",
+    link: "http://clinicadelacosta.co/",
     active: "",
-    target: "_blank", // Opens in a new window
+    target: "_blank",
   },
   {
     id: 7,
@@ -69,8 +66,27 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
+  
+  // New "FAQ" menu
   {
-    id: 5,
+    id: 9,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "FAQ",
+    link: "/faq",
+    active: "",
+  },
+  // New "Equipo" menu
+  {
+    id: 10,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Equipo",
+    link: "/equipo",
+    active: "",
+  },
+  {
+    id: 8,
     mega_menu: false,
     has_dropdown: true,
     title: "Blog",
@@ -81,7 +97,6 @@ const menu_data = [
       { link: "/blog-details", title: "Blog Details" },
     ],
   },
-
-
 ];
+
 export default menu_data;
