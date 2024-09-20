@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+import GeneralInfo from './GeneralInfo';
+import ProfessionalExperience from './ProfessionalExperience';
+import Recognitions from './Recognitions';
+import TrabajosDirigidosTutorias from './TrabajosDirigidosTutorias';
+import EventosCientificos from './EventosCientificos';
+import ProduccionBibliografica from './ProduccionBibliografica';
+import ClinicalTrials from './ClinicalTrials';
 
 const styles = {
   container: {
@@ -13,7 +20,7 @@ const styles = {
   leftSection: {
     flex: 1,
     textAlign: 'center',
-    maxWidth: '320px',  // Aumentado el ancho un 10%
+    maxWidth: '320px',
   },
   profileImage: {
     borderRadius: '50%',
@@ -61,32 +68,43 @@ const styles = {
   },
 };
 
-const tabsData = [
-  { title: 'INFORMACIÓN GENERAL', content: 'Aquí va la información general del investigador.' },
-  { title: 'EXPERIENCIA PROFESIONAL', content: 'Aquí va la experiencia profesional del investigador.' },
-  { title: 'RECONOCIMIENTOS', content: 'Aquí van los reconocimientos del investigador.' },
-  { title: 'TRABAJOS DIRIGIDOS', content: 'Aquí van los trabajos dirigidos del investigador.' },
-  { title: 'EVENTOS CIENTÍFICOS', content: 'Aquí van los eventos científicos del investigador.' },
-  { title: 'PRODUCCIÓN BIBLIOGRÁFICA', content: 'Aquí va la producción bibliográfica del investigador.' },
-  { title: 'ENSAYOS CLÍNICOS', content: 'Aquí van los ensayos clínicos del investigador.' },
-];
-
 const TeamDetailsArea = ({ researcher }) => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const renderTabContent = () => {
-    return (
-      <div>
-        <h3 style={styles.sectionTitle}>{tabsData[activeTab].title}</h3>
-        <p>{tabsData[activeTab].content}</p>
-      </div>
-    );
+  const renderContent = () => {
+    switch (activeTab) {
+      case 0:
+        return <GeneralInfo researcher={researcher} />;
+      case 1:
+        return <ProfessionalExperience experienciaProfesional={researcher.experiencia_profesional} />;
+      case 2:
+        return <Recognitions recognitions={researcher.reconocimientos} />;
+      case 3:
+        return <TrabajosDirigidosTutorias trabajosDirigidos={researcher.trabajos_dirigidos_tutorias} />;
+      case 4:
+        return <EventosCientificos eventos={researcher.eventos_cientificos} />;
+      case 5:
+        return <ProduccionBibliografica productions={researcher.produccion_bibliografica} />;
+      case 6:
+        return <ClinicalTrials trials={researcher.clinical_studies} />;
+      default:
+        return <p>No hay información disponible.</p>;
+    }
   };
+
+  const tabs = [
+    'INFORMACIÓN GENERAL',
+    'EXPERIENCIA PROFESIONAL',
+    'RECONOCIMIENTOS',
+    'TRABAJOS DIRIGIDOS',
+    'EVENTOS CIENTÍFICOS',
+    'PRODUCCIÓN BIBLIOGRÁFICA',
+    'ENSAYOS CLÍNICOS',
+  ];
 
   return (
     <section style={styles.container}>
       <div style={styles.generalInfo}>
-        {/* Foto e Información Básica */}
         <div style={styles.leftSection}>
           <img
             src={researcher?.informacion_personal?.foto || "/assets/img/default-avatar.jpg"}
@@ -95,9 +113,8 @@ const TeamDetailsArea = ({ researcher }) => {
           />
           <h2 style={styles.name}>{researcher?.informacion_personal?.nombre_completo}</h2>
 
-          {/* Tabs */}
           <div style={styles.tabsContainer}>
-            {tabsData.map((tab, index) => (
+            {tabs.map((tab, index) => (
               <button
                 key={index}
                 style={{
@@ -106,15 +123,14 @@ const TeamDetailsArea = ({ researcher }) => {
                 }}
                 onClick={() => setActiveTab(index)}
               >
-                {tab.title}
+                {tab}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Contenido del tab seleccionado */}
         <div style={styles.rightSection}>
-          {renderTabContent()}
+          {renderContent()}
         </div>
       </div>
     </section>

@@ -1,21 +1,42 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const functions = require("firebase-functions");
+const nodemailer = require("nodemailer");
 
-// eslint-disable-next-line no-unused-vars
-const {onRequest} = require("firebase-functions/v2/https");
-// eslint-disable-next-line no-unused-vars
-const logger = require("firebase-functions/logger");
+// Configura tu servidor SMTP (Hostinger)
+const transporter = nodemailer.createTransport({
+  host: "smtp.hostinger.com", // Servidor SMTP
+  port: 465, // Puerto SSL
+  secure: true, // Usar SSL
+  auth: {
+    user: "informacion@invclicosta.info", // Tu correo electrónico
+    pass: "F2oP2JE6v^", // Tu contraseña de correo
+  },
+});
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+// Función para enviar correos desde Firebase
+exports.sendContactEmail = functions.https.onRequest((req, res) => {
+  if (req.method !== "POST") {
+    return res.status(405).send("Método no permitido");
+  }
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+  const {name, email, subject, message} = req.body;
+
+  if (!name || !email || !subject || !message) {
+    return res.status(400).send("Todos los campos son obligatorios.");
+  }
+
+  const mailOptions = {
+    from: "informacion@invclicosta.info", // Desde tu correo
+    to: "informacion@invclicosta.info", // Correo destinatario
+    subject: `Nuevo mensaje de contacto: ${subject}`,
+    text: `Nombre: ${name}\nCorreo: ${email}\nMensaje:\n${message}`,
+  };
+
+  // Enviar el correo
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error("Error al enviar el correo:", error);
+      return res.status(500).send("Error al enviar el correo.");
+    }
+    return res.status(200).send("¡Correo enviado con éxito!");
+  });
+});
