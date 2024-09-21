@@ -7,14 +7,7 @@ const menu_data = [
     link: "/",
     active: "active",
   },
-  {
-    id: 2,
-    mega_menu: false,
-    has_dropdown: true,
-    title: "Nosotros",
-    link: "/about",
-    active: "",
-  },
+  
   {
     id: 3,
     mega_menu: false,
@@ -23,60 +16,19 @@ const menu_data = [
     link: "/research",
     active: "",
   },
-  {
-    id: 4,
-    mega_menu: false,
-    has_dropdown: true,
-    title: "Service",
-    link: "/service-3",
-    active: "",
-    sub_menus: [
-      { link: "/project-details", title: "Comité de Ética" },
-      { link: "/service-3", title: "Estudios" },
-      { link: "/service-details", title: "Service Details" },
-    ],
-  },
-  {
-    id: 5,
-    mega_menu: false,
-    has_dropdown: true,
-    title: "Equipo Invclincosta",
-    link: "/",
-    active: "",
-    sub_menus: [
-      { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Investigación", target: "_blank" },
-      { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Monitores", target: "_blank" },
-      { link: "https://dmsclinicadelacosta.ngrok.io/", title: "Gestión Documental", target: "_blank" },
-    ],
-  },
-  {
-    id: 6,
-    mega_menu: false,
-    has_dropdown: false,
-    title: "Clínica de la Costa",
-    link: "http://clinicadelacosta.co/",
-    active: "",
-    target: "_blank",
-  },
-  {
-    id: 7,
-    mega_menu: false,
-    has_dropdown: false,
-    title: "Contactos",
-    link: "/contact",
-    active: "",
-  },
-  
-  // New "FAQ" menu
-  {
-    id: 9,
-    mega_menu: false,
-    has_dropdown: false,
-    title: "FAQ",
-    link: "/faq",
-    active: "",
-  },
-  // New "Equipo" menu
+  // {
+  //   id: 4,
+  //   mega_menu: false,
+  //   has_dropdown: true,
+  //   title: "Service",
+  //   link: "/service-3",
+  //   active: "",
+  //   sub_menus: [
+  //     { link: "/project-details", title: "Comité de Ética" },
+  //     { link: "/service-3", title: "Estudios" },
+     
+  //   ],
+  // },
   {
     id: 10,
     mega_menu: false,
@@ -97,6 +49,62 @@ const menu_data = [
       { link: "/blog-details", title: "Blog Details" },
     ],
   },
+  {
+    id: 5,
+    mega_menu: false,
+    has_dropdown: true,
+    title: "Equipo Invclincosta",
+    link: "/",
+    active: "",
+    sub_menus: [
+      { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Investigación", target: "_blank" },
+      { link: "https://saimclinico.com/Saim_Inv/", title: "SAIM Monitores", target: "_blank" },
+      { link: "https://dmsclinicadelacosta.ngrok.io/", title: "Gestión Documental", target: "_blank" },
+    ],
+  },
+  {
+    id: 9,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "FAQ",
+    link: "/faq",
+    active: "",
+  },
+  // {
+  //   id: 6,
+  //   mega_menu: false,
+  //   has_dropdown: false,
+  //   title: "Clínica de la Costa",
+  //   link: "http://clinicadelacosta.co/",
+  //   active: "",
+  //   target: "_blank",
+  // },
+  {
+    id: 2,
+    mega_menu: false,
+    has_dropdown: true,
+    title: "Nosotros",
+    link: "/about",
+    active: "",
+    sub_menus: [
+      { link: "/project-details", title: "Comité de Ética" },
+      { link: "/service-3", title: "Estudios" },
+     
+    ],
+  },
+  {
+    id: 7,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Contactos",
+    link: "/contact",
+    active: "",
+  },
+  
+  // New "FAQ" menu
+  
+  // New "Equipo" menu
+  
 ];
 
 export default menu_data;

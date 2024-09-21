@@ -11,7 +11,7 @@
   }
 }
 .main-menu {
-  margin: 0 0 0 60px;
+  margin: 0 0 0 30px; // Mantiene margen inicial si es necesario
   @media #{$xl} {
     margin: 10px 0 0 0;
   }
@@ -20,9 +20,13 @@
       display: inline-block;
       position: relative;
       z-index: 9;
+      margin-right: 10px; // Reducido el espacio entre elementos del menú
+      &:last-child {
+        margin-right: 0; // Asegurarse de que el último elemento no tenga margen a la derecha
+      }
       & > a {
-        padding: 15px 0;
-        margin: 0 30px;
+        padding: 10px 0; // Mantiene padding vertical
+        margin: 0 5px; // Reducido el margen entre enlaces para que estén más cerca
         font-size: 14px;
         color: var(--tp-text-2);
         font-weight: 700;
@@ -36,7 +40,7 @@
           font-size: 12px;
         }
         @media #{$xxl,$xl} {
-          margin: 0 20px;
+          margin: 0 5px; // Ajuste de margen para pantallas más pequeñas
         }
         @media #{$xl} {
           font-size: 12px;

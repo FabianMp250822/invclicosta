@@ -51,7 +51,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
             <MobileMenus />
           </div>
         </div>
-
+      
         <div className="tpsideinfo__content mb-60">
           <p className=" d-none d-xl-block">
             Nuestra misión es consolidar un espacio de innovación tecnológica en salud, donde la inteligencia artificial juegue un rol clave en la creación de soluciones que mejoren la atención médica.
@@ -61,7 +61,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
             <i className="fa-solid fa-star"></i> infoestudiosclinicos@clinicadelacosta.co
           </a>
           <a href="tel:+576053369999">
-            <i className="fa-solid fa-star"></i> +57 605 3369999 Ext. 0 (cero)
+            <i className="fa-solid fa-star"></i> +57 605 3369999 
           </a>
           <a href="mailto:juridica@clinicadelacosta.co">
             <i className="fa-solid fa-star"></i> juridica@clinicadelacosta.co

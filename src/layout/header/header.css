@@ -1,0 +1,38 @@
+/* Ajustar el espaciado entre los menús horizontales */
+.main-menu nav ul li {
+    margin: 0 10px; /* Reduce el espacio horizontal entre los ítems del menú */
+    padding: 5px 0; /* Reduce el espacio vertical */
+  }
+  
+  /* Ajustar el espaciado en el submenú (dropdown) */
+  .main-menu nav ul li ul.sub-menu {
+    margin-top: 5px; /* Reducir el espacio entre el menú principal y el submenú */
+  }
+  
+  /* Ajustar el espaciado entre los menús verticales */
+  .main-menu nav ul {
+    margin-top: 10px; /* Reducir el espacio entre los menús verticales */
+    padding: 0; /* Elimina paddings innecesarios */
+  }
+  
+  /* Opcional: reducir el tamaño de fuente para ahorrar espacio */
+  .main-menu nav ul li a {
+    font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+    line-height: 1.5; /* Ajusta la altura de línea para reducir espacio vertical */
+  }
+  
+  /* Si el header o el contenedor también afecta el espaciado */
+  .header__area {
+    padding: 10px 0; /* Ajustar el padding del contenedor del menú */
+  }
+  
+  /* Para mejorar la visualización en el móvil */
+  .tp-mobile-bar .tp-bt-btn-banner {
+    margin-right: 5px; /* Ajusta el margen a la derecha del botón de contacto */
+  }
+  
+  /* Ajustar el espaciado en la vista móvil */
+  .tp-mobile-header-area .tp-mob-logo img {
+    width: 120px; /* Ajusta el tamaño del logo en el móvil */
+  }
+  

@@ -23,7 +23,9 @@ const MobileMenus = () => {
             <React.Fragment key={i}>
               {menu.has_dropdown && menu.sub_menus?.length > 0 ? (
                 <li className="has-dropdown">
-                  <Link href={menu.link}>{menu.title}</Link>
+                  <Link href={menu.link} target={menu.target ? menu.target : "_self"}>
+                    {menu.title}
+                  </Link>
                   <ul
                     className="submenu"
                     style={{
@@ -32,7 +34,9 @@ const MobileMenus = () => {
                   >
                     {menu.sub_menus.map((sub, i) => (
                       <li key={i}>
-                        <Link href={sub.link}>{sub.title}</Link>
+                        <Link href={sub.link} target={sub.target ? sub.target : "_self"}>
+                          {sub.title}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -48,7 +52,9 @@ const MobileMenus = () => {
                 </li>
               ) : (
                 <li>
-                  <Link href={menu.link}>{menu.title}</Link>
+                  <Link href={menu.link} target={menu.target ? menu.target : "_self"}>
+                    {menu.title}
+                  </Link>
                 </li>
               )}
             </React.Fragment>

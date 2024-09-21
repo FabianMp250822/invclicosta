@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import NavMenu from "./nav-menu";
 
 const HeaderTwo = () => {
-  const { sticky } = useSticky();
+  const sticky = false; 
   const [isActive, setIsActive] = useState(false);
 
   return (
