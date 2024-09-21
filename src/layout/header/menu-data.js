@@ -53,7 +53,7 @@ const menu_data = [
     id: 5,
     mega_menu: false,
     has_dropdown: true,
-    title: "Equipo Invclincosta",
+    title: "Invclincosta",
     link: "/",
     active: "",
     sub_menus: [
