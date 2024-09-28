@@ -33,7 +33,7 @@ const service_three_data = [
     img: "https://th.bing.com/th/id/R.34a172a81291a026f28afdf1a39a7c23?rik=bNjZnfqvi9p4Uw&riu=http%3a%2f%2fwww.saludymedicina.org%2fwp-content%2fuploads%2f2017%2f07%2feii1024.jpg&ehk=tYCK4Z8gybHNL5bCDgfFNgQJ%2bQ0jewqPNH2xxQQ9UjY%3d&risl=&pid=ImgRaw&r=0",  // Ruta de la imagen
     icon: "flaticon-stomach",
     color: "sky-round",
-    title: "Enfermedad de Crohn",
+    title: "Enfermedad de Crohn ",
     description: `
       El Centro de Investigación de la Clínica de la Costa los invita a participar en un estudio de tratamiento para enfermedad de moderada a severa.
       

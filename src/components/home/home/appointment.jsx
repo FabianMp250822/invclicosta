@@ -10,16 +10,19 @@ const Appointment = () => {
             <div className="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
               <div className="appoinment-thumb">
                 <img
-                  src="/assets/img/banner/appoinment-01.jpg"
-                  alt="appoinment-img"
+                  src="/assets/img/banner/contacto.jpg"
+                  alt="Imagen de programación de citas en el Centro de Investigación Clínica de la Costa"
                 />
               </div>
             </div>
             <div className="col-xxl-6 col-xl-7 col-lg-12 col-md-12 p-0">
               <div className="visitor-info">
-                <h4 className="appoinment-title mb-25">
-                  <i className="fa-light fa-file-signature"></i>Programe su visita
-                </h4>
+                <h2 className="appoinment-title mb-25">
+                  <i className="fa-light fa-file-signature"></i> Programe su Cita en el Centro de Investigación Clínica de la Costa
+                </h2>
+                <p className="appoinment-description mb-20">
+                  Complete el siguiente formulario para programar su visita. Nuestro equipo de expertos está listo para ofrecerle atención personalizada y responder a todas sus inquietudes.
+                </p>
                 <div className="visitor-form">
                   {/* form start */}
                   <AppointForm />
