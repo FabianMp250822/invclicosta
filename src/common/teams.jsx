@@ -65,8 +65,8 @@ const Teams = () => {
         <div className="row align-items-center mb-4">
           <div className="col-lg-8 col-md-8 col-12">
             <div className="tp-section">
-              <span className="tp-section__sub-title left-line mb-25">Nuestro Equipo</span>
-              <h3 className="tp-section__title mb-30">Conoce a Nuestros Especialistas</h3>
+              <span className="tp-section__sub-title left-line mb-25">Nuestro Equipo de Investigación</span>
+              <h2 className="tp-section__title mb-30">Conozca a Nuestros Especialistas en Investigación Clínica</h2>
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-12">
@@ -74,9 +74,10 @@ const Teams = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Buscar investigador"
+              placeholder="Buscar investigador por nombre"
               value={searchTerm}
               onChange={handleSearchChange}
+              aria-label="Buscar investigador"
             />
           </div>
         </div>
@@ -119,7 +120,7 @@ const Teams = () => {
                     <Link href={`/team-details/${item.id}`}>
                       <img
                         src={item.informacion_personal?.foto || "/assets/img/default-avatar.jpg"}
-                        alt="team-thumb"
+                        alt={`Imagen de ${item.informacion_personal?.nombre_completo}`}
                         style={{
                           width: "100%",
                           height: "100%",
@@ -129,14 +130,14 @@ const Teams = () => {
                     </Link>
                   </div>
                   <div className="tp-team__content mt-3" style={{ textAlign: "center" }}>
-                    <h4 className="tp-team__title mb-2">
+                    <h3 className="tp-team__title mb-2">
                       <Link href={`/team-details/${item.id}`}>
                         {item.informacion_personal?.nombre_completo}
                       </Link>
-                    </h4>
-                    <span className="tp-team__position mb-2">
+                    </h3>
+                    <h4 className="tp-team__position mb-2">
                       {item.nivel || "Nivel Desconocido"}
-                    </span>
+                    </h4>
                     <p>{`${item.biografia?.texto?.substring(0, 100)}...`}</p>
                     <Link href={`/team-details/${item.id}`}>
                       <button
@@ -149,7 +150,7 @@ const Teams = () => {
                           cursor: "pointer",
                         }}
                       >
-                        Leer más
+                        Leer la biografía completa del especialista
                       </button>
                     </Link>
                   </div>
@@ -157,7 +158,7 @@ const Teams = () => {
               </div>
             ))
           ) : (
-            <p>No se encontraron investigadores.</p>
+            <p>No se encontraron investigadores. Intente buscar por otro término.</p>
           )}
         </div>
       </div>

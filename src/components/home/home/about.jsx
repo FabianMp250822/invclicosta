@@ -13,7 +13,7 @@ const experience_count = currentYear - baseYear;
 
 // content
 const content = {
-  left_img: "assets/img/about/about-bg-01.png",
+  left_img: "assets/img/about/paso.jpg",
   experience_count_text: (
     <>
       Años de <br />
@@ -21,7 +21,7 @@ const content = {
     </>
   ),
   title: "Sobre Nosotros",
-  section_title: "Centro de Investigación Clínica de la costa,  Líder en la Región Caribe",
+  section_title: "Centro de Investigación Clínica de la costa, Líder en la Región Caribe",
   section_sub_title:
     "El principal centro de estudios clínicos en la Región Caribe, con 35 años de experiencia en investigación médica avanzada.",
   section_des: (
@@ -67,7 +67,11 @@ const About = () => {
                 data-wow-delay=".4s"
               >
                 <div className="about__img">
-                  <img src={left_img} alt="about-bg-img" />
+                  <img
+                    src={left_img}
+                    alt="Imagen del Centro de Investigación Clínica"
+                    style={{ transform: "scale(1.3)" }}
+                  />
                   <div className="about__exprience">
                     <h3 className="counter">
                       <Count add_style={true} number={experience_count} />

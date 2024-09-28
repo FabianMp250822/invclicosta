@@ -104,19 +104,19 @@ const Team = () => {
           <div className="col-lg-8 col-md-8 col-12">
             <div className="tp-section">
               <span className="tp-section__sub-title left-line mb-25">
-                Nuestro Equipo
+                Conoce a Nuestro Equipo de Investigación
               </span>
-              <h3 className="tp-section__title mb-75">
-                Conoce a Nuestros Especialistas
-              </h3>
+              <h2 className="tp-section__title mb-75">
+                Especialistas en Investigación Clínica para el Avance de la Salud
+              </h2>
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-12">
             <div className="tp-team-arrow d-flex align-items-center">
-              <div className="team-p">
+              <div className="team-p" aria-label="Equipo anterior">
                 <i className="fa-regular fa-arrow-left"></i>
               </div>
-              <div className="team-n">
+              <div className="team-n" aria-label="Siguiente equipo">
                 <i className="fa-regular fa-arrow-right"></i>
               </div>
             </div>
@@ -153,7 +153,7 @@ const Team = () => {
                               item.informacion_personal?.foto ||
                               "/assets/img/default-avatar.jpg"
                             }
-                            alt="team-thumb"
+                            alt={`Imagen de ${item.informacion_personal?.nombre_completo}`}
                             style={{
                               width: "100%",
                               height: "100%",
@@ -163,14 +163,14 @@ const Team = () => {
                         </Link>
                       </div>
                       <div className="tp-team__content" style={{ flexGrow: 1 }}>
-                        <h4 className="tp-team__title mb-15">
+                        <h3 className="tp-team__title mb-15">
                           <Link href={`/team-details/${item.id}`}>
                             {item.informacion_personal?.nombre_completo}
                           </Link>
-                        </h4>
-                        <span className="tp-team__position mb-30">
+                        </h3>
+                        <h4 className="tp-team__position mb-30">
                           {item.nivel || "Nivel Desconocido"}
-                        </span>
+                        </h4>
                         <p>
                           {expandedBiography[item.id]
                             ? item.biografia?.texto
@@ -178,11 +178,11 @@ const Team = () => {
                         </p>
                         <Link href={`/team-details/${item.id}`}>
                           <button className="tp-btn-link">
-                            Leer más
+                            Leer la biografía completa del especialista
                           </button>
                         </Link>
                         <div className="tp-team__social">
-                          <Link href="#">
+                          <Link href="#" aria-label="Facebook de {item.informacion_personal?.nombre_completo}">
                             <i className="fa-brands fa-facebook-f"></i>
                           </Link>
                         </div>

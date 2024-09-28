@@ -39,6 +39,7 @@ const Feedback = () => {
   useEffect(() => {
     setIsLoop(true);
   }, []);
+
   return (
     <>
       <section
@@ -51,11 +52,14 @@ const Feedback = () => {
             <div className="col-lg-12">
               <div className="tp-section text-center">
                 <span className="tp-section__sub-title sub-title-white left-line-white right-line-white mb-25">
-                  Testimonios
+                  Testimonios de Nuestros Pacientes
                 </span>
-                <h3 className="tp-section__title title-white mb-70">
-                  Opiniones de los Pacientes
-                </h3>
+                <h2 className="tp-section__title title-white mb-70">
+                  Opiniones y Experiencias de los Pacientes en el Centro de Investigación Clínica de la Costa
+                </h2>
+                <p className="tp-section__description mb-40">
+                  Descubra cómo nuestros tratamientos y servicios han impactado la vida de nuestros pacientes. Sus opiniones reflejan nuestro compromiso con la excelencia en el cuidado de la salud.
+                </p>
               </div>
             </div>
           </div>
@@ -69,11 +73,14 @@ const Feedback = () => {
               <SwiperSlide key={item.id}>
                 <div className="tp-testi p-relative mb-70">
                   <div className="tp-testi__avata">
-                    <img src={item.img} alt="testimonial-avata" />
+                    <img
+                      src={item.img}
+                      alt={`Foto de ${item.name}, paciente del Centro de Investigación Clínica de la Costa`}
+                    />
                   </div>
                   <div className="tp-testi__content text-center">
                     <p>{item.des}</p>
-                    <h5 className="tp-testi__avata-title">{item.name}</h5>
+                    <h4 className="tp-testi__avata-title">{item.name}</h4>
                     <span className="tp-testi__ava-position">{item.title}</span>
                   </div>
                 </div>
@@ -83,10 +90,10 @@ const Feedback = () => {
           <div className="row text-center">
             <div className="col-lg-12">
               <div className="tp-test-arrow d-flex align-items-center justify-content-center">
-                <div className="tp-test-prv">
+                <div className="tp-test-prv" aria-label="Testimonio anterior">
                   <i className="fa-regular fa-arrow-left"></i>
                 </div>
-                <div className="tp-test-nxt">
+                <div className="tp-test-nxt" aria-label="Siguiente testimonio">
                   <i className="fa-regular fa-arrow-right"></i>
                 </div>
               </div>
