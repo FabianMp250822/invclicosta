@@ -37,7 +37,7 @@ const slider_content = [
     id: 1,
     icon: "flaticon-vaccine",
     title: "Vacunas",
-    des: "Investigación y desarrollo en vacunas para prevenir diversas enfermedades.",
+    des: "Desarrollamos vacunas efectivas para proteger su salud y prevenir enfermedades.",
     color_icon: "",
     color: "",
   },
@@ -45,7 +45,7 @@ const slider_content = [
     id: 2,
     icon: "flaticon-oncology",
     title: "Oncología",
-    des: "Estudios clínicos en tratamientos innovadores contra el cáncer.",
+    des: "Ofrecemos tratamientos avanzados y personalizados para combatir el cáncer.",
     color_icon: "pink-icon",
     color: "pink-hexa",
   },
@@ -53,7 +53,7 @@ const slider_content = [
     id: 3,
     icon: "flaticon-pediatrics",
     title: "Pediatría",
-    des: "Investigaciones enfocadas en la salud y bienestar de los niños.",
+    des: "Cuidamos la salud de sus hijos con investigaciones dedicadas al bienestar infantil.",
     color_icon: "green-icon",
     color: "green-hexa",
   },
@@ -61,7 +61,7 @@ const slider_content = [
     id: 4,
     icon: "flaticon-cardiology",
     title: "Cardiología",
-    des: "Estudios en enfermedades cardiovasculares y nuevos tratamientos.",
+    des: "Proporcionamos diagnósticos precisos y tratamientos innovadores para enfermedades del corazón.",
     color_icon: "sky-icon",
     color: "sky-hexa",
   },
@@ -69,7 +69,7 @@ const slider_content = [
     id: 5,
     icon: "flaticon-nephrology",
     title: "Nefrología",
-    des: "Investigación en enfermedades renales y terapias innovadoras.",
+    des: "Mejoramos su salud renal mediante terapias avanzadas y cuidados especializados.",
     color_icon: "",
     color: "",
   },
@@ -77,7 +77,7 @@ const slider_content = [
     id: 6,
     icon: "flaticon-internal-medicine",
     title: "Medicina Interna",
-    des: "Amplio enfoque en estudios de diversas patologías de medicina interna.",
+    des: "Abordamos una amplia gama de patologías con un enfoque integral y personalizado.",
     color_icon: "pink-icon",
     color: "pink-hexa",
   },
@@ -85,7 +85,7 @@ const slider_content = [
     id: 7,
     icon: "flaticon-lupus",
     title: "Lupus",
-    des: "Investigaciones en tratamientos y manejo del lupus.",
+    des: "Ofrecemos tratamientos especializados y apoyo continuo para el manejo del lupus.",
     color_icon: "green-icon",
     color: "green-hexa",
   },
@@ -105,14 +105,15 @@ const ServiceArea = () => {
         <div className="container">
           
           <div className="row align-items-center">
-            <div className="col-lg-8 col-md-8 col-12">
+          <div className="col-lg-8 col-md-8 col-12">
               <div className="tp-section">
                 <span className="tp-section__sub-title left-line mb-20">
-                  Nuestros Servicios
+                Especialidades Médicas de Nuestro Centro de Investigación
                 </span>
-                <h3 className="tp-section__title mb-50">Áreas de Servicio</h3>
+                <h3 className="tp-section__title mb-50"> Descubre nuestras áreas de investigación dedicadas a mejorar la salud y el bienestar.</h3>
               </div>
             </div>
+
             <div className="col-lg-4 col-md-4 col-12">
               <div className="tp-services d-flex align-items-center">
                 <div className="services-p">

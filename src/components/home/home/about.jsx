@@ -2,10 +2,18 @@ import Count from "@/common/count";
 import Link from "next/link";
 import React from "react";
 
+// Obtener el año actual
+const currentYear = new Date().getFullYear();
+
+// Año base de experiencia
+const baseYear = 1989;
+
+// Calcular los años de experiencia dinámicamente
+const experience_count = currentYear - baseYear;
+
 // content
 const content = {
   left_img: "assets/img/about/about-bg-01.png",
-  experience_count: 35, // Años de experiencia del Centro de Investigación
   experience_count_text: (
     <>
       Años de <br />
@@ -13,37 +21,32 @@ const content = {
     </>
   ),
   title: "Sobre Nosotros",
-  section_title: "Centro de Investigación Clínica de Excelencia",
+  section_title: "Centro de Investigación Clínica de la costa,  Líder en la Región Caribe",
   section_sub_title:
-    "El centro más grande de la Región Caribe en estudios clínicos, con una trayectoria de 35 años en investigación avanzada.",
+    "El principal centro de estudios clínicos en la Región Caribe, con 35 años de experiencia en investigación médica avanzada.",
   section_des: (
     <>
-      Contamos con más de 5,000 estudios realizados y colaboramos con líderes
-      globales como Pfizer, Sanofi y Novartis en áreas como oncología,
-      cardiología, nefrología y más. Nuestro compromiso es garantizar
-      investigaciones con los más altos estándares de calidad y seguridad,
-      centradas en la atención integral de nuestros usuarios.
+      Realizamos más de 10,000 estudios clínicos y colaboramos con reconocidas farmacéuticas globales como Pfizer, Sanofi y Novartis. Nos especializamos en áreas como oncología, cardiología, nefrología y más, asegurando siempre los más altos estándares de calidad y seguridad. Nuestro enfoque se centra en la atención integral de nuestros pacientes, brindando soluciones innovadoras para mejorar la salud y el bienestar.
     </>
   ),
   about_info_list: [
     {
-      text: "Investigación en Vacunas",
+      text: "Desarrollo de Vacunas Efectivas",
     },
     {
-      text: "Estudios en Oncología y Cardiología",
+      text: "Investigación en Oncología y Cardiología",
     },
     {
-      text: "Certificado por INVIMA y FDA",
+      text: "Certificación por INVIMA y FDA",
     },
     {
-      text: "Colaboración con grandes farmacéuticas",
+      text: "Alianzas con Líderes Farmacéuticos",
     },
   ],
 };
 
 const {
   left_img,
-  experience_count,
   experience_count_text,
   title,
   section_title,
@@ -102,7 +105,6 @@ const About = () => {
                   <Link className="tp-btn" href="/about">
                     Nuestra Historia
                   </Link>
-                  
                 </div>
               </div>
             </div>

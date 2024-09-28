@@ -20,13 +20,13 @@ const HomeOne = () => {
       <ServiceArea />
       <About />
       <Counter />
+      <Brands />
       <Gallery />
       <ProcessArea />
       <Specialists />
       <Appointment />
       <Team />
       <Feedback />
-      <Brands />
       <Cta_Area />
       <Blog />
     </>

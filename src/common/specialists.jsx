@@ -1,8 +1,14 @@
 import Link from "next/link";
 import React from "react";
 
+// Obtener el año actual
+const currentYear = new Date().getFullYear();
+// Año base de experiencia
+const baseYear = 1989;
+// Calcular los años de experiencia dinámicamente
+const yearsOfExperience = currentYear - baseYear;
 
-// choose data
+// choose data mejorado
 const choose = [
   {
     id: 1,
@@ -10,14 +16,14 @@ const choose = [
     icon: "flaticon-microscope",
     title: (
       <>
-        Experiencia de <br />
-        Más de 30 Años
+        Más de {yearsOfExperience} Años de <br />
+        Experiencia en Investigación
       </>
     ),
     des: (
       <>
-        Con 30 años de experiencia en <br />
-        investigación clínica a nivel nacional e internacional.
+        Amplia experiencia en investigación clínica, <br />
+        respaldada por tres décadas de logros nacionales e internacionales.
       </>
     ),
   },
@@ -27,14 +33,14 @@ const choose = [
     icon: "flaticon-thinking",
     title: (
       <>
-        Investigación en <br />
-        Áreas Críticas
+        Estudios Pioneros en <br />
+        Áreas Médicas Críticas
       </>
     ),
     des: (
       <>
-        Estudios avanzados en oncología, <br />
-        cardiología, nefrología, y más.
+        Investigaciones avanzadas en oncología, <br />
+        cardiología, nefrología, y otras áreas críticas para la salud.
       </>
     ),
   },
@@ -44,14 +50,14 @@ const choose = [
     icon: "flaticon-24-hours-1",
     title: (
       <>
-        Certificación y <br />
-        Reconocimientos
+        Certificaciones <br />
+        y Reconocimientos Internacionales
       </>
     ),
     des: (
       <>
-        Certificados por INVIMA y <br />
-        reconocidos por la FDA y otros organismos.
+        Avalados por INVIMA y reconocidos por la FDA, <br />
+        cumpliendo con los más altos estándares de calidad.
       </>
     ),
   },
@@ -61,18 +67,18 @@ const choose = [
     icon: "flaticon-team",
     title: (
       <>
-        Equipo de <br /> Expertos
+        Equipo Multidisciplinario de <br />
+        Expertos Investigadores
       </>
     ),
     des: (
       <>
-        Contamos con más de 46 investigadores <br />
-        y un equipo altamente calificado.
+        Más de 46 investigadores especializados, <br />
+        comprometidos con la excelencia y la innovación en la salud.
       </>
     ),
   },
 ];
-
 
 const Specialists = () => {
   return (
@@ -83,10 +89,10 @@ const Specialists = () => {
             <div className="col-lg-12">
               <div className="tp-section text-center">
                 <span className="tp-section__sub-title left-line right-line mb-25">
-                  Nuestros Especialistas
+                  Nuestro Equipo de Investigación
                 </span>
                 <h3 className="tp-section__title title-white mb-85">
-                  ¿Por Qué Elegirnos?
+                  Conozca Nuestras Ventajas Competitivas
                 </h3>
               </div>
             </div>
@@ -113,9 +119,8 @@ const Specialists = () => {
             <div className="col-lg-12">
               <div className="tp-choose-option">
                 <span>
-                  El Centro de Investigación de la Clínica de la Costa lleva 35 años realizando investigaciones en áreas clave, 
-                  incluyendo oncología, cardiología, y más. 
-                 
+                  El Centro de Investigación de la Clínica de la Costa lleva 35 años realizando investigaciones de vanguardia en áreas clave, 
+                  como oncología, cardiología, nefrología, entre otras, impactando la vida de miles de pacientes.
                 </span>
               </div>
             </div>

@@ -4,23 +4,24 @@ import { useState } from "react";
 import VideoPopup from "@/modals/video-popup";
 
 // content
+// content
 const content = {
-  sub_title: "Bienvenidos al Centro de Investigación Clínica de la Costa",
+  sub_title: "Bienvenido al Centro de Investigación Clínica de la Costa",
   title: (
     <>
-      Pasión por una <br />
-      Medicina Mejor
+      Liderando el Camino <br />
+      hacia la Innovación Médica
     </>
   ),
   des: (
     <>
-      Somos su laboratorio integral para ensayos clínicos. Nuestra misión es
-      garantizar la generación de resultados precisos y confiables.
+      Somos su aliado en avances clínicos. Nuestra dedicación a la excelencia garantiza resultados precisos y confiables que impulsan el futuro de la medicina.
     </>
   ),
-  btn_text1: "Solicitar Cita",
-  btn_text2: "Sobre Nosotros",
+  btn_text1: "Programar Consulta",
+  btn_text2: "Conócenos",
 };
+
 const { sub_title, title, des, btn_text1, btn_text2 } = content;
 
 // hero_box
@@ -46,6 +47,7 @@ const hero_box = [
     border: "green-border",
   },
 ];
+
 
 const HeroBanner = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -100,7 +102,7 @@ const HeroBanner = () => {
           </div>
         </div>
         <div className="banner__shape d-none d-lg-block">
-          <img src="/assets/img/banner/banner-01.png" alt="banner-img" />
+          <img src="/assets/img/banner/laboratorio.jpg" alt="banner-img" />
           <div className="banner__video-btn">
             <button
               onClick={() => setIsVideoOpen(true)}

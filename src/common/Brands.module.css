@@ -1,68 +1,68 @@
 .brandArea {
-    margin-top: 20px;
-  }
-  
-  .brandContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  margin-top: 20px;
+  margin-bottom: 25px; /* Añadido margen inferior de 10px */
+}
+
+.brandContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brandGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.brandItem {
+  text-align: center;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brandItem img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.brandItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.brandItem:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
   .brandGrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .brandItem {
-    text-align: center;
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .brandGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .brandItem img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .brandGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .brandItem:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 576px) {
+  .brandGrid {
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  .brandItem:hover img {
-    transform: scale(1.05);
-  }
-  
-  @media (max-width: 1200px) {
-    .brandGrid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .brandGrid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .brandGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .brandGrid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  
+}

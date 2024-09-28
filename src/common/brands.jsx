@@ -19,6 +19,10 @@ const Brands = ({ style_2 = false, border_style = false }) => {
   return (
     <div className={styles.brandArea}>
       <div className={styles.brandContainer}>
+        <h2 className={styles.brandTitle}>Nuestros Patrocinadores</h2>
+        <p className={styles.brandDescription}>
+          Agradecemos el apoyo de nuestros patrocinadores, quienes hacen posible nuestras investigaciones y el avance en la atención médica.
+        </p>
         <div className={styles.brandGrid}>
           {brands_img.map((item, i) => (
             <div key={i} className={styles.brandItem}>
