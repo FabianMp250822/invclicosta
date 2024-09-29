@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Contexto de la IA en Medicina",
+    "subtitle": "Medicina 4P y el Impacto de la IA",
+    "img": "/assets/img/research/research-thumb-01.jpg",
+    "content": {
+      "section_1_title": "Medicina 4P",
+      "section_1_text": "La medicina 4P se enfoca en prevención, predicción, participación y personalización para ofrecer tratamientos más eficaces. Esta filosofía de la medicina busca un enfoque integral donde se pueda predecir el riesgo de enfermedades, prevenirlas antes de que se desarrollen, involucrar al paciente activamente y ofrecer un tratamiento personalizado para sus necesidades.",
+      "section_2_title": "Impacto en el Mantenimiento de la Salud",
+      "section_2_text": "La inteligencia artificial (IA) está permitiendo a los profesionales de la salud adoptar un enfoque más proactivo para el mantenimiento de la salud. En lugar de esperar a que las enfermedades se manifiesten, la IA puede analizar patrones y predecir cuándo una persona está en riesgo, permitiendo intervenciones tempranas."
+    }
+  },
+  {
+    "id": 2,
+    "title": "Contribución de la IA",
+    "subtitle": "Mejora en la Toma de Decisiones Médicas",
+    "img": "/assets/img/research/research-thumb-02.jpg",
+    "content": {
+      "section_1_title": "Datos de Salud",
+      "section_1_text": "La IA utiliza grandes volúmenes de datos de salud, que incluyen información genética (ADN), registros médicos, y exposiciones ambientales, para ayudar a los médicos a tomar decisiones más informadas. Al analizar estos datos, la IA puede identificar correlaciones que no serían visibles para los seres humanos, proporcionando una base sólida para el diagnóstico y tratamiento.",
+      "section_2_title": "Predicción de Enfermedades",
+      "section_2_text": "Uno de los beneficios clave de la IA en la salud es la capacidad de predecir enfermedades antes de que se desarrollen síntomas graves. Esto permite un enfoque más preventivo en la medicina, ofreciendo tratamientos personalizados que se adaptan al perfil único de cada paciente, lo que mejora la eficacia del tratamiento."
+    }
+  },
+  {
+    "id": 3,
+    "title": "Toma de Decisiones Basada en Datos",
+    "subtitle": "Algoritmos de IA y Análisis de Datos Médicos",
+    "img": "/assets/img/research/research-thumb-03.jpg",
+    "content": {
+      "section_1_title": "Procesamiento de Datos Médicos",
+      "section_1_text": "Los algoritmos de IA son capaces de procesar grandes volúmenes de datos médicos, identificando patrones que serían imposibles de detectar manualmente. Este procesamiento permite a los profesionales de la salud tomar decisiones más rápidas y precisas sobre la atención médica de los pacientes.",
+      "section_2_title": "Prevención de Brotes de Enfermedades",
+      "section_2_text": "Además de la atención individual, la IA puede prever brotes de enfermedades a nivel poblacional. Con la IA, los sistemas de salud pueden identificar señales tempranas de brotes como neumonía o COVID-19, lo que permite la implementación de medidas de contención a tiempo."
+    }
+  },
+  {
+    "id": 4,
+    "title": "Desafíos y Consideraciones Éticas",
+    "subtitle": "Privacidad, Seguridad y Ética en el Uso de la IA",
+    "img": "/assets/img/research/research-thumb-04.jpg",
+    "content": {
+      "section_1_title": "Privacidad de los Datos",
+      "section_1_text": "El uso de IA en la salud requiere el manejo de una gran cantidad de datos sensibles, lo cual plantea serios desafíos relacionados con la privacidad y la seguridad de la información. Es crucial que se establezcan regulaciones claras para proteger la privacidad del paciente.",
+      "section_2_title": "Uso Ético de la Información",
+      "section_2_text": "Además de la privacidad, el uso ético de la IA es fundamental. Se deben evitar sesgos en los algoritmos que podrían llevar a desigualdades en el tratamiento. Es esencial que las aplicaciones de IA sean transparentes y equitativas para todos los pacientes."
+    }
+  },
+  {
+    "id": 5,
+    "title": "Introducción a CIDEACC",
+    "subtitle": "Innovación y Desafíos en el Campo de la Salud",
+    "img": "/assets/img/research/research-thumb-05.jpg",
+    "content": {
+      "section_1_title": "Innovación en Salud",
+      "section_1_text": "CIDEACC es un hub dedicado a la innovación en el campo de la salud mediante el uso de inteligencia artificial. Su objetivo principal es enfrentar los desafíos médicos modernos con soluciones tecnológicas avanzadas.",
+      "section_2_title": "Enfrentando Desafíos Médicos",
+      "section_2_text": "A través de la investigación y el desarrollo, CIDEACC busca abordar algunos de los mayores desafíos en la atención médica, mejorando tanto el diagnóstico como el tratamiento de las enfermedades."
+    }
+  },
+  {
+    "id": 6,
+    "title": "Misión de CIDEACC",
+    "subtitle": "Un Espacio de Innovación en Tecnología de Salud",
+    "img": "/assets/img/research/research-thumb-06.jpg",
+    "content": {
+      "section_1_title": "Mejorar la Atención Médica",
+      "section_1_text": "La misión de CIDEACC es consolidarse como un espacio de innovación tecnológica en salud. Utilizando IA, busca mejorar la atención médica, el diagnóstico y el tratamiento de enfermedades, proporcionando resultados de alta calidad en la Clínica de la Costa.",
+      "section_2_title": "Uso de IA en el Diagnóstico",
+      "section_2_text": "CIDEACC se enfoca en la implementación de tecnologías de IA para ayudar a los profesionales médicos en el diagnóstico, reduciendo el margen de error y aumentando la eficacia en la detección de patologías."
+    }
+  },
+  {
+    "id": 7,
+    "title": "Visión de CIDEACC",
+    "subtitle": "Ser Líderes en Innovación Médica con IA",
+    "img": "/assets/img/research/research-thumb-07.jpg",
+    "content": {
+      "section_1_title": "Liderazgo en IA y Medicina",
+      "section_1_text": "La visión de CIDEACC es ser líderes en la integración de la inteligencia artificial en la medicina. Su objetivo es generar un impacto positivo a nivel local y global, cambiando la forma en que se utiliza la tecnología para mejorar la salud.",
+      "section_2_title": "Impacto Global y Local",
+      "section_2_text": "CIDEACC busca transformar la forma en que se utiliza la tecnología en la medicina, asegurando que la innovación beneficie tanto a la comunidad local como a los pacientes en todo el mundo."
+    }
+  },
+  {
+    "id": 8,
+    "title": "Objetivos de CIDEACC",
+    "subtitle": "Fomentar la Innovación en Salud con IA",
+    "img": "/assets/img/research/research-thumb-08.jpg",
+    "content": {
+      "section_1_title": "Desarrollar Aplicaciones Clínicas",
+      "section_1_text": "Uno de los principales objetivos de CIDEACC es fomentar el uso de IA en el desarrollo de aplicaciones clínicas. Esto incluye la creación de herramientas que ayuden a los médicos en su práctica diaria y mejoren los resultados de los pacientes.",
+      "section_2_title": "Entornos Colaborativos",
+      "section_2_text": "CIDEACC promueve la creación de entornos colaborativos en los que se validen tecnologías innovadoras en entornos clínicos, asegurando que cada innovación sea efectiva y segura para los pacientes."
+    }
+  },
+  {
+    "id": 9,
+    "title": "Áreas de Exploración en CIDEACC",
+    "subtitle": "Explorando Nuevas Fronteras en la Medicina",
+    "img": "/assets/img/research/research-thumb-09.jpg",
+    "content": {
+      "section_1_title": "Diagnóstico Asistido por IA",
+      "section_1_text": "CIDEACC explora el uso del diagnóstico asistido por IA para mejorar la precisión y rapidez en la identificación de enfermedades. Esto tiene un gran potencial para mejorar la calidad de la atención médica.",
+      "section_2_title": "Optimización de Operaciones Hospitalarias",
+      "section_2_text": "Además de los beneficios clínicos, CIDEACC se enfoca en la optimización de las operaciones hospitalarias, asegurando que la administración de recursos sea más eficiente y que los pacientes reciban la mejor atención posible."
+    }
+  }
+]

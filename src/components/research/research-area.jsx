@@ -1,8 +1,29 @@
 import research_data from "@/data/research-data";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
+import cideaccData from "@/data/cideacc.json";
+
+// Configuración del modal
+Modal.setAppElement("#__next");
 
 const ResearchArea = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedResearch, setSelectedResearch] = useState(null);
+
+  // Función para abrir el modal y establecer los datos del artículo seleccionado
+  const openModal = (id) => {
+    const research = cideaccData.find((item) => item.id === id);
+    setSelectedResearch(research);
+    setModalIsOpen(true);
+  };
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setSelectedResearch(null);
+  };
+
   return (
     <>
       <section className="research-area pt-130 pb-130">
@@ -23,48 +44,93 @@ const ResearchArea = () => {
                       <Link href="/services-details">{item.title}</Link>
                     </h4>
                     <p>{item.des}</p>
-                    <Link href="/services-3" className="research-item__btn">
-                      Read More
-                    </Link>
+                    <button
+                      className="research-item__btn"
+                      onClick={() => openModal(item.id)}
+                    >
+                      Leer más
+                    </button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="row">
-            {/* <div className="col-12">
-              <div className="basic-pagination text-center mt-30">
-                <nav>
-                  <ul>
-                    <li>
-                      <Link href="/research">
-                        <i className="fa-light fa-arrow-left-long"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/research">1</Link>
-                    </li>
-                    <li>
-                      <span className="current">2</span>
-                    </li>
-                    <li>
-                      <Link href="/research">3</Link>
-                    </li>
-                    <li>
-                      <Link href="/research">...</Link>
-                    </li>
-                    <li>
-                      <Link href="/research">
-                        <i className="fa-light fa-arrow-right-long"></i>
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div> */}
-          </div>
         </div>
       </section>
+
+      {/* Modal */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Detalles de Investigación"
+        className="research-modal"
+        overlayClassName="research-modal-overlay"
+      >
+        {selectedResearch && (
+          <div className="modal-content">
+            <button className="close-modal" onClick={closeModal}>
+              &times;
+            </button>
+            <h2>{selectedResearch.title}</h2>
+            <h4>{selectedResearch.subtitle}</h4>
+            <img
+              src={selectedResearch.img}
+              alt={`Imagen de ${selectedResearch.title}`}
+              className="modal-img"
+            />
+            <div className="modal-body">
+              <h3>{selectedResearch.content.section_1_title}</h3>
+              <p>{selectedResearch.content.section_1_text}</p>
+              <h3>{selectedResearch.content.section_2_title}</h3>
+              <p>{selectedResearch.content.section_2_text}</p>
+            </div>
+          </div>
+        )}
+      </Modal>
+
+      {/* Estilos del Modal */}
+      <style jsx global>{`
+        .research-modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.75);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+        }
+        .research-modal {
+          background: #fff;
+          padding: 20px;
+          width: 80%;
+          max-width: 800px;
+          border-radius: 10px;
+          position: relative;
+        }
+        .modal-content {
+          text-align: left;
+        }
+        .close-modal {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: none;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        .modal-img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+        .modal-body h3 {
+          margin-top: 20px;
+        }
+      `}</style>
     </>
   );
 };
