@@ -25,7 +25,18 @@ const contact_info = {
   website: "www.clinicadelacosta.co",
 };
 
-const { address, phone_1, phone_2, phone_3, email_general, email_studies, email_legal, open, website } = contact_info;
+const {
+  address,
+  phone_1,
+  phone_2,
+  phone_3,
+  email_general,
+  email_studies,
+  email_legal,
+  open,
+  website,
+} = contact_info;
+
 const ContactForm = () => {
   return (
     <>
@@ -40,10 +51,14 @@ const ContactForm = () => {
               <div className="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".2s">
                 <div className="tpcontact__item text-center">
                   <div className="tpcontact__icon mb-20">
-                    <img src="/assets/img/icon/contact-01.svg" alt="" />
+                    <img
+                      src="/assets/img/icon/contact-01.svg"
+                      alt="Ícono de dirección"
+                      title="Dirección de la Clínica de la Costa"
+                    />
                   </div>
                   <div className="tpcontact__address">
-                    <h4 className="tpcontact__title mb-15">Dirección</h4>
+                    <h4 className="tpcontact__title mb-15">Nuestra Ubicación</h4>
                     <span>
                       <Link href="/contact">{address}</Link>
                     </span>
@@ -55,10 +70,14 @@ const ContactForm = () => {
               <div className="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".4s">
                 <div className="tpcontact__item text-center">
                   <div className="tpcontact__icon mb-20">
-                    <img src="/assets/img/icon/contact-02.svg" alt="" />
+                    <img
+                      src="/assets/img/icon/contact-02.svg"
+                      alt="Ícono de teléfono"
+                      title="Teléfonos de la Clínica de la Costa"
+                    />
                   </div>
                   <div className="tpcontact__address">
-                    <h4 className="tpcontact__title mb-15">Teléfonos</h4>
+                    <h4 className="tpcontact__title mb-15">Teléfonos de Contacto</h4>
                     <span><a href={`tel:${phone_1}`}>{phone_1}</a></span>
                     <span><a href={`tel:${phone_2}`}>{phone_2}</a></span>
                     <span><a href={`tel:${phone_3}`}>{phone_3}</a></span>
@@ -70,7 +89,11 @@ const ContactForm = () => {
               <div className="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".6s">
                 <div className="tpcontact__item text-center">
                   <div className="tpcontact__icon mb-20">
-                    <img src="/assets/img/icon/contact-03.svg" alt="" />
+                    <img
+                      src="/assets/img/icon/contact-03.svg"
+                      alt="Ícono de horario"
+                      title="Horario de Atención"
+                    />
                   </div>
                   <div className="tpcontact__address">
                     <h4 className="tpcontact__title mb-15">Horario de Atención</h4>
@@ -80,41 +103,42 @@ const ContactForm = () => {
               </div>
 
               {/* Correos electrónicos */}
-              <div
-className="tpcontact mr-60 mb-60 wow fadeInUp"
-data-wow-delay=".8s"
->
-<div className="tpcontact__item text-center">
-<div className="tpcontact__icon mb-20">
-<img
-src="/assets/img/icon/email.svg"
-alt="Email"
-style={{ width: "40px", height: "40px" }}  
-/>
-</div>
-
-  <div className="tpcontact__address">
-    <h4 className="tpcontact__title mb-15">Correos Electrónicos</h4>
-    <span>General: <a href={`mailto:${email_general}`}>{email_general}</a></span>
-    <span>Estudios Clínicos: <a href={`mailto:${email_studies}`}>{email_studies}</a></span>
-    <span>Notificaciones Jurídicas: <a href={`mailto:${email_legal}`}>{email_legal}</a></span>
-  </div>
-</div>
-</div>
+              <div className="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".8s">
+                <div className="tpcontact__item text-center">
+                  <div className="tpcontact__icon mb-20">
+                    <img
+                      src="/assets/img/icon/email.svg"
+                      alt="Ícono de correo electrónico"
+                      title="Correo Electrónico"
+                      style={{ width: "40px", height: "40px" }}
+                    />
+                  </div>
+                  <div className="tpcontact__address">
+                    <h4 className="tpcontact__title mb-15">Correos Electrónicos</h4>
+                    <span>General: <a href={`mailto:${email_general}`}>{email_general}</a></span>
+                    <span>Estudios Clínicos: <a href={`mailto:${email_studies}`}>{email_studies}</a></span>
+                    <span>Notificaciones Jurídicas: <a href={`mailto:${email_legal}`}>{email_legal}</a></span>
+                  </div>
+                </div>
+              </div>
 
               {/* Sitio web */}
               <div className="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay="1s">
                 <div className="tpcontact__item text-center">
-                  <h4 className="tpcontact__title mb-15">Sitio Web</h4>
-                  <span><a href={`https://${website}`} target="_blank" rel="noopener noreferrer">{website}</a></span>
+                  <h4 className="tpcontact__title mb-15">Visita Nuestro Sitio Web</h4>
+                  <span>
+                    <a href={`https://${website}`} target="_blank" rel="noopener noreferrer">
+                      {website}
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
 
-            {/* Formulario y Mapa */}
+            {/* Formulario de contacto y Mapa */}
             <div className="col-lg-8 col-md-7 col-12">
               <div className="contactform wow fadeInRight" data-wow-delay=".4s">
-                <h4 className="contactform__title mb-35">Envíanos un mensaje:</h4>
+                <h4 className="contactform__title mb-35">¿Tienes alguna consulta? ¡Contáctanos ahora!</h4>
                 <ContactUs />
 
                 {/* Mapa */}
@@ -128,6 +152,7 @@ style={{ width: "40px", height: "40px" }}
                         allowFullScreen=""
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
+                        title="Mapa de la Clínica de la Costa"
                       ></iframe>
                     </div>
                   </div>
@@ -135,11 +160,23 @@ style={{ width: "40px", height: "40px" }}
 
                 {/* Redes sociales */}
                 <div className="social-links mt-4 text-center">
-                  <h4 className="mb-3">Síguenos en nuestras redes:</h4>
-                  <a href="https://www.facebook.com/invclicosta" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <h4 className="mb-3">Síguenos en Nuestras Redes Sociales:</h4>
+                  <a
+                    href="https://www.facebook.com/invclicosta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                    title="Facebook - Clínica de la Costa"
+                  >
                     <FaFacebookF size={30} />
                   </a>
-                  <a href="https://www.instagram.com/invclicosta/" target="_blank" rel="noopener noreferrer" className="social-icon mx-3">
+                  <a
+                    href="https://www.instagram.com/invclicosta/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon mx-3"
+                    title="Instagram - Clínica de la Costa"
+                  >
                     <FaInstagram size={30} />
                   </a>
                 </div>
@@ -153,5 +190,3 @@ style={{ width: "40px", height: "40px" }}
 };
 
 export default ContactForm;
-
-

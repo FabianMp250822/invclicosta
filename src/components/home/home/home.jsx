@@ -12,6 +12,7 @@ import ServiceArea from "./service-area";
 import Specialists from "../../../common/specialists";
 import Team from "../../../common/team";
 import ProcessArea from "@/components/services/service-three/process-area";
+import PricingArea from "@/common/pricing-area";
 
 const HomeOne = () => {
   return (
@@ -20,6 +21,7 @@ const HomeOne = () => {
       <ServiceArea />
       <About />
       <Counter />
+    
       <Brands />
       <Gallery />
       <ProcessArea />
