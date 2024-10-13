@@ -48,41 +48,48 @@ const Team = () => {
       try {
         const data = await getResearchers();
         console.log("Datos de investigadores obtenidos:", data);
-
-        // Filtrar investigadores con visual: true y luego ordenar los datos
-        const filteredAndSortedData = data
-          .filter((researcher) => researcher.visual) // Solo mostrar investigadores con visual: true
-          .sort((a, b) => {
-            const nombresPrioritarios = [
-              "Gustavo Aroca Martínez",
-              "Andres Angelo Cadena Bonfanti",
-              "Alberto Jose Cadena Bonfanti",
-            ];
-
-            if (nombresPrioritarios.includes(a.informacion_personal?.nombre_completo)) {
-              return -1;
-            }
-            if (nombresPrioritarios.includes(b.informacion_personal?.nombre_completo)) {
-              return 1;
-            }
-
-            const levelsOrder = {
-              "Investigador Senior": 1,
-              "Investigador Asociado": 2,
-              "Sub Investigador": 3,
-            };
-
-            const nivelA = levelsOrder[a.nivel] || 4;
-            const nivelB = levelsOrder[b.nivel] || 4;
-
-            return nivelA - nivelB;
-          });
-
-        setTeamData(filteredAndSortedData); // Actualiza el estado con los datos filtrados y ordenados
+    
+        // Filtrar investigadores con visual: true
+        const filteredData = data.filter((researcher) => researcher.visual);
+    
+        // Definir el orden de prioridad exacto
+        const nombresPrioritarios = [
+          "Gustavo Aroca Martínez",
+          "Andres Angelo Cadena Bonfanti",
+          "Alberto Jose Cadena Bonfanti",
+        ];
+    
+        // Ordenar los investigadores de acuerdo a los nombres prioritarios y niveles
+        const sortedData = filteredData.sort((a, b) => {
+          const nombreA = a.informacion_personal?.nombre_completo || "";
+          const nombreB = b.informacion_personal?.nombre_completo || "";
+    
+          const indexA = nombresPrioritarios.indexOf(nombreA);
+          const indexB = nombresPrioritarios.indexOf(nombreB);
+    
+          if (indexA !== -1 || indexB !== -1) {
+            return indexA - indexB; // Ordenar por prioridad si el nombre está en la lista
+          }
+    
+          // Si no están en la lista de nombres prioritarios, ordenar por nivel
+          const levelsOrder = {
+            "Investigador Senior": 1,
+            "Investigador Asociado": 2,
+            "Sub Investigador": 3,
+          };
+    
+          const nivelA = levelsOrder[a.nivel] || 4;
+          const nivelB = levelsOrder[b.nivel] || 4;
+    
+          return nivelA - nivelB;
+        });
+    
+        setTeamData(sortedData); // Actualiza el estado con los datos ordenados
       } catch (error) {
         console.error("Error al obtener los investigadores: ", error);
       }
     };
+    
 
     fetchTeamData();
   }, []);
