@@ -7,71 +7,68 @@ const ProjectDetailsArea = () => {
   const sections = [
     {
       id: 1,
-      title: 'Comité de Ética en Investigación',
+      title: 'Compromiso con la Ética en la Investigación Clínica',
       content: (
         <>
           <p>
-            El <strong>Comité de Ética en Investigación (CEI)</strong> es una organización independiente cuya misión es revisar los principios éticos y metodológicos de los estudios clínicos y garantizar el cumplimiento de las normativas:
+            El <strong>Comité de Ética en Investigación (CEI)</strong> trabaja bajo los más altos estándares éticos para asegurar la transparencia y el cumplimiento normativo en cada proyecto de investigación. Nuestra misión es proteger los derechos y el bienestar de los participantes en estudios clínicos mediante la evaluación rigurosa de protocolos según:
           </p>
           <ul>
-            <li>Resolución 8430 de 1993</li>
-            <li>Resolución 2378 de 2008</li>
-            <li>Guías de Obligatorio cumplimiento del INVIMA</li>
-            <li>Estándares propios del CEI</li>
+            <li>Resolución 8430 de 1993 y 2378 de 2008</li>
+            <li>Guías del INVIMA</li>
             <li>Declaración de Helsinki</li>
             <li>Normas Internacionales de Buena Práctica Clínica</li>
           </ul>
-          <a href="#" className="tp-btn-link">Conoce más</a>
+          <a href="#" className="tp-btn-link">Explora nuestros procesos éticos</a>
         </>
       ),
       img: 'assets/img/about/parte1.jpg',
-      alt: 'comite-etica',
+      alt: 'Ética en Investigación Clínica',
     },
     {
       id: 2,
-      title: 'Fases de Investigación',
+      title: 'Innovación en Fases de Investigación Clínica',
       content: (
         <>
           <ul>
-            <li>Fase I</li>
-            <li>Fase IIA</li>
-            <li>Fase IIB</li>
-            <li>Fase IIIA</li>
-            <li>Fase IIIB</li>
-            <li>Fase IV (con intervención)</li>
-            <li>Estudios observacionales</li>
-            <li>Dispositivos Médicos</li>
-            <li>Proyectos de investigación de pregrado y posgrado</li>
-            <li>Investigaciones propias de la IPS Clínica de la Costa S.A.S.</li>
+            <li>Fase I: Ensayos de seguridad</li>
+            <li>Fase II: Evaluación de eficacia preliminar</li>
+            <li>Fase III: Estudios a gran escala</li>
+            <li>Fase IV: Monitorización post-comercialización</li>
+            <li>Estudios observacionales y dispositivos médicos</li>
+            <li>Proyectos de investigación académica (pregrado y posgrado)</li>
           </ul>
-          <h5 className="card-subtitle mt-4">¿Qué tipo de investigaciones evaluamos?</h5>
+          <h5 className="card-subtitle mt-4">¿Qué investigaciones respaldamos?</h5>
           <p>
-            El Comité de Ética en Investigación evalúa estudios clínicos de todas las fases, estudios observacionales, y más. También colaboramos con la Universidad Simón Bolívar en investigaciones académicas.
+            Respaldamos investigaciones de todas las fases, colaborando estrechamente con instituciones académicas como la Universidad Simón Bolívar y apoyando proyectos dentro de la IPS Clínica de la Costa S.A.S.
           </p>
         </>
       ),
       img: 'assets/img/about/parte2.jpg',
-      alt: 'fases-clinicas',
+      alt: 'Fases de Investigación Clínica',
     },
     {
       id: 3,
-      title: 'Principios y Marco Ético',
+      title: 'Adopción de Principios Éticos Internacionales',
       content: (
         <>
           <p>
-            Nos acogemos a principios éticos internacionales, entre ellos:
+            Nos guiamos por códigos éticos reconocidos globalmente, lo que asegura que cada proyecto cumpla con los estándares internacionales:
           </p>
           <ul>
-            <li>Código de Ética de Núremberg (1946)</li>
+            <li>Código de Núremberg (1946)</li>
             <li>Declaración de Helsinki (2013)</li>
-            <li>Informe Belmont (1976-79)</li>
+            <li>Informe Belmont (1979)</li>
             <li>Pautas éticas del CIOMS (2017)</li>
             <li>Organización Mundial de la Salud (OMS)</li>
           </ul>
+          <p>
+            Estos principios garantizan que cada decisión se tome con integridad y en beneficio de los pacientes.
+          </p>
         </>
       ),
       img: 'assets/img/about/parte3.jpg',
-      alt: 'principios-eticos',
+      alt: 'Principios Éticos en Investigación',
     }
   ];
 
@@ -100,19 +97,29 @@ const ProjectDetailsArea = () => {
             </div>
           ))}
 
-          {/* Imagen del Video del Comité */}
-          
+          <div className="video-card mb-60">
+            <img
+              src="assets/img/about/video-thumbnail.jpg"
+              alt="Comité de Ética en Acción"
+              className="img-fluid"
+            />
+            <button
+              className="play-btn"
+              onClick={() => setIsVideoOpen(true)}
+              aria-label="Reproducir video del Comité de Ética"
+            >
+              ▶
+            </button>
+          </div>
         </div>
 
-        {/* Popup de Video */}
-        <VideoPopup
+        {/* <VideoPopup
           isVideoOpen={isVideoOpen}
           setIsVideoOpen={setIsVideoOpen}
-          videoId={"d8w5SICzzxc"}
-        />
+          videoId="d8w5SICzzxc"
+        /> */}
       </section>
 
-      {/* Estilos del Componente */}
       <style jsx>{`
         .card-horizontal {
           display: flex;
