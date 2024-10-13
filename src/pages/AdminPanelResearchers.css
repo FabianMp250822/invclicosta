@@ -1,0 +1,60 @@
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .table-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .researchers-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .researchers-table th,
+  .researchers-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+  }
+  
+  .researchers-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  .delete-button,
+  .suspend-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .suspend-button {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .suspend-button:hover {
+    background-color: #e67e22;
+  }
+  

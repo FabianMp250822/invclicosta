@@ -7,7 +7,6 @@ const menu_data = [
     link: "/",
     active: "active",
   },
-  
   {
     id: 3,
     mega_menu: false,
@@ -16,19 +15,6 @@ const menu_data = [
     link: "/research",
     active: "",
   },
-  // {
-  //   id: 4,
-  //   mega_menu: false,
-  //   has_dropdown: true,
-  //   title: "Service",
-  //   link: "/service-3",
-  //   active: "",
-  //   sub_menus: [
-  //     { link: "/project-details", title: "Comité de Ética" },
-  //     { link: "/service-3", title: "Estudios" },
-     
-  //   ],
-  // },
   {
     id: 10,
     mega_menu: false,
@@ -70,15 +56,6 @@ const menu_data = [
     link: "/faq",
     active: "",
   },
-  // {
-  //   id: 6,
-  //   mega_menu: false,
-  //   has_dropdown: false,
-  //   title: "Clínica de la Costa",
-  //   link: "http://clinicadelacosta.co/",
-  //   active: "",
-  //   target: "_blank",
-  // },
   {
     id: 2,
     mega_menu: false,
@@ -89,7 +66,6 @@ const menu_data = [
     sub_menus: [
       { link: "/project-details", title: "Comité de Ética" },
       { link: "/service-3", title: "Estudios" },
-     
     ],
   },
   {
@@ -100,11 +76,14 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
-  
-  // New "FAQ" menu
-  
-  // New "Equipo" menu
-  
+  {
+    id: 11,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Admin Investigadores",
+    link: "/administrador",
+    active: "",
+  },
 ];
 
 export default menu_data;
