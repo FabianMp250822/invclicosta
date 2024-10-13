@@ -76,14 +76,14 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
-  {
-    id: 11,
-    mega_menu: false,
-    has_dropdown: false,
-    title: "Admin Investigadores",
-    link: "/administrador",
-    active: "",
-  },
+  // {
+  //   id: 11,
+  //   mega_menu: false,
+  //   has_dropdown: false,
+  //   title: "Admin Investigadores",
+  //   link: "/administrador",
+  //   active: "",
+  // },
 ];
 
 export default menu_data;
