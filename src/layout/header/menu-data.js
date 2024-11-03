@@ -8,6 +8,18 @@ const menu_data = [
     active: "active",
   },
   {
+    id: 2,
+    mega_menu: false,
+    has_dropdown: true,
+    title: "Sobre el centro",
+    link: "/about",
+    active: "",
+    sub_menus: [
+      { link: "/project-details", title: "Comité de Ética" },
+      { link: "/service-3", title: "Estudios" },
+    ],
+  },
+  {
     id: 3,
     mega_menu: false,
     has_dropdown: false,
@@ -24,18 +36,6 @@ const menu_data = [
     link: "/equipo",
     active: "",
   },
-  // {
-  //   id: 8,
-  //   mega_menu: false,
-  //   has_dropdown: true,
-  //   title: "Blog",
-  //   link: "/blog",
-  //   active: "",
-  //   sub_menus: [
-  //     { link: "/blog", title: "Blog" },
-  //     { link: "/blog-details", title: "Blog Details" },
-  //   ],
-  // },
   {
     id: 5,
     mega_menu: false,
@@ -50,26 +50,6 @@ const menu_data = [
     ],
   },
   {
-    id: 9,
-    mega_menu: false,
-    has_dropdown: false,
-    title: "FAQ",
-    link: "/faq",
-    active: "",
-  },
-  {
-    id: 2,
-    mega_menu: false,
-    has_dropdown: true,
-    title: "Nosotros",
-    link: "/about",
-    active: "",
-    sub_menus: [
-      { link: "/project-details", title: "Comité de Ética" },
-      { link: "/service-3", title: "Estudios" },
-    ],
-  },
-  {
     id: 7,
     mega_menu: false,
     has_dropdown: false,
@@ -77,14 +57,7 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
-  // {
-  //   id: 11,
-  //   mega_menu: false,
-  //   has_dropdown: false,
-  //   title: "Admin Investigadores",
-  //   link: "/administrador",
-  //   active: "",
-  // },
+
 ];
 
 export default menu_data;

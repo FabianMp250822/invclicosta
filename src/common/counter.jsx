@@ -14,7 +14,7 @@ const counter_text = [
     id: 1,
     color: "blue-hard",
     counter: 10000,
-    text: "Pacientes atendidos",
+    text: "Casos de estuios",
   },
   {
     id: 2,
