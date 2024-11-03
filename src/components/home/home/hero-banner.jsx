@@ -1,72 +1,74 @@
 import Link from "next/link";
 import { useState } from "react";
-// internal
 import VideoPopup from "@/modals/video-popup";
 
-// content
-// content
+// Contenido específico para el centro de investigación
 const content = {
-  sub_title: "Bienvenido al Centro de Investigación Clínica de la Costa",
+  sub_title: "Centro de Investigación Clínica de la Costa",
   title: (
     <>
-      Liderando el Camino <br />
-      hacia la Innovación Médica
+      Innovación y Excelencia <br />
+      en Investigación Médica
     </>
   ),
   des: (
     <>
-      Somos su aliado en avances clínicos. Nuestra dedicación a la excelencia garantiza resultados precisos y confiables que impulsan el futuro de la medicina.
+      Con más de 35 años de experiencia en la Región Caribe, somos líderes en investigación clínica, colaborando con farmacéuticas de prestigio y comprometidos con el avance de la medicina en Colombia y el mundo.
     </>
   ),
   btn_text1: "Programar Consulta",
-  btn_text2: "Conócenos",
+  btn_text2: "Descubrir Nuestro Trabajo",
 };
 
 const { sub_title, title, des, btn_text1, btn_text2 } = content;
 
-// hero_box
+// hero_box con ítems que destacan los valores y fortalezas del centro
 const hero_box = [
   {
     id: 1,
-    icon: "flaticon-rating",
-    des: "100% Satisfacción del Paciente",
+    icon: "flaticon-science",
+    des: "Pioneros en Investigación Clínica",
     color: "",
   },
   {
     id: 2,
-    icon: "flaticon-target",
-    des: "Acceso y Ayuda es Nuestra Misión",
+    icon: "flaticon-certificate",
+    des: "Certificación por FDA e Invima",
     color: "pink-icon",
     border: "pink-border",
   },
   {
     id: 3,
-    icon: "flaticon-premium-badge",
-    des: "Servicios de Laboratorio de Máxima Calidad",
+    icon: "flaticon-teamwork",
+    des: "Colaboración con Líderes Globales",
     color: "green-icon",
     border: "green-border",
   },
 ];
-
 
 const HeroBanner = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <>
-      <section className="banner-area p-relative pt-90">
+      <section
+        className="banner-area p-relative pt-90"
+        style={{ backgroundColor: "#0c1841" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-xl-8">
               <div className="banner__content pt-145 mb-135">
-                <span className="banner__sub-title mb-20">{sub_title}</span>
-                <h2 className="banner__title mb-30">{title}</h2>
-                <p>{des}</p>
+                <span className="banner__sub-title mb-20 text-3xl font-bold" style={{ color: "#FFFFFF" }}>
+                  {sub_title}
+                </span>
+                <h2 className="banner__title mb-30" style={{ color: "#FFFFFF" }}>{title}</h2>
+                <p style={{ color: "#FFFFFF" }}>{des}</p>
                 <div className="banner__btn">
-                  <Link className="tp-btn" href="/contact">
+                  <Link className="tp-btn" href="/contact" style={{ color: "#FFFFFF" }}>
                     {btn_text1}
                   </Link>
-                  <Link className="tp-btn-second ml-25" href="/about">
+                  <Link className="tp-btn-second ml-25" href="/about" style={{ color: "#FFFFFF" }}>
                     {btn_text2}
                   </Link>
                 </div>
@@ -80,10 +82,10 @@ const HeroBanner = () => {
                         data-wow-delay=".2s"
                       >
                         <div className={`banner__item-icon ${item.color}`}>
-                          <i className={item.icon}></i>
+                          <i className={item.icon} style={{ color: "#FFFFFF" }}></i>
                         </div>
                         <div className="banner__item-content">
-                          <span>{item.des}</span>
+                          <span style={{ color: "#FFFFFF" }}>{item.des}</span>
                         </div>
                       </div>
                     </div>
@@ -95,8 +97,8 @@ const HeroBanner = () => {
         </div>
         <div className="bannerscroll d-none d-xl-block">
           <div className="banner-scroll-btn">
-            <a className="bannerscroll-icon" href="#tp-about-scroll">
-              <i className="fa-light fa-computer-mouse"></i>
+            <a className="bannerscroll-icon" href="#tp-about-scroll" style={{ color: "#FFFFFF" }}>
+              <i className="fa-light fa-computer-mouse" style={{ color: "#FFFFFF" }}></i>
               <span>Desplazar hacia abajo</span>
             </a>
           </div>
@@ -107,8 +109,9 @@ const HeroBanner = () => {
             <button
               onClick={() => setIsVideoOpen(true)}
               className="banner__video-icon popup-video"
+              style={{ color: "#FFFFFF" }}
             >
-              <i className="fa-solid fa-play"></i>
+              <i className="fa-solid fa-play" style={{ color: "#FFFFFF" }}></i>
             </button>
           </div>
         </div>

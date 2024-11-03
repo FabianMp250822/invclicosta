@@ -28,9 +28,9 @@ const HomeOne = () => {
       <Specialists />
       <Appointment />
       <Team />
-      <Feedback />
-      <Cta_Area />
-      <Blog />
+      {/* <Feedback /> */}
+      {/* <Cta_Area />
+      <Blog /> */}
     </>
   );
 };

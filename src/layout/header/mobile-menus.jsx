@@ -23,8 +23,13 @@ const MobileMenus = () => {
             <React.Fragment key={i}>
               {menu.has_dropdown && menu.sub_menus?.length > 0 ? (
                 <li className="has-dropdown">
-                  <Link href={menu.link} target={menu.target ? menu.target : "_self"}>
-                    {menu.title}
+                  <Link href={menu.link} legacyBehavior passHref>
+                    <a 
+                      target={menu.title === "CIDEACC" ? "_blank" : "_self"}
+                      rel={menu.title === "CIDEACC" ? "noopener noreferrer" : ""}
+                    >
+                      {menu.title}
+                    </a>
                   </Link>
                   <ul
                     className="submenu"
@@ -34,8 +39,13 @@ const MobileMenus = () => {
                   >
                     {menu.sub_menus.map((sub, i) => (
                       <li key={i}>
-                        <Link href={sub.link} target={sub.target ? sub.target : "_self"}>
-                          {sub.title}
+                        <Link href={sub.link} legacyBehavior passHref>
+                          <a 
+                            target={sub.target ? sub.target : "_self"}
+                            rel={sub.target === "_blank" ? "noopener noreferrer" : ""}
+                          >
+                            {sub.title}
+                          </a>
                         </Link>
                       </li>
                     ))}
@@ -52,8 +62,13 @@ const MobileMenus = () => {
                 </li>
               ) : (
                 <li>
-                  <Link href={menu.link} target={menu.target ? menu.target : "_self"}>
-                    {menu.title}
+                  <Link href={menu.link} legacyBehavior passHref>
+                    <a 
+                      target={menu.title === "CIDEACC" ? "_blank" : "_self"}
+                      rel={menu.title === "CIDEACC" ? "noopener noreferrer" : ""}
+                    >
+                      {menu.title}
+                    </a>
                   </Link>
                 </li>
               )}

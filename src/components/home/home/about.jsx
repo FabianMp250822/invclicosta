@@ -58,7 +58,11 @@ const {
 const About = () => {
   return (
     <>
-      <section id="tp-about-scroll" className="about-area pb-70">
+      <section
+        id="tp-about-scroll"
+        className="about-area pb-70"
+        style={{ backgroundColor: "#0c1841", color: "#FFFFFF" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-xl-6 col-lg-12">
@@ -73,10 +77,10 @@ const About = () => {
                     style={{ transform: "scale(1.3)" }}
                   />
                   <div className="about__exprience">
-                    <h3 className="counter">
+                    <h3 className="counter" style={{ color: "#FFFFFF" }}>
                       <Count add_style={true} number={experience_count} />
                     </h3>
-                    <i>{experience_count_text}</i>
+                    <i style={{ color: "#FFFFFF" }}>{experience_count_text}</i>
                   </div>
                 </div>
               </div>
@@ -87,26 +91,34 @@ const About = () => {
                 data-wow-delay=".4s"
               >
                 <div className="tp-section">
-                  <span className="tp-section__sub-title left-line mb-25">
+                  <span
+                    className="tp-section__sub-title left-line mb-25"
+                    style={{ color: "#FFFFFF" }}
+                  >
                     {title}
                   </span>
-                  <h3 className="tp-section__title tp-ab-sm-title mb-45">
+                  <h3
+                    className="tp-section__title tp-ab-sm-title mb-45"
+                    style={{ color: "#FFFFFF" }}
+                  >
                     {section_title}
                   </h3>
-                  <i>{section_sub_title}</i>
-                  <p className="mr-20 mb-45">{section_des}</p>
+                  <i style={{ color: "#FFFFFF" }}>{section_sub_title}</i>
+                  <p className="mr-20 mb-45" style={{ color: "#FFFFFF" }}>
+                    {section_des}
+                  </p>
                 </div>
                 <div className="tp-about__info-list mb-55">
                   <ul>
                     {about_info_list.map((list, i) => (
-                      <li key={i}>
-                        <i className="fa-solid fa-check"></i> {list.text}
+                      <li key={i} style={{ color: "#FFFFFF" }}>
+                        <i className="fa-solid fa-check" style={{ color: "#FFFFFF" }}></i> {list.text}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="tp-about__btn">
-                  <Link className="tp-btn" href="/about">
+                  <Link className="tp-btn" href="/about" style={{ color: "#FFFFFF" }}>
                     Nuestra Historia
                   </Link>
                 </div>

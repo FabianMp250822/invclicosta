@@ -12,8 +12,9 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: false,
     title: "CIDEACC",
-    link: "/research",
+    link: "https://cideacc.org/",
     active: "",
+    target: "_blank",
   },
   {
     id: 10,
