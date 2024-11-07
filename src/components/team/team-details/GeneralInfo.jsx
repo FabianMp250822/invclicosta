@@ -114,10 +114,10 @@ const GeneralInfo = ({ researcher }) => {
             <strong>Nationality:</strong>{" "}
             {informacion_personal?.nacionalidad || "No data"}
           </p>
-          <p>
+          {/* <p>
             <strong>Place of Birth:</strong>{" "}
             {informacion_personal?.lugar_nacimiento || "No data"}
-          </p>
+          </p> */}
         </div>
 
         {/* Academic Social Networks */}
@@ -224,10 +224,7 @@ const GeneralInfo = ({ researcher }) => {
 
       {/* Flexbox para organizar Próximos Eventos y Languages */}
       <div style={{ display: "flex", gap: "20px", marginBottom: "1.5rem" }}>
-        <div style={{ flex: 1 }}>
-          <h6>Research Products and Services</h6>
-          <ProximosEventos eventos={proximos_eventos} />
-        </div>
+        
 
         <div style={{ flex: 1 }}>
           <Languages languages={idiomas} />

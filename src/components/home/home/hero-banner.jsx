@@ -4,16 +4,16 @@ import VideoPopup from "@/modals/video-popup";
 
 // Contenido específico para el centro de investigación
 const content = {
-  sub_title: "Centro de Investigación Clínica de la Costa",
+  sub_title: "Pasión por  la investigación  e imnovacón Clínica",
   title: (
     <>
-      Innovación y Excelencia <br />
-      en Investigación Médica
+      líder en investigación clínica en Colombia <br />
+     
     </>
   ),
   des: (
     <>
-      Con más de 35 años de experiencia en la Región Caribe, somos líderes en investigación clínica, colaborando con farmacéuticas de prestigio y comprometidos con el avance de la medicina en Colombia y el mundo.
+    Con más de 20 años de experiencia y certificaciones de buenas prácticas clínicas desde 2011 e ISO 9001:2015. Con un equipo dedicado, altos estándares de calidad, y tecnología avanzada, cuenta con cuatro sedes exclusivas para investigación, más de 300 camas y laboratorios de alta complejidad. Ha realizado más de 100 ensayos clínicos, destacándose en vacunas, cardiología y nefrología. Comprometidos con el avance científico para el beneficio de la sociedad.
     </>
   ),
   btn_text1: "Programar Consulta",
