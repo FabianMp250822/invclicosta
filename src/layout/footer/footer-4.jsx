@@ -21,7 +21,7 @@ const FooterFour = ({ style_2 = false }) => {
                     <div className="tp-footer-widget__content mb-95">
                       <i>NO DUDES EN CONTACTARNOS</i>
                       <h4 className="tp-footer-widget__contact mb-20">
-                        <a href="tel:+576053369999">+57 605 336 9999</a>
+                        <a href="tel:+576053369940">+57 605 336 9999</a>
                       </h4>
                       <a href="mailto:info@clinicadelacosta.co">
                         info@clinicadelacosta.co

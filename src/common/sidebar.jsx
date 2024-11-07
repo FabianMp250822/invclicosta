@@ -60,8 +60,8 @@ const Sidebar = ({ isActive, setIsActive }) => {
           <a href="mailto:infoestudiosclinicos@clinicadelacosta.co">
             <i className="fa-solid fa-star"></i> infoestudiosclinicos@clinicadelacosta.co
           </a>
-          <a href="tel:+576053369999">
-            <i className="fa-solid fa-star"></i> +57 605 3369999 
+          <a href="tel:+576053369940">
+            <i className="fa-solid fa-star"></i> +57 605 3369940 
           </a>
           <a href="mailto:juridica@clinicadelacosta.co">
             <i className="fa-solid fa-star"></i> juridica@clinicadelacosta.co

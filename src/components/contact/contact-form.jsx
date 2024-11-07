@@ -10,7 +10,7 @@ const contact_info = {
       Cra. 50 #80-209, <br /> Barranquilla, Colombia
     </>
   ),
-  phone_1: "(605) 3369999 Ext. 0",
+  phone_1: "(605) 3369940 Ext. 0",
   phone_2: "(605) 3563156",
   phone_3: "(605) 3369912",
   email_general: "info@clinicadelacosta.co",
