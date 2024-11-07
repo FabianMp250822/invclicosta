@@ -33,7 +33,7 @@ const hero_box = [
   {
     id: 2,
     icon: "flaticon-certificate",
-    des: "Certificación por FDA e Invima",
+    des: "Más de 100 ensayos clínicos",
     color: "pink-icon",
     border: "pink-border",
   },

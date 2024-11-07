@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoPopup = ({ isVideoOpen, setIsVideoOpen, videoPath = "/assets/img/video/video1.mp4" }) => {
+const VideoPopup = ({ isVideoOpen, setIsVideoOpen, videoPath = "/assets/img/video/videoClinica.mp4" }) => {
   return (
     <>
       {isVideoOpen && (
