@@ -66,7 +66,7 @@ const Appointment = () => {
                           <span>
                             Servicio de Emergencia 24/7 :
                             <a href="tel:+576053369940">
-                              +57 605 336 9999 Ext. 0
+                              +57 605 336 9940 Ext. 0
                               <i className="fa-regular fa-arrow-right"></i>
                             </a>
                           </span>

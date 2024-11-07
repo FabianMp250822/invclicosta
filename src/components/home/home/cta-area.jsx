@@ -37,7 +37,7 @@ const Cta_Area = () => {
                       <circle cx="2" cy="7" r="2" fill="white" />
                       <circle cx="2" cy="12" r="2" fill="white" />
                     </svg>
-                    <span>LLAMA :</span> +57 605 336 9999
+                    <span>LLAMA :</span> +57 605 336 9940
                   </a>
                 </div>
               </div>

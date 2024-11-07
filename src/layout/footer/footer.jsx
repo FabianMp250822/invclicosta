@@ -21,7 +21,7 @@ const footer_content = {
       cls: "footer-col-3",
       links: [
         { name: "Carrera 50 #80-209, Barranquilla, Colombia" },
-        { name: "+57 605 336 9999 Ext. 0" },
+        { name: "+57 605 336 9940 Ext. 0" },
         { name: "+57 605 356 3156" },
         { name: "info@clinicadelacosta.co" },
         { name: "Horario de oficina: 8AM - 6PM" },
