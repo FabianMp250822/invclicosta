@@ -2,11 +2,11 @@ import FooterFour from "@/layout/footer/footer-4";
 import HeaderTwo from "@/layout/header/header-two";
 import Link from "next/link";
 import React from "react";
-
+import Header from '@/layout/header/header';
 const Error = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <div className="container">
         <div className="error_page">
           <Link href="/">

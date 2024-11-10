@@ -6,11 +6,11 @@ import React from "react";
 import Banner from "./banner";
 import ProcessArea from "./process-area";
 import ServiceArea from "./service-area";
-
+import Header from '@/layout/header/header';
 const ServiceThree = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner />
       <ServiceArea />
       <ProcessArea />

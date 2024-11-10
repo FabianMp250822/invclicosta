@@ -4,11 +4,11 @@ import HeaderTwo from "@/layout/header/header-two";
 import React from "react";
 import BannerTeamOne from "./banner-team-one";
 import TeamArea from "./team-area";
-
+import Header from '@/layout/header/header';
 const TeamOne = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <BannerTeamOne />
       <TeamArea />
       <DirectContactUs />

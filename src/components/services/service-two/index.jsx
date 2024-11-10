@@ -6,11 +6,11 @@ import React from "react";
 import Banner from "./banner";
 import ServiceArea from "./service-area";
 import Video from "./video";
-
+import Header from '@/layout/header/header';
 const ServiceTwo = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner />
       <ServiceArea />
       <Video />

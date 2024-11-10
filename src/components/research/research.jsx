@@ -3,11 +3,11 @@ import HeaderTwo from "@/layout/header/header-two";
 import React from "react";
 import Banner from "./banner";
 import ResearchArea from "./research-area";
-
+import Header from '@/layout/header/header';
 const Research = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header/>
       <Banner />
       <ResearchArea />
       <FooterFour />

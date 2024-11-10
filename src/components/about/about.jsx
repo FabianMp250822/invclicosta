@@ -7,11 +7,12 @@ import Specialists from "@/common/specialists";
 import NavTab from "@/common/nav-tab";
 import Team from "@/common/team";
 import FooterFour from "@/layout/footer/footer-4";
+import Header from "@/layout/header/header";
 
 const About = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner />
       <AboutArea />
       <Counter />

@@ -4,11 +4,11 @@ import React from "react";
 import DirectContactUs from "../forms/direct-contact-us";
 import FaqArea from "./faq-area";
 import FaqBanner from "./faq-banner";
-
+import Header from '@/layout/header/header';
 const FAQ = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <FaqBanner />
       <FaqArea />
       <DirectContactUs />

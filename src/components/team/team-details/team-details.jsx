@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { getResearchers } from "@/components/services/firebaseService"; // Servicio para obtener investigadores
 import TeamDetailsArea from "./team-details-area";
 import Team from "@/components/home/home-2/team";
+import Header from "@/layout/header/header";
 
 const TeamDetails = () => {
   const router = useRouter();
@@ -32,7 +33,7 @@ const TeamDetails = () => {
 
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner researcherName={researcher.informacion_personal?.nombre_completo} />
       <TeamDetailsArea researcher={researcher} /> {/* Pasamos los datos al componente */}
       <Team />

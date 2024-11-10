@@ -3,11 +3,11 @@ import HeaderTwo from "@/layout/header/header-two";
 import React from "react";
 import Banner from "./banner";
 import ContactForm from "./contact-form";
-
+import Header from '@/layout/header/header';
 const ContactUs = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner />
       <ContactForm />
       <FooterFour />

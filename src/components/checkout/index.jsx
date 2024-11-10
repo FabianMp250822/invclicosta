@@ -3,11 +3,11 @@ import HeaderTwo from '@/layout/header/header-two';
 import React from 'react';
 import CheckoutArea from './checkout-area';
 import CheckoutBanner from './checkout-banner';
-
+import Header from '@/layout/header/header';
 const Checkout = () => {
     return (
         <>
-            <HeaderTwo />
+            <Header />
             <CheckoutBanner />
             <CheckoutArea />
             <FooterFour />

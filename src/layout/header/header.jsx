@@ -34,7 +34,11 @@ const Header = () => {
                 </div>
               </div>
               <div className="col-xxl-3 col-lg-3 d-flex align-items-center justify-content-end">
-                {/* Botón de contacto o elementos adicionales */}
+              <div className="ms-auto">
+                <Link className="header-bottom-btn" href="/about">
+                  Solicitar Cita
+                </Link>
+              </div>
               </div>
             </div>
           </div>

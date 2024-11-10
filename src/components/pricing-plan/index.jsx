@@ -4,11 +4,11 @@ import HeaderTwo from "@/layout/header/header-two";
 import React from "react";
 import DirectContactUs from "../forms/direct-contact-us";
 import BannerPricing from "./banner-pricing";
-
+import Header from '@/layout/header/header';
 const PricingPlan = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <BannerPricing />
       <PricingArea dark={false} />
       <PricingArea dark={true} />

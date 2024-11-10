@@ -3,11 +3,11 @@ import HeaderTwo from '@/layout/header/header-two';
 import React from 'react';
 import ProjectDetailsArea from './project-details-area';
 import ProjectDetailsBanner from './project-details-banner';
-
+import Header from '@/layout/header/header';
 const ProjectDetails = () => {
     return (
         <>
-            <HeaderTwo />
+            <Header />
             <ProjectDetailsBanner />
             <ProjectDetailsArea />
             <FooterFour />

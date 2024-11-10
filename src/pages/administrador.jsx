@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getResearchers } from "@/components/services/firebaseService";
-import { db } from "@/firebaseConfig";
+import { db, auth } from "@/firebaseConfig";
 import { doc, deleteDoc, updateDoc } from "firebase/firestore";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import HeaderTwo from "@/layout/header/header-two";
 import FooterFour from "@/layout/footer/footer-4";
 import ResearcherForm from "./AddResearcher";
-import { Modal } from "@mui/material";
+import { Modal, TextField, Button } from "@mui/material";
+import { useRouter } from "next/router";
 
 const AdminPanelResearchers = () => {
   const [researchers, setResearchers] = useState([]);
@@ -13,21 +15,53 @@ const AdminPanelResearchers = () => {
   const [filterLevel, setFilterLevel] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [selectedResearcherId, setSelectedResearcherId] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
 
   // Cargar los investigadores desde Firebase
   useEffect(() => {
     const fetchResearchers = async () => {
       try {
         const data = await getResearchers();
-        data.sort((a, b) => a.informacion_personal?.nombre_completo.localeCompare(b.informacion_personal?.nombre_completo));
+        data.sort((a, b) =>
+          a.informacion_personal?.nombre_completo.localeCompare(b.informacion_personal?.nombre_completo)
+        );
         setResearchers(data);
       } catch (error) {
         console.error("Error al obtener investigadores: ", error);
       }
     };
 
-    fetchResearchers();
+    // Verificar si el usuario está autenticado
+    const checkAuth = () => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setIsAuthenticated(true);
+          fetchResearchers();
+        } else {
+          setIsAuthenticated(false);
+          setShowLogin(true); // Mostrar modal de inicio de sesión si no está autenticado
+        }
+      });
+    };
+
+    checkAuth();
   }, []);
+
+  // Función para iniciar sesión
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      setIsAuthenticated(true);
+      setShowLogin(false); // Ocultar el modal de inicio de sesión al autenticarse correctamente
+    } catch (error) {
+      console.error("Error de autenticación: ", error);
+      router.push("/"); // Redirigir a la página de inicio en caso de error
+    }
+  };
 
   // Función para eliminar un investigador
   const deleteResearcher = async (id) => {
@@ -73,6 +107,45 @@ const AdminPanelResearchers = () => {
   const handleCloseForm = () => {
     setShowForm(false);
   };
+
+  if (!isAuthenticated) {
+    // Mostrar el modal de inicio de sesión si no está autenticado
+    return (
+      <Modal open={showLogin} onClose={() => router.push("/")}>
+        <div
+          style={{
+            backgroundColor: "white",
+            padding: "20px",
+            borderRadius: "8px",
+            maxWidth: "400px",
+            margin: "50px auto",
+          }}
+        >
+          <h2>Iniciar Sesión</h2>
+          <TextField
+            label="Correo Electrónico"
+            variant="outlined"
+            fullWidth
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={{ marginBottom: "20px" }}
+          />
+          <TextField
+            label="Contraseña"
+            type="password"
+            variant="outlined"
+            fullWidth
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={{ marginBottom: "20px" }}
+          />
+          <Button variant="contained" color="primary" fullWidth onClick={handleLogin}>
+            Iniciar Sesión
+          </Button>
+        </div>
+      </Modal>
+    );
+  }
 
   return (
     <>
