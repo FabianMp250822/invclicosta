@@ -37,7 +37,7 @@ const VideoPopup = ({ isVideoOpen, setIsVideoOpen, videoPath = "/assets/img/vide
               top: "20px",
               right: "20px",
               fontSize: "24px",
-              color: "#FFF",
+              color: "#C62E2E", // Color granate para el botón de cierre
               background: "transparent",
               border: "none",
               cursor: "pointer",

@@ -2,18 +2,33 @@ import Link from "next/link";
 import { useState } from "react";
 import VideoPopup from "@/modals/video-popup";
 
+// Paleta de colores principal
+const colors = {
+  primary: "#0D92F4", // Azul fuerte
+  secondary: "#77CDFF", // Azul claro
+  accent: "#F95454", // Rojo claro
+  darkAccent: "#C62E2E", // Rojo oscuro (granate)
+  white: "#FFFFFF",
+  background: "#0c1841", // Fondo oscuro
+};
+
 // Contenido específico para el centro de investigación
 const content = {
-  sub_title: "Pasión por  la investigación  e imnovacón Clínica",
+  sub_title: "Pasión por la investigación e innovación Clínica",
   title: (
     <>
       líder en investigación clínica en Colombia <br />
-     
     </>
   ),
   des: (
     <>
-    Con más de 20 años de experiencia y certificaciones de buenas prácticas clínicas desde 2011 e ISO 9001:2015. Con un equipo dedicado, altos estándares de calidad, y tecnología avanzada, cuenta con cuatro sedes exclusivas para investigación, más de 300 camas y laboratorios de alta complejidad. Ha realizado más de 100 ensayos clínicos, destacándose en vacunas, cardiología y nefrología. Comprometidos con el avance científico para el beneficio de la sociedad.
+      Con más de 20 años de experiencia y certificaciones de buenas prácticas
+      clínicas desde 2011 e ISO 9001:2015. Con un equipo dedicado, altos
+      estándares de calidad, y tecnología avanzada, cuenta con cuatro sedes
+      exclusivas para investigación, más de 300 camas y laboratorios de alta
+      complejidad. Ha realizado más de 100 ensayos clínicos, destacándose en
+      vacunas, cardiología y nefrología. Comprometidos con el avance científico
+      para el beneficio de la sociedad.
     </>
   ),
   btn_text1: "Programar Consulta",
@@ -28,21 +43,19 @@ const hero_box = [
     id: 1,
     icon: "flaticon-science",
     des: "Pioneros en Investigación Clínica",
-    color: "",
+    color: colors.primary,
   },
   {
     id: 2,
     icon: "flaticon-certificate",
     des: "Más de 100 ensayos clínicos",
-    color: "pink-icon",
-    border: "pink-border",
+    color: colors.accent,
   },
   {
     id: 3,
     icon: "flaticon-teamwork",
     des: "Colaboración con Líderes Globales",
-    color: "green-icon",
-    border: "green-border",
+    color: colors.secondary,
   },
 ];
 
@@ -53,22 +66,44 @@ const HeroBanner = () => {
     <>
       <section
         className="banner-area p-relative pt-90"
-        style={{ backgroundColor: "#0c1841" }}
+        style={{ backgroundColor: colors.background }}
       >
         <div className="container">
           <div className="row">
             <div className="col-xl-8">
               <div className="banner__content pt-145 mb-135">
-                <span className="banner__sub-title mb-20 text-3xl font-bold" style={{ color: "#FFFFFF" }}>
+                <span
+                  className="banner__sub-title mb-20 text-3xl font-bold"
+                  style={{ color: colors.white }}
+                >
                   {sub_title}
                 </span>
-                <h2 className="banner__title mb-30" style={{ color: "#FFFFFF" }}>{title}</h2>
-                <p style={{ color: "#FFFFFF" }}>{des}</p>
+                <h2
+                  className="banner__title mb-30"
+                  style={{ color: colors.white }}
+                >
+                  {title}
+                </h2>
+                <p style={{ color: colors.white }}>{des}</p>
                 <div className="banner__btn">
-                  <Link className="tp-btn" href="/contact" style={{ color: "#FFFFFF" }}>
+                  <Link
+                    className="tp-btn"
+                    href="/contact"
+                    style={{
+                      color: colors.white,
+                      backgroundColor: colors.primary,
+                    }}
+                  >
                     {btn_text1}
                   </Link>
-                  <Link className="tp-btn-second ml-25" href="/about" style={{ color: "#FFFFFF" }}>
+                  <Link
+                    className="tp-btn-second ml-25"
+                    href="/about"
+                    style={{
+                      color: colors.white,
+                      backgroundColor: colors.accent,
+                    }}
+                  >
                     {btn_text2}
                   </Link>
                 </div>
@@ -78,14 +113,21 @@ const HeroBanner = () => {
                   {hero_box.map((item) => (
                     <div key={item.id} className="col-xl-4 col-lg-4 col-md-6">
                       <div
-                        className={`banner__item d-flex ${item.border} align-items-center mb-30 wow fadeInUp`}
+                        className="banner__item d-flex align-items-center mb-30 wow fadeInUp"
                         data-wow-delay=".2s"
+                        style={{
+                          borderColor: item.color,
+                          color: colors.white,
+                        }}
                       >
-                        <div className={`banner__item-icon ${item.color}`}>
-                          <i className={item.icon} style={{ color: "#FFFFFF" }}></i>
+                        <div
+                          className="banner__item-icon"
+                          style={{ color: item.color }}
+                        >
+                          <i className={item.icon}></i>
                         </div>
                         <div className="banner__item-content">
-                          <span style={{ color: "#FFFFFF" }}>{item.des}</span>
+                          <span style={{ color: colors.white }}>{item.des}</span>
                         </div>
                       </div>
                     </div>
@@ -97,21 +139,29 @@ const HeroBanner = () => {
         </div>
         <div className="bannerscroll d-none d-xl-block">
           <div className="banner-scroll-btn">
-            <a className="bannerscroll-icon" href="#tp-about-scroll" style={{ color: "#FFFFFF" }}>
-              <i className="fa-light fa-computer-mouse" style={{ color: "#FFFFFF" }}></i>
+            <a
+              className="bannerscroll-icon"
+              href="#tp-about-scroll"
+              style={{ color: colors.white }}
+            >
+              <i className="fa-light fa-computer-mouse" style={{ color: colors.white }}></i>
               <span>Desplazar hacia abajo</span>
             </a>
           </div>
         </div>
         <div className="banner__shape d-none d-lg-block">
-          <img src="/assets/img/about/banner_pioneros.jpg" alt="banner-img" />
+          <img
+            src="/assets/img/about/banner_pioneros.jpg"
+            alt="banner-img"
+            style={{ width: "100%" }}
+          />
           <div className="banner__video-btn">
             <button
               onClick={() => setIsVideoOpen(true)}
               className="banner__video-icon popup-video"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: colors.white }}
             >
-              <i className="fa-solid fa-play" style={{ color: "#FFFFFF" }}></i>
+              <i className="fa-solid fa-play" style={{ color: colors.white }}></i>
             </button>
           </div>
         </div>

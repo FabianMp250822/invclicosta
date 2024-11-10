@@ -61,7 +61,7 @@ const About = () => {
       <section
         id="tp-about-scroll"
         className="about-area pb-70"
-        style={{ backgroundColor: "#0c1841", color: "#FFFFFF" }}
+        style={{ backgroundColor: "#0c1841", color: "#C62E2E" }}
       >
         <div className="container">
           <div className="row">

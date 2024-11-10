@@ -1,4 +1,4 @@
-import Link from "next/link.js";
+import Link from "next/link";
 import React from "react";
 import menu_data from "./menu-data.js";
 
@@ -13,6 +13,7 @@ const NavMenu = ({ num = false }) => {
                 className={`${menu?.active}`} 
                 target={menu.title === "CIDEACC" ? "_blank" : "_self"}
                 rel={menu.title === "CIDEACC" ? "noopener noreferrer" : ""}
+                style={{ color: "#FFFFFF" }} // Color blanco para los enlaces principales
               >
                 {num && index <= 9
                   ? `0${index + 1 + "."}`
@@ -28,6 +29,7 @@ const NavMenu = ({ num = false }) => {
                       <a 
                         target={sub_m.target ? sub_m.target : "_self"}
                         rel={sub_m.target === "_blank" ? "noopener noreferrer" : ""}
+                        style={{ color: "#FFFFFF" }} // Color blanco para los enlaces del submenú
                       >
                         {sub_m.title}
                       </a>
