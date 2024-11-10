@@ -136,7 +136,7 @@ const Teams = () => {
                       </Link>
                     </h3>
                     <h4 className="tp-team__position mb-2">
-                      {item.nivel || "Nivel Desconocido"}
+                    {item.nivel || item.informacion_personal?.nivel || "Investigador  Asociado"}
                     </h4>
                     <p>{`${item.biografia?.texto?.substring(0, 100)}...`}</p>
                     <Link href={`/team-details/${item.id}`}>

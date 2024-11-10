@@ -176,7 +176,7 @@ const Team = () => {
                           </Link>
                         </h3>
                         <h4 className="tp-team__position mb-30">
-                          {item.nivel || "Nivel Desconocido"}
+                          {item.nivel || item.informacion_personal?.nivel || "Investigador  Asociado"}
                         </h4>
                         <p>
                           {expandedBiography[item.id]
