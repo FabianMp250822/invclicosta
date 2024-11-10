@@ -2,14 +2,15 @@ import Sidebar from "@/common/sidebar";
 import useSticky from "hooks/use-sticky";
 import Link from "next/link";
 import React, { useState } from "react";
-import NavMenu from "./nav-menu";
+import NavMenu2 from "./nav-menu2";
 
 const HeaderTwo = () => {
-  const sticky = false; 
+  const { sticky } = useSticky();
   const [isActive, setIsActive] = useState(false);
 
   return (
     <>
+      {/* Mobile Header */}
       <div
         id="header-mob-sticky"
         className={`tp-mobile-header-area pt-15 pb-15 d-xl-none ${
@@ -27,33 +28,7 @@ const HeaderTwo = () => {
             </div>
             <div className="col-md-8 col-2">
               <div className="tp-mobile-bar d-flex align-items-center justify-content-end">
-                <div className="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
-                  <a className="tp-bt-btn" href="tel:123456">
-                    <svg
-                      width="14"
-                      height="19"
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
-                    </svg>
-                    <span>Contacto :</span>+57 (605) 336 9940
-                  </a>
-                </div>
-                <button
-                  onClick={() => setIsActive(true)}
-                  className="tp-menu-toggle"
-                >
+                <button onClick={() => setIsActive(true)} className="tp-menu-toggle">
                   <i className="far fa-bars"></i>
                 </button>
               </div>
@@ -62,89 +37,38 @@ const HeaderTwo = () => {
         </div>
       </div>
 
+      {/* Desktop Header */}
       <header className="d-none d-xl-block">
-        <div
-          className={`header-custom ${sticky ? "header-sticky" : ""}`}
-          id="header-sticky"
-        >
-          <div className="header-logo-box">
-            <Link href="/">
-              <img src="/assets/img/logo/logo.png" alt="logo" />
-            </Link>
-          </div>
-          <div className="header-menu-box">
-            <div className="header-menu-top">
-              <div className="row align-items-center">
-                <div className="col-lg-4">
-                  <div className="header-top-mob">
-                    <svg
-                      width="14"
-                      height="19"
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
-                    </svg>
-                    <span>Contacto :</span>
-                    <a href="tel:+576053369940"> +57 (605) 336 9940 </a>
-                  </div>
-                </div>
-                <div className="col-lg-8">
-                  <div className="header-time">
-                    <span>
-                      <i className="fa-light fa-clock-ten"></i> Lunes  - Viernes
-                      07:00 am - 05:00 Pm
-                    </span>
-                
-                  </div>
-                </div>
+        <div className={`header-custom ${sticky ? "header-sticky" : ""}`} id="header-sticky">
+          <div className="container" style={{ maxWidth: "1360px" }}>
+            <div className="d-flex align-items-center">
+              {/* Logo Section */}
+              <div className="header-logo-box me-3" style={{ paddingRight: "30px" }}>
+                <Link href="/">
+                  <img src="/assets/img/logo/logo.png" alt="logo" />
+                </Link>
               </div>
-            </div>
-            <div className="header-menu-bottom">
-              <div className="row">
-                <div className="col-lg-7">
-                  <div className="main-menu main-menu-second">
-                    <nav id="mobile-menu">
-                      <NavMenu />
-                    </nav>
-                  </div>
-                </div>
-                <div className="col-lg-5">
-                  <div className="header-cart-order d-flex align-items-center justify-content-end">
-                    <div className="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                      <button
-                        onClick={() => setIsActive(true)}
-                        className="tp-menu-toggle mr-40"
-                      >
-                        <i className="fa-solid fa-list"></i>
-                      </button>
+              
+              {/* Menu Section */}
+              <div className="flex-grow-1">
+                <nav className="main-menu main-menu-second d-flex justify-content-center">
+                  <NavMenu2 isSticky={sticky} />
+                </nav>
+              </div>
 
-                      
-                    </div>
-                    <Link className="header-bottom-btn" href="/about">
-                      Solicitar Cita 
-                    </Link>
-                  </div>
-                </div>
+              {/* Contact Button */}
+              <div className="ms-auto">
+                <Link className="header-bottom-btn" href="/about">
+                  Solicitar Cita
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      {/* side bar start */}
+      {/* Sidebar */}
       <Sidebar isActive={isActive} setIsActive={setIsActive} />
-      {/* side bar end */}
     </>
   );
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import menu_data from "./menu-data.js";
 
-const NavMenu = ({ num = false }) => {
+const NavMenu = ({ num = false, isSticky }) => {
   return (
     <>
       <ul>
@@ -13,7 +13,7 @@ const NavMenu = ({ num = false }) => {
                 className={`${menu?.active}`} 
                 target={menu.title === "CIDEACC" ? "_blank" : "_self"}
                 rel={menu.title === "CIDEACC" ? "noopener noreferrer" : ""}
-                style={{ color: "#FFFFFF" }} // Color blanco para los enlaces principales
+                style={{ color: isSticky ? "#000000" : "#FFFFFF" }} // Color negro en sticky, blanco normal
               >
                 {num && index <= 9
                   ? `0${index + 1 + "."}`
@@ -29,7 +29,7 @@ const NavMenu = ({ num = false }) => {
                       <a 
                         target={sub_m.target ? sub_m.target : "_self"}
                         rel={sub_m.target === "_blank" ? "noopener noreferrer" : ""}
-                        style={{ color: "#FFFFFF" }} // Color blanco para los enlaces del submenú
+                        style={{ color: isSticky ? "#000000" : "#FFFFFF" }} // Submenú color negro en sticky
                       >
                         {sub_m.title}
                       </a>
