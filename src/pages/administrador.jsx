@@ -150,7 +150,10 @@ const AdminPanelResearchers = () => {
                     />
                   </td>
                   <td style={{ border: "1px solid #ddd", padding: "12px" }}>{researcher.informacion_personal?.nombre_completo}</td>
-                  <td style={{ border: "1px solid #ddd", padding: "12px" }}>{researcher.nivel}</td>
+                  <td style={{ border: "1px solid #ddd", padding: "12px" }}>
+  {researcher.nivel || researcher.informacion_personal?.nivel}
+</td>
+
                   <td style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center" }}>
                     <button
                       style={{

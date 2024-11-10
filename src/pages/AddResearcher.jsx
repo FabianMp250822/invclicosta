@@ -25,6 +25,7 @@ const ResearcherForm = ({ researcherId, onClose }) => {
       nacionalidad: "",
       biografia: "",
     },
+    
     areas_actuacion: [],
     alianzas_cooperacion: { internacionales: [], nacionales: [] },
     experiencia_profesional: [],
@@ -110,15 +111,23 @@ const ResearcherForm = ({ researcherId, onClose }) => {
 
   const handleDateChange = (name, date, index, type) => {
     setResearcherData((prevData) => {
-      const updatedList = [...prevData[type]];
+      // Asegúrate de que prevData[type] existe y es un array
+      const updatedList = prevData[type] ? [...prevData[type]] : [];
+      
+      // Asegúrate de que el índice existe en updatedList
+      if (!updatedList[index]) {
+        updatedList[index] = {};
+      }
+      
       updatedList[index][name] = date;
+      
       return {
         ...prevData,
         [type]: updatedList
       };
     });
   };
-
+  
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
@@ -134,23 +143,27 @@ const ResearcherForm = ({ researcherId, onClose }) => {
   };
   const handleSave = async () => {
     try {
+      // Completar los campos vacíos con "No aplica" si están vacíos o undefined
+      const sanitizedData = JSON.parse(JSON.stringify(researcherData, (key, value) => {
+        return value === "" || value === null || value === undefined ? "No aplica" : value;
+      }));
+  
       if (researcherId) {
         // Actualizar un investigador existente
-        await updateDoc(doc(db, "researchers", researcherId), researcherData);
+        await updateDoc(doc(db, "researchers", researcherId), sanitizedData);
       } else {
-        // Crear un nuevo investigador
-        const newDocRef = doc(
-          db,
-          "researchers",
-          researcherData.nombre_completo
-        );
-        await setDoc(newDocRef, researcherData);
+        // Verificar si nombre_completo está vacío antes de crear un nuevo investigador
+        const nombreCompleto = sanitizedData.informacion_personal.nombre_completo || "Investigador Sin Nombre";
+        const newDocRef = doc(db, "researchers", nombreCompleto);
+        
+        await setDoc(newDocRef, sanitizedData);
       }
       onClose();
     } catch (error) {
       console.error("Error al guardar el investigador: ", error);
     }
   };
+  
 
   const handleNextTab = () => {
     if (activeTab < 8) {
