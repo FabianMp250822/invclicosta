@@ -4,7 +4,7 @@ import VideoPopup from '@/modals/video-popup';
 const ProjectDetailsArea = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const sections = [
+  const blogSections = [
     {
       id: 1,
       title: 'Compromiso con la Ética en la Investigación Clínica',
@@ -27,122 +27,128 @@ const ProjectDetailsArea = () => {
     },
     {
       id: 2,
-      title: 'Innovación en Fases de Investigación Clínica',
+      title: 'Nuestro Objetivo',
       content: (
         <>
-          <ul>
-            <li>Fase I: Ensayos de seguridad</li>
-            <li>Fase II: Evaluación de eficacia preliminar</li>
-            <li>Fase III: Estudios a gran escala</li>
-            <li>Fase IV: Monitorización post-comercialización</li>
-            <li>Estudios observacionales y dispositivos médicos</li>
-            <li>Proyectos de investigación académica (pregrado y posgrado)</li>
-          </ul>
-          <h5 className="card-subtitle mt-4">¿Qué investigaciones respaldamos?</h5>
           <p>
-            Respaldamos investigaciones de todas las fases, colaborando estrechamente con instituciones académicas como la Universidad Simón Bolívar y apoyando proyectos dentro de la IPS Clínica de la Costa S.A.S.
+            Evaluar los riesgos y beneficios de la investigación clínica, fomentando la ética y la integridad inherente al ser humano conforme a los principios y valores constitucionales y legales, salvaguardando los derechos de los participantes en la investigación.
+          </p>
+          <p>
+            El Comité de Ética en Investigación evalúa los estudios clínicos en distintas fases, incluyendo observacionales y de dispositivos médicos, así como proyectos de investigación de universidades en convenio con la IPS Clínica de la Costa S.A.S.
           </p>
         </>
       ),
-      img: 'assets/img/about/parte2.jpg',
-      alt: 'Fases de Investigación Clínica',
+      img: 'assets/img/about/objetivo.png',
+      alt: 'Objetivo del Comité de Ética',
     },
     {
       id: 3,
-      title: 'Adopción de Principios Éticos Internacionales',
+      title: 'Principios y Marco Ético',
       content: (
         <>
           <p>
-            Nos guiamos por códigos éticos reconocidos globalmente, lo que asegura que cada proyecto cumpla con los estándares internacionales:
+            Nos guiamos por principios éticos reconocidos globalmente para llevar a cabo investigaciones con sujetos humanos, en cumplimiento de lineamientos nacionales e internacionales de:
           </p>
           <ul>
-            <li>Código de Núremberg (1946)</li>
+            <li>Código de Ética de Núremberg (1946)</li>
             <li>Declaración de Helsinki (2013)</li>
-            <li>Informe Belmont (1979)</li>
-            <li>Pautas éticas del CIOMS (2017)</li>
+            <li>Informe Belmont (1976-79)</li>
+            <li>Pautas éticas internacionales para la investigación biomédica (CIOMS, 2017)</li>
             <li>Organización Mundial de la Salud (OMS)</li>
           </ul>
           <p>
-            Estos principios garantizan que cada decisión se tome con integridad y en beneficio de los pacientes.
+            Estos principios aseguran que cada investigación se realice con integridad y en beneficio de los pacientes.
           </p>
         </>
       ),
-      img: 'assets/img/about/parte3.jpg',
-      alt: 'Principios Éticos en Investigación',
+      img: 'assets/img/about/marco.jpeg',
+      alt: 'Principios y Marco Ético',
     }
+  ];
+
+  const committeeMembers = [
+    { name: 'Jose Ignacio Guerrero Peña', role: 'Representante No Científico', profession: 'Licenciado en Educación Básica con Énfasis en Ciencias Naturales y Educación Ambiental.' },
+    { name: 'Hugo Alvarado Olaya', role: 'Representante No Científico', profession: 'Abogado, Especialista en Derecho Procesal' },
+    { name: 'Yesica Giraldo Ramirez', role: 'Miembro no científico', profession: 'Abogado' },
+    { name: 'Reina Bawab Miguel', role: 'Representante Científico', profession: 'Bacterióloga, Especialista en Gerencia Social.' },
+    { name: 'Alan David Aníbal Orozco', role: 'Representante de la Comunidad', profession: 'Técnico en Riesgo Crediticio y su Administración' },
+    { name: 'Katya de la Hoz Mendoza', role: 'Representante Científico', profession: 'Bacterióloga, Especialista en Auditoría en Servicios de Salud' },
+    { name: 'Alberto Carlos Espinosa Garavito', role: 'Representante Científico', profession: 'Químico Farmacéutico, Especialista en Estadística Aplicada, Magíster en Estadística Aplicada, Candidato a Doctor en Genética y Biología Molecular' },
+    { name: 'Cynthia Manotas Altamar', role: 'Presidente Suplente', profession: 'Médico, Especialista en Bioética, Magíster en Bioética' },
+    { name: 'Yamileth Paola Bolívar Machacón', role: 'Presidente del Comité de Ética en Investigación', profession: 'Químico Farmacéutico, Especialista en Gerencia de la Calidad y Auditoría en Salud, Especialista en Bioética', email: 'ybolivar@clinicadelacosta.co' }
   ];
 
   return (
     <>
-      <section className="ethics-committee-area pt-125 pb-35">
-        <div className="container">
-          {sections.map((section, index) => (
-            <div className="row mb-40" key={section.id}>
-              <div className="col-lg-12">
-                <div
-                  className={`card-horizontal d-flex ${
-                    index % 2 === 0 ? 'flex-lg-row' : 'flex-lg-row-reverse'
-                  } flex-column mb-60 wow fadeInUp`}
-                  data-wow-delay=".2s"
-                >
-                  <div className="card-img">
-                    <img src={section.img} alt={section.alt} className="img-fluid" />
-                  </div>
-                  <div className="card-body p-4">
-                    <h5 className="card-title">{section.title}</h5>
-                    {section.content}
-                  </div>
+      <section className="blog-banner">
+        <h1 className="text-center">CEI es una organización independiente que revisa los principios éticos y metodológicos de la investigación clínica.</h1>
+       
+      </section>
+
+      <section className="blog-content container">
+        {blogSections.map((section) => (
+          <div className="blog-post mb-5" key={section.id}>
+            <h2 className="blog-title">{section.title}</h2>
+            <div className="row">
+              <div className="col-md-6">
+                <img src={section.img} alt={section.alt} className="img-fluid" />
+              </div>
+              <div className="col-md-6">
+                <div className="blog-content">
+                  {section.content}
                 </div>
               </div>
             </div>
-          ))}
+          </div>
+        ))}
 
-          <div className="video-card mb-60">
-            <img
-              src="assets/img/about/video-thumbnail.jpg"
-              alt="Comité de Ética en Acción"
-              className="img-fluid"
-            />
-            <button
-              className="play-btn"
-              onClick={() => setIsVideoOpen(true)}
-              aria-label="Reproducir video del Comité de Ética"
-            >
-              ▶
-            </button>
+        <div className="video-card my-5">
+          <img src="assets/img/about/comite.png" alt="Comité de Ética en Acción" className="img-fluid" />
+          <button
+            className="play-btn"
+            onClick={() => setIsVideoOpen(true)}
+            aria-label="Reproducir video del Comité de Ética"
+          >
+            ▶
+          </button>
+        </div>
+
+        <div className="committee-members mt-5">
+          <h3 className="text-center mb-4">Miembros del Comité de Ética</h3>
+          <div className="row">
+            {committeeMembers.map((member, index) => (
+              <div className="col-lg-4 col-md-6 mb-4" key={index}>
+                <div className="member-card text-center p-4">
+                  <h5>{member.name}</h5>
+                  <p><strong>{member.role}</strong></p>
+                  <p>{member.profession}</p>
+                  {member.email && <p><a href={`mailto:${member.email}`}>{member.email}</a></p>}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* <VideoPopup
-          isVideoOpen={isVideoOpen}
-          setIsVideoOpen={setIsVideoOpen}
-          videoId="d8w5SICzzxc"
-        /> */}
+        <VideoPopup isVideoOpen={isVideoOpen} setIsVideoOpen={setIsVideoOpen} videoId="d8w5SICzzxc" />
       </section>
 
       <style jsx>{`
-        .card-horizontal {
-          display: flex;
+        .blog-banner {
+          background: #f4f4f4;
+          padding: 50px 0;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+        .blog-post {
+          padding: 20px;
+          background: #fff;
           border: 1px solid #ddd;
           border-radius: 8px;
-          overflow: hidden;
-          background: #fff;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          margin-bottom: 40px;
         }
-        .card-horizontal:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-        .card-img {
-          flex: 1;
-          min-width: 300px;
-        }
-        .card-body {
-          flex: 2;
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+        .blog-title {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
         }
         .video-card {
           position: relative;
@@ -154,17 +160,20 @@ const ProjectDetailsArea = () => {
           left: 50%;
           transform: translate(-50%, -50%);
           background: #ff5722;
-          color: #fff;
           border-radius: 50%;
           width: 60px;
           height: 60px;
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: background 0.3s;
         }
-        .play-btn:hover {
-          background: #e64a19;
+        .committee-members {
+          margin-top: 40px;
+        }
+        .member-card {
+          background: #f9f9f9;
+          padding: 20px;
+          border-radius: 8px;
         }
       `}</style>
     </>
