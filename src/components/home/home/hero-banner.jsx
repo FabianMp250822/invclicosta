@@ -21,19 +21,29 @@ const content = {
     </>
   ),
   des: (
-    <>
-      Con más de 20 años de experiencia y certificaciones de buenas prácticas
-      clínicas desde 2011 e ISO 9001:2015. Con un equipo dedicado, altos
-      estándares de calidad, y tecnología avanzada, cuenta con cuatro sedes
-      exclusivas para investigación, más de 300 camas y laboratorios de alta
-      complejidad. Ha realizado más de 100 ensayos clínicos, destacándose en
-      vacunas, cardiología y nefrología. Comprometidos con el avance científico
-      para el beneficio de la sociedad.
-    </>
+    <ul style={{ color: colors.white, paddingLeft: "20px", listStyleType: "disc" }}>
+      <li>
+        Más de 20 años de experiencia en investigación clínica.
+      </li>
+      <li>
+        Certificaciones de buenas prácticas clínicas desde 2011 e ISO 9001:2015.
+      </li>
+      <li>
+        Cuatro sedes exclusivas para investigación con más de 300 camas.
+      </li>
+      <li>
+        Laboratorios de alta complejidad y tecnología avanzada.
+      </li>
+      <li>
+        Más de 100 ensayos clínicos realizados en áreas como vacunas, cardiología y nefrología.
+      </li>
+    
+    </ul>
   ),
   btn_text1: "Programar Consulta",
   btn_text2: "Descubrir Nuestro Trabajo",
 };
+
 
 const { sub_title, title, des, btn_text1, btn_text2 } = content;
 
@@ -84,8 +94,9 @@ const HeroBanner = () => {
                 >
                   {title}
                 </h2>
-                <p style={{ color: colors.white }}>{des}</p>
-                <div className="banner__btn">
+                {/* Nuevo formato como lista */}
+                <div>{des}</div>
+                <div className="banner__btn mt-4">
                   <Link
                     className="tp-btn"
                     href="/contact"
@@ -144,7 +155,10 @@ const HeroBanner = () => {
               href="#tp-about-scroll"
               style={{ color: colors.white }}
             >
-              <i className="fa-light fa-computer-mouse" style={{ color: colors.white }}></i>
+              <i
+                className="fa-light fa-computer-mouse"
+                style={{ color: colors.white }}
+              ></i>
               <span>Desplazar hacia abajo</span>
             </a>
           </div>
@@ -161,7 +175,10 @@ const HeroBanner = () => {
               className="banner__video-icon popup-video"
               style={{ color: colors.white }}
             >
-              <i className="fa-solid fa-play" style={{ color: colors.white }}></i>
+              <i
+                className="fa-solid fa-play"
+                style={{ color: colors.white }}
+              ></i>
             </button>
           </div>
         </div>
@@ -178,3 +195,4 @@ const HeroBanner = () => {
 };
 
 export default HeroBanner;
+

@@ -16,8 +16,8 @@ const choose = [
     icon: "flaticon-microscope",
     title: (
       <>
-        Más de {yearsOfExperience} Años de <br />
-        Experiencia en Investigación
+        Pioneros en <br />
+        Investigaión Clínica
       </>
     ),
     des: (
@@ -119,8 +119,7 @@ const Specialists = () => {
             <div className="col-lg-12">
               <div className="tp-choose-option">
                 <span>
-                  El Centro de Investigación de la Clínica de la Costa lleva 35 años realizando investigaciones de vanguardia en áreas clave, 
-                  como oncología, cardiología, nefrología, entre otras, impactando la vida de miles de pacientes.
+                El Centro de Investigación de la Clínica de la Costa se dedica a desarrollar soluciones innovadoras en áreas clave como oncología, cardiología y nefrología, transformando vidas y promoviendo la salud a través de avances científicos de vanguardia.
                 </span>
               </div>
             </div>

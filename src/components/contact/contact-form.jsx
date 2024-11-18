@@ -143,20 +143,22 @@ const ContactForm = () => {
 
                 {/* Mapa */}
                 <div className="row">
-                  <div className="col-lg-12">
-                    <div className="tpcontactmap">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2688045013987!2d-74.826014!3d10.9876391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42f67adf77e73%3A0x8d7713be8b041f4b!2sCl%C3%ADnica%20de%20la%20Costa!5e0!3m2!1ses-419!2sco!4v1695123456789!5m2!1ses-419!2sco"
-                        width="600"
-                        height="450"
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Mapa de la Clínica de la Costa"
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
+  <div className="col-lg-12">
+    <div className="tpcontactmap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.483487879024!2d-74.81575092402817!3d11.00230518916052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42da7bed68429%3A0xd68e8bc92d4d391f!2sCl%C3%ADnica%20de%20la%20Costa!5e0!3m2!1ses-419!2sco!4v1731899944643!5m2!1ses-419!2sco"
+        width="600"
+        height="450"
+        style={{ border: "0", width: "100%" }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Mapa de la Clínica de la Costa"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
 
                 {/* Redes sociales */}
                 <div className="social-links mt-4 text-center">

@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Swal from "sweetalert2";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Navigation } from "swiper";
 
-// Configuración del slider
-const setting = {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  breakpoints: {
-    1200: { slidesPerView: 4 },
-    992: { slidesPerView: 3 },
-    768: { slidesPerView: 2 },
-    576: { slidesPerView: 1 },
-    0: { slidesPerView: 1 },
-  },
-  navigation: {
-    nextEl: ".services-n",
-    prevEl: ".services-p",
-  },
-};
+// Importa los estilos de Swiper
+import "swiper/css";
+import "swiper/css/navigation";
+
+// Instala los módulos que vas a usar
+SwiperCore.use([Autoplay, Navigation]);
 
 // Contenido del slider
 const slider_content = [
@@ -108,11 +100,6 @@ const slider_content = [
 ];
 
 const ServiceArea = () => {
-  const [isLoop, setIsLoop] = useState(false);
-  useEffect(() => {
-    setIsLoop(true);
-  }, []);
-
   // Función para abrir el modal con SweetAlert2
   const handleReadMore = (item) => {
     Swal.fire({
@@ -146,67 +133,89 @@ const ServiceArea = () => {
           <div className="row align-items-center mb-4">
             <div className="col-lg-8 col-md-8 col-12">
               <div className="tp-section">
-                <span className="tp-section__sub-title left-line mb-20" style={{ color: "#77CDFF" }}>
+                <span
+                  className="tp-section__sub-title left-line mb-20"
+                  style={{ color: "#77CDFF" }}
+                >
                   Especialidades Médicas de Nuestro Centro de Investigación
                 </span>
                 <h3 className="tp-section__title" style={{ color: "#0D92F4" }}>
-                  Descubre nuestras áreas de investigación dedicadas a mejorar la salud y el bienestar.
+                  Descubre nuestras áreas de investigación dedicadas a mejorar la salud y el
+                  bienestar.
                 </h3>
               </div>
             </div>
           </div>
-          <div className="services-grid">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={4}
+            loop={true}
+            navigation={{
+              nextEl: ".services-n",
+              prevEl: ".services-p",
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              1200: { slidesPerView: 4 },
+              992: { slidesPerView: 3 },
+              768: { slidesPerView: 2 },
+              576: { slidesPerView: 1 },
+              0: { slidesPerView: 1 },
+            }}
+          >
             {slider_content.map((item) => (
-              <div key={item.id} className="services-item">
-                <div
-                  className="services-item__icon mb-30"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontSize: "30px",
-                    color: "#C62E2E",
-                  }}
-                >
-                  <i className={`${item.icon}`}></i>
-                </div>
-                <div className="services-item__content">
-                  <h4 className="services-item__tp-title mb-30">
-                    <Link href="/services-details" style={{ color: "#0D92F4" }}>
-                      {item.title}
-                    </Link>
-                  </h4>
-                  <p style={{ color: "#333" }}>{item.des}</p>
-                  <div className="services-item__btn">
-                    <button
-                      onClick={() => handleReadMore(item)}
-                      className="btn-hexa"
-                      style={{
-                        backgroundColor: "#F95454",
-                        color: "#FFFFFF",
-                        border: "none",
-                        padding: "8px 16px",
-                        borderRadius: "4px",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Leer Más
-                    </button>
+              <SwiperSlide key={item.id}>
+                <div className="services-item">
+                  <div
+                    className="services-item__icon mb-30"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      fontSize: "30px",
+                      color: "#C62E2E",
+                    }}
+                  >
+                    <i className={`${item.icon}`}></i>
+                  </div>
+                  <div className="services-item__content">
+                    <h4 className="services-item__tp-title mb-30">
+                      <Link href="/services-details" style={{ color: "#0D92F4" }}>
+                        {item.title}
+                      </Link>
+                    </h4>
+                    <p style={{ color: "#333" }}>{item.des}</p>
+                    <div className="services-item__btn">
+                      <button
+                        onClick={() => handleReadMore(item)}
+                        className="btn-hexa"
+                        style={{
+                          backgroundColor: "#F95454",
+                          color: "#FFFFFF",
+                          border: "none",
+                          padding: "8px 16px",
+                          borderRadius: "4px",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Leer Más
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+            {/* Botones de navegación (opcional) */}
+            <div className="services-n">Next</div>
+            <div className="services-p">Prev</div>
+          </Swiper>
         </div>
       </section>
 
       <style jsx>{`
-        .services-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 20px;
-        }
-
         .services-item {
           display: flex;
           flex-direction: column;
@@ -218,6 +227,7 @@ const ServiceArea = () => {
           box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           min-height: 300px;
+          text-align: center;
         }
 
         .services-item:hover {
@@ -225,15 +235,36 @@ const ServiceArea = () => {
           box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
         }
 
-        .services-item__content h4,
-        .services-item__content p {
-          text-align: center;
-        }
-
         .services-item__icon {
           font-size: 48px;
           margin-bottom: 15px;
-          color: #C62E2E;
+          color: #c62e2e;
+        }
+
+        /* Estilos para la navegación (opcional) */
+        .services-n,
+        .services-p {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          width: 35px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .services-n {
+          right: 10px;
+        }
+
+        .services-p {
+          left: 10px;
         }
       `}</style>
     </>
