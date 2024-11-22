@@ -7,7 +7,8 @@ const Teams = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const specialtiesMap = {
-    Nefrología: ["Gustavo Aroca Martínez", "Andres Angelo Cadena Bonfanti"],
+    Nefrología: ["Gustavo Aroca Martínez", "Andres Angelo Cadena Bonfanti",  "Lorena Sofía Gómez Escorcia",
+      "Hellen Elena Medina Fábregas", "Adriana Paola Gómez Hernández",],
     Cardiología: ["Alberto Jose Cadena Bonfanti"],
     Infectología: ["Shirley Patricia Iglesias Pertuz"],
     Pediátrico: [
@@ -15,39 +16,44 @@ const Teams = () => {
       "Zilac Espitaleta Vergara",
       "Jorge Antonio Piedrahita Olier",
       "jrMv47mUi7mqLjPUXU5x",
-    ], // Incluimos el ID
-    Oncología: ["Carmen Marcela Alcalá Castro", "Ivan Medina"],
+    ], 
+    Oncología: ["Carmen Marcela Alcalá Castro", "Ivan Medina",  "LvA06NNgz5BUi1502OKM",  "Alejandra Arrieta Muñoz"],
     Medicina_Interna: [
       "Leonardo Fabio Brochado Fontalvo",
       "Luisa Maria Gómez Giraldo",
       "Sandra Yolima Hernández Agudelo",
       "Osvaldo Elías Lara Sarabia",
+      "Lisneth de Jesús Almendrales Escobar",
 
     ],
-    Médico_Especialista: [
-      "Jesús Raimundo Godoy Martínez"
+    Cardiologia: [
+      "Diego Felipe Eli Sanchez Calderin",
+      "Lina María De Arco Caraballo",
+      "Jessica Paola Martínez Escamilla",
+
+
+    ],
+    Reumatología: [
+      "Jesús Raimundo Godoy Martínez",
+      "Edith Maria Vizcaino Ferreira"
+
      
     ],
     Médico_General: [
       "Saida Ivonne Orozco Paez",
-      "Lorena Sofía Gómez Escorcia",
-      "Diego Felipe Eli Sanchez Calderin",
       "LvA06NNgz5BUi1502OKM"
      
     ],
     Neurología: [],
-    Coordinadora:["Hellen Elena Medina Fábregas",
-      "Lina María De Arco Caraballo",
-      "Adriana Paola Gómez Hernández",
-      "Lisneth de Jesús Almendrales Escobar",
-      "Alejandra Arrieta Muñoz"],
+    Coordinadora:[
+      
+     
+     ],
       Enfermera_Jefe: [
         "Erika Patricia Orozco Cantillo",
-        "Jessica Paola Martínez Escamilla",
-        "Diego Felipe Eli Sanchez Calderin",
+        
         "LvA06NNgz5BUi1502OKM",
-        "Yannina Rojas Melendez",
-        "Edith Maria Vizcaino Ferreira"
+       
       ],
   };
 
