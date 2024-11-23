@@ -14,7 +14,9 @@ const Teams = () => {
       "Hellen Elena Medina Fábregas",
       "Adriana Paola Gómez Hernández",
     ],
-    Cardiología: ["Alberto Jose Cadena Bonfanti"],
+    Cardiología: ["Alberto Jose Cadena Bonfanti",  "Diego Felipe Eli Sanchez Calderin",
+      "Lina María De Arco Caraballo",
+      "Jessica Paola Martínez Escamilla",],
     Infectología: ["Shirley Patricia Iglesias Pertuz"],
     Pediátrico: [
       "Vilma Carolina Ruiz de Castro",
@@ -35,18 +37,13 @@ const Teams = () => {
       "Osvaldo Elías Lara Sarabia",
       "Lisneth de Jesús Almendrales Escobar",
     ],
-    Cardiologia: [
-      "Diego Felipe Eli Sanchez Calderin",
-      "Lina María De Arco Caraballo",
-      "Jessica Paola Martínez Escamilla",
-    ],
+   
     Reumatología: [
       "Jesús Raimundo Godoy Martínez",
       "Edith Maria Vizcaino Ferreira",
     ],
     Médico_General: ["Saida Ivonne Orozco Paez", "LvA06NNgz5BUi1502OKM"],
-    Neurología: [],
-    Coordinadora: [],
+  
     Enfermera_Jefe: [
       "Erika Patricia Orozco Cantillo",
       "LvA06NNgz5BUi1502OKM",
