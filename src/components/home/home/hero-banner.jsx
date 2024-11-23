@@ -165,7 +165,7 @@ const HeroBanner = () => {
         </div>
         <div className="banner__shape d-none d-lg-block">
           <img
-            src="/assets/img/about/banner_pioneros.jpg"
+            src="/assets/img/about/Recurso7.svg"
             alt="banner-img"
             style={{ width: "100%" }}
           />
