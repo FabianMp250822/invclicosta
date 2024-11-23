@@ -7,8 +7,13 @@ const Teams = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const specialtiesMap = {
-    Nefrología: ["Gustavo Aroca Martínez", "Andres Angelo Cadena Bonfanti",  "Lorena Sofía Gómez Escorcia",
-      "Hellen Elena Medina Fábregas", "Adriana Paola Gómez Hernández",],
+    Nefrología: [
+      "Gustavo Aroca Martínez",
+      "Andres Angelo Cadena Bonfanti",
+      "Lorena Sofía Gómez Escorcia",
+      "Hellen Elena Medina Fábregas",
+      "Adriana Paola Gómez Hernández",
+    ],
     Cardiología: ["Alberto Jose Cadena Bonfanti"],
     Infectología: ["Shirley Patricia Iglesias Pertuz"],
     Pediátrico: [
@@ -16,45 +21,36 @@ const Teams = () => {
       "Zilac Espitaleta Vergara",
       "Jorge Antonio Piedrahita Olier",
       "jrMv47mUi7mqLjPUXU5x",
-    ], 
-    Oncología: ["Carmen Marcela Alcalá Castro", "Ivan Medina",  "LvA06NNgz5BUi1502OKM",  "Alejandra Arrieta Muñoz"],
+    ],
+    Oncología: [
+      "Carmen Marcela Alcalá Castro",
+      "Ivan Medina",
+      "LvA06NNgz5BUi1502OKM",
+      "Alejandra Arrieta Muñoz",
+    ],
     Medicina_Interna: [
       "Leonardo Fabio Brochado Fontalvo",
       "Luisa Maria Gómez Giraldo",
       "Sandra Yolima Hernández Agudelo",
       "Osvaldo Elías Lara Sarabia",
       "Lisneth de Jesús Almendrales Escobar",
-
     ],
     Cardiologia: [
       "Diego Felipe Eli Sanchez Calderin",
       "Lina María De Arco Caraballo",
       "Jessica Paola Martínez Escamilla",
-
-
     ],
     Reumatología: [
       "Jesús Raimundo Godoy Martínez",
-      "Edith Maria Vizcaino Ferreira"
-
-     
+      "Edith Maria Vizcaino Ferreira",
     ],
-    Médico_General: [
-      "Saida Ivonne Orozco Paez",
-      "LvA06NNgz5BUi1502OKM"
-     
-    ],
+    Médico_General: ["Saida Ivonne Orozco Paez", "LvA06NNgz5BUi1502OKM"],
     Neurología: [],
-    Coordinadora:[
-      
-     
-     ],
-      Enfermera_Jefe: [
-        "Erika Patricia Orozco Cantillo",
-        
-        "LvA06NNgz5BUi1502OKM",
-       
-      ],
+    Coordinadora: [],
+    Enfermera_Jefe: [
+      "Erika Patricia Orozco Cantillo",
+      "LvA06NNgz5BUi1502OKM",
+    ],
   };
 
   useEffect(() => {
@@ -63,23 +59,42 @@ const Teams = () => {
         const data = await getResearchers();
 
         // Filtrar para excluir nombres específicos
-        const excludedNames = ["Luis Aurelio Castillo Parodi","Saida Ivonne Orozco Paez"];
+        const excludedNames = [
+          "Luis Aurelio Castillo Parodi",
+          "Saida Ivonne Orozco Paez",
+        ];
         const filteredData = data.filter(
           (member) =>
-            !excludedNames.includes(member.informacion_personal?.nombre_completo)
+            !excludedNames.includes(
+              member.informacion_personal?.nombre_completo
+            )
         );
 
-        // Añadimos especialidad por ID si no coincide el nombre
+        // Añadir especialidad y orden dentro de la especialidad
         const enrichedData = filteredData.map((member) => {
-          for (const [specialty, identifiers] of Object.entries(specialtiesMap)) {
-            if (
-              identifiers.includes(member.informacion_personal?.nombre_completo) ||
-              identifiers.includes(member.id)
-            ) {
-              return { ...member, specialty };
+          let assignedSpecialty = "Staff";
+          let specialtyOrder = Infinity;
+
+          for (const [specialty, identifiers] of Object.entries(
+            specialtiesMap
+          )) {
+            const memberName = member.informacion_personal?.nombre_completo;
+            const memberId = member.id;
+            const indexInSpecialty = identifiers.findIndex(
+              (identifier) => identifier === memberName || identifier === memberId
+            );
+            if (indexInSpecialty !== -1) {
+              assignedSpecialty = specialty;
+              specialtyOrder = indexInSpecialty;
+              break;
             }
           }
-          return { ...member, specialty: "Staff" }; // Asignamos "Staff" si no tiene especialidad
+
+          return {
+            ...member,
+            specialty: assignedSpecialty,
+            specialtyOrder,
+          };
         });
 
         setTeamData(enrichedData);
@@ -95,26 +110,40 @@ const Teams = () => {
     setSearchTerm(e.target.value);
   };
 
-  // Agrupar los investigadores por especialidad
+  // Agrupar y ordenar los investigadores por especialidad
   const groupedData = Object.keys(specialtiesMap).reduce((acc, specialty) => {
-    acc[specialty] = teamData.filter((member) => member.specialty === specialty);
+    const membersInSpecialty = teamData.filter(
+      (member) => member.specialty === specialty
+    );
+
+    // Ordenar según el orden en specialtiesMap
+    membersInSpecialty.sort((a, b) => a.specialtyOrder - b.specialtyOrder);
+
+    acc[specialty] = membersInSpecialty;
     return acc;
   }, {});
 
   // Añadir los investigadores clasificados como "Staff"
-  groupedData["Staff"] = teamData.filter(
-    (member) => member.specialty === "Staff"
-  );
+  groupedData["Staff"] = teamData
+    .filter((member) => member.specialty === "Staff")
+    .sort((a, b) =>
+      (a.informacion_personal?.nombre_completo || "").localeCompare(
+        b.informacion_personal?.nombre_completo || ""
+      )
+    );
 
   // Filtrar por término de búsqueda
-  const filteredGroupedData = Object.keys(groupedData).reduce((acc, specialty) => {
-    acc[specialty] = groupedData[specialty].filter((member) =>
-      member.informacion_personal?.nombre_completo
-        ?.toLowerCase()
-        .includes(searchTerm.toLowerCase())
-    );
-    return acc;
-  }, {});
+  const filteredGroupedData = Object.keys(groupedData).reduce(
+    (acc, specialty) => {
+      acc[specialty] = groupedData[specialty].filter((member) =>
+        member.informacion_personal?.nombre_completo
+          ?.toLowerCase()
+          .includes(searchTerm.toLowerCase())
+      );
+      return acc;
+    },
+    {}
+  );
 
   return (
     <section
@@ -158,7 +187,7 @@ const Teams = () => {
                     paddingBottom: "5px",
                   }}
                 >
-                  {specialty}
+                  {specialty.replace(/_/g, " ")}
                 </h3>
                 <div className="row">
                   {filteredGroupedData[specialty].map((item) => (
@@ -177,7 +206,8 @@ const Teams = () => {
                           padding: "15px",
                           borderRadius: "8px",
                           backgroundColor: "#fff",
-                          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                          transition:
+                            "transform 0.3s ease, box-shadow 0.3s ease",
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.transform = "translateY(-2px)";
@@ -226,7 +256,11 @@ const Teams = () => {
                           <h4 className="tp-team__position mb-2">
                             {item.nivel || "Investigador Asociado"}
                           </h4>
-                          <p>{`${item.biografia?.texto?.substring(0, 100)}...`}</p>
+                          <p>
+                            {`${
+                              item.biografia?.texto?.substring(0, 100) || ""
+                            }...`}
+                          </p>
                           <Link href={`/team-details/${item.id}`}>
                             <button
                               className="tp-btn-link"
