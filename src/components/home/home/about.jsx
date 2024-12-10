@@ -13,7 +13,7 @@ const experience_count = currentYear - baseYear;
 
 // content
 const content = {
-  left_img: "assets/img/about/paso.jpg",
+  left_img: "assets/img/about/principl3.jpeg",
   experience_count_text: (
     <>
       Años de <br />
