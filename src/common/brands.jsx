@@ -20,7 +20,17 @@ const brands_img = [
   { img: "/assets/img/brand/Syneos-100.jpg", alt: "Brand 15" },
   { img: "/assets/img/brand/Syneos_1-100.jpg", alt: "Brand 16" },
   { img: "/assets/img/brand/The George Washington-100.jpg", alt: "Brand 17" },
+  // Agregar marcas faltantes a continuación
+  { img: "/assets/img/brand/Valneva Austria GmbH-100.jpg", alt: "Brand 18" },
+  { img: "/assets/img/brand/ModernaTX, Inc.-100.jpg", alt: "Brand 19" },
+  { img: "/assets/img/brand/UCB Biopharma-100.jpg", alt: "Brand 20" },
+  { img: "/assets/img/brand/AbbVie-100.jpg", alt: "Brand 21" },
+  { img: "/assets/img/brand/Alumis Inc.-100.jpg", alt: "Brand 22" },
+  { img: "/assets/img/brand/Eagle Pharmaceuticals,-100.jpg", alt: "Brand 23" },
+  { img: "/assets/img/brand/Enanta Pharmaceuticals-100.jpg", alt: "Brand 24" },
+  { img: "/assets/img/brand/Biogen Idec Research Limited-100.jpg", alt: "Brand 25" },
 ];
+
 
 
 
