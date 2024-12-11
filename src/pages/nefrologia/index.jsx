@@ -1,7 +1,8 @@
 import React from "react";
 import HeaderTwo from "@/layout/header/header-two";
 import FooterFour from "@/layout/footer/footer-4";
-import Banner from "@/components/about/banner";
+import Banner from "./banner";
+
 
 export default function InvestigationGroup() {
   return (
