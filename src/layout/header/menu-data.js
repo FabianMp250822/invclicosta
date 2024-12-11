@@ -50,6 +50,14 @@ const menu_data = [
     ],
   },
   {
+    id: 6,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Nefrología",
+    link: "/nefrologia",
+    active: "",
+  },
+  {
     id: 7,
     mega_menu: false,
     has_dropdown: false,
