@@ -13,7 +13,7 @@ const contact_info = {
   phone_1: "(605) 3369940 Ext. 0",
   phone_2: "(605) 3563156",
   phone_3: "(605) 3369912",
-  email_general: "info@clinicadelacosta.co",
+  email_general: "investigación@clinicadelacosta.co",
   email_studies: "infoestudiosclinicos@clinicadelacosta.co",
   email_legal: "juridica@clinicadelacosta.co",
   open: (

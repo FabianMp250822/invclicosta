@@ -23,8 +23,8 @@ const FooterFour = ({ style_2 = false }) => {
                       <h4 className="tp-footer-widget__contact mb-20">
                         <a href="tel:+576053369940">+57 605 336 9940</a>
                       </h4>
-                      <a href="mailto:info@clinicadelacosta.co">
-                        info@clinicadelacosta.co
+                      <a href="mailto:investigación@clinicadelacosta.co">
+                        investigación@clinicadelacosta.co
                       </a>
                     </div>
                     <div className="tp-footer-widget__sub-sec">
