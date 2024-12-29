@@ -52,7 +52,7 @@ const FooterFour = ({ style_2 = false }) => {
                     <div className="tp-footer-widget__links mb-35">
                       <ul>
                         <li>
-                          <Link href="/contacto">Contáctanos</Link>
+                          <Link href="/contact">Contáctanos</Link>
                         </li>
                         <li>
                           <Link href="/about">Sobre nosotros</Link>
