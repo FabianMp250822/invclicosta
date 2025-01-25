@@ -26,7 +26,7 @@ const content = {
     "El principal centro de estudios clínicos en la Región Caribe, con 35 años de experiencia en investigación médica avanzada.",
   section_des: (
     <>
-      Realizamos más de 10,000 estudios clínicos y colaboramos con reconocidas farmacéuticas globales como Pfizer, Sanofi y Novartis. Nos especializamos en áreas como oncología, cardiología, nefrología y más, asegurando siempre los más altos estándares de calidad y seguridad. Nuestro enfoque se centra en la atención integral de nuestros pacientes, brindando soluciones innovadoras para mejorar la salud y el bienestar.
+      Realizamos más de 100 estudios clínicos y colaboramos con reconocidas farmacéuticas globales como Pfizer, Sanofi y Novartis. Nos especializamos en áreas como oncología, cardiología, nefrología y más, asegurando siempre los más altos estándares de calidad y seguridad. Nuestro enfoque se centra en la atención integral de nuestros pacientes, brindando soluciones innovadoras para mejorar la salud y el bienestar.
     </>
   ),
   about_info_list: [

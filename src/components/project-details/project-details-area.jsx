@@ -67,16 +67,87 @@ const ProjectDetailsArea = () => {
   ];
 
   const committeeMembers = [
-    { name: 'Jose Ignacio Guerrero Peña', role: 'Representante No Científico', profession: 'Licenciado en Educación Básica con Énfasis en Ciencias Naturales y Educación Ambiental.' },
-    { name: 'Hugo Alvarado Olaya', role: 'Representante No Científico', profession: 'Abogado, Especialista en Derecho Procesal' },
-    { name: 'Yesica Giraldo Ramirez', role: 'Miembro no científico', profession: 'Abogado' },
-    { name: 'Reina Bawab Miguel', role: 'Representante Científico', profession: 'Bacterióloga, Especialista en Gerencia Social.' },
-    { name: 'Alan David Aníbal Orozco', role: 'Representante de la Comunidad', profession: 'Técnico en Riesgo Crediticio y su Administración' },
-    { name: 'Katya de la Hoz Mendoza', role: 'Representante Científico', profession: 'Bacterióloga, Especialista en Auditoría en Servicios de Salud' },
-    { name: 'Alberto Carlos Espinosa Garavito', role: 'Representante Científico', profession: 'Químico Farmacéutico, Especialista en Estadística Aplicada, Magíster en Estadística Aplicada, Candidato a Doctor en Genética y Biología Molecular' },
-    { name: 'Cynthia Manotas Altamar', role: 'Presidente Suplente', profession: 'Médico, Especialista en Bioética, Magíster en Bioética' },
-    { name: 'Yamileth Paola Bolívar Machacón', role: 'Presidente del Comité de Ética en Investigación', profession: 'Químico Farmacéutico, Especialista en Gerencia de la Calidad y Auditoría en Salud, Especialista en Bioética', email: 'ybolivar@clinicadelacosta.co' }
+    {
+      name: "Yamileth Paola Bolívar Machacón",
+      profession: "Químico Farmacéutico",
+      postgrad: [
+        "Especialista en Gerencia de la Calidad y Auditoria en Salud",
+        "Especialista en Bioética",
+      ],
+      role: "Presidente",
+    },
+    {
+      name: "Cynthia Patricia Manotas Altamar",
+      profession: "Médico",
+      postgrad: [
+        "Especialista en Bioética",
+        "Magíster en Bioética",
+      ],
+      role: "Presidente Suplente",
+    },
+    {
+      name: "Shakira Morales Yanes",
+      profession: "Psicóloga",
+      postgrad: [],
+      role: "Secretaria",
+    },
+    {
+      name: "María José Viera Contreras",
+      profession: "Médico",
+      postgrad: [
+        "Especialista en Gerencia de la Salud",
+        "Estudiante de Medicina Interna",
+      ],
+      role: "Representante Científico",
+    },
+    {
+      name: "Reina Bawab Miguel",
+      profession: "Bacterióloga",
+      postgrad: ["Especialista en Gerencia Social"],
+      role: "Representante Científico",
+    },
+    {
+      name: "Alberto Carlos Espinosa Garavito",
+      profession: "Químico Farmacéutico",
+      postgrad: [
+        "Especialista en Estadística Aplicada",
+        "Magíster en Estadística Aplicada",
+        "Doctor en Genética y Biología Molecular",
+      ],
+      role: "Representante Científico",
+    },
+    {
+      name: "Yesica Daniela Giraldo Ramírez",
+      profession: "Abogado",
+      postgrad: [],
+      role: "Representante No Científico",
+    },
+    {
+      name: "José Ignacio Guerrero Peña",
+      profession: "Licenciado en Educación Básica con Énfasis en Ciencias Naturales y Educación Ambiental",
+      postgrad: [],
+      role: "Representante No Científico",
+    },
+    {
+      name: "Hugo Alvarado Olaya",
+      profession: "Abogado",
+      postgrad: ["Especialista en Derecho Procesal"],
+      role: "Representante No Científico",
+    },
+    {
+      name: "Alan David Aníbal Orozco",
+      profession: "Técnico en Riesgo Crediticio y su Administración",
+      postgrad: [],
+      role: "Representante de la Comunidad",
+    },
+    {
+      name: "Kelvin Fernando Navarro Quiroz",
+      profession: "Tecnólogo en Mantenimiento de Equipo Biomédico",
+      postgrad: [],
+      role: "Representante No Científico",
+    },
   ];
+  
 
   return (
     <>

@@ -7,7 +7,7 @@ import ContactUs from "../forms/contact-us";
 const contact_info = {
   address: (
     <>
-      Cra. 50 #80-209, <br /> Barranquilla, Colombia
+      Carrera 50 # 80-90, <br /> Barranquilla, Colombia
     </>
   ),
   phone_1: "(605) 3369999 Ext 209",
