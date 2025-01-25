@@ -10,12 +10,11 @@ const contact_info = {
       Cra. 50 #80-209, <br /> Barranquilla, Colombia
     </>
   ),
-  phone_1: "(605) 3369940 Ext. 0",
-  phone_2: "(605) 3563156",
-  phone_3: "(605) 3369912",
-  email_general: "investigación@clinicadelacosta.co",
-  email_studies: "infoestudiosclinicos@clinicadelacosta.co",
-  email_legal: "juridica@clinicadelacosta.co",
+  phone_1: "(605) 3369999 Ext 209",
+  phone_2: "+57 5 3133894240",
+  email_general: "infoestudios@clinicadelacosta.co",
+  email_studies: "factibilidad@clinicadelacosta.co",
+  email_legal: "juridica@clinicadelacosta.co", // Este no fue solicitado cambiar, pero está incluido
   open: (
     <>
       Lunes - Viernes <br />
