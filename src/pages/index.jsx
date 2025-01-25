@@ -3,6 +3,9 @@ import Layout from "@/layout/layout";
 import HomeOne from "@/components/home/home/home";
 import SEO from "@/components/seo";
 import Wrapper from "@/layout/wrapper";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+
+const RECAPTCHA_SITE_KEY = "6LcD-7sqAAAAABOcQvLv0LWfFEJMf1BKfFol4pC3";
 
 const Index = () => {
   // URL de la imagen del logo
@@ -15,20 +18,49 @@ const Index = () => {
   const author = "Clínica de la Costa";
   const siteUrl = "https://www.invclicosta.info";
 
+  // Componente para manejar reCAPTCHA
+  const ReCaptchaComponent = () => {
+    const { executeRecaptcha } = useGoogleReCaptcha();
+
+    const handleReCaptcha = async () => {
+      if (!executeRecaptcha) {
+        console.error("reCAPTCHA no está listo");
+        return;
+      }
+
+      try {
+        const token = await executeRecaptcha("homepage_action"); // Acción personalizada
+        console.log("Token reCAPTCHA:", token);
+        // Puedes enviar este token a tu backend para validación
+      } catch (error) {
+        console.error("Error ejecutando reCAPTCHA:", error);
+      }
+    };
+
+    React.useEffect(() => {
+      handleReCaptcha(); // Ejecuta el reCAPTCHA al cargar la página
+    }, [executeRecaptcha]);
+
+    return null; // Este componente no renderiza nada visual
+  };
+
   return (
-    <Wrapper>
-      <SEO
-        pageTitle={pageTitle}
-        description={pageDescription}
-        keywords={keywords}
-        author={author}
-        siteUrl={siteUrl}
-        imageUrl={logoUrl} // Usar la variable logoUrl para la imagen en SEO
-      />
-      <Layout logoUrl={logoUrl}> {/* Pasar la URL del logo al Layout */}
-        <HomeOne />
-      </Layout>
-    </Wrapper>
+    <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SITE_KEY}>
+      <Wrapper>
+        <SEO
+          pageTitle={pageTitle}
+          description={pageDescription}
+          keywords={keywords}
+          author={author}
+          siteUrl={siteUrl}
+          imageUrl={logoUrl}
+        />
+        <Layout logoUrl={logoUrl}>
+          <HomeOne />
+        </Layout>
+        <ReCaptchaComponent /> {/* Agrega el componente para manejar reCAPTCHA */}
+      </Wrapper>
+    </GoogleReCaptchaProvider>
   );
 };
 
