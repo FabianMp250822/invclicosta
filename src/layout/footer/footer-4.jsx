@@ -5,6 +5,20 @@ const FooterFour = ({ style_2 = false }) => {
   return (
     <>
       <footer>
+        {/* Logo al inicio del footer */}
+        <div
+          className="footer-logo-container"
+          style={{ textAlign: "center", padding: "20px 0" }}
+        >
+          <Link href="/">
+            <img
+              src="assets/images/vigilado-supersalud.png"
+              alt="Vigilado Supersalud Logo"
+              style={{ maxWidth: "150px" }}
+            />
+          </Link>
+        </div>
+
         <div
           className={`footer-area ${
             style_2 ? "pt-105" : "tp-footer-white-content theme-bg pt-95"
@@ -153,8 +167,10 @@ const FooterFour = ({ style_2 = false }) => {
                   <div className="footer-widget__copyright copyright-white">
                     <span>
                       © {new Date().getFullYear()}{" "}
-                      <a href="https://clinicadelacosta.co">Clínica de la Costa</a>.{" "}
-                      <i>Todos los derechos reservados.</i>
+                      <a href="https://clinicadelacosta.co">
+                        Clínica de la Costa
+                      </a>
+                      . <i>Todos los derechos reservados.</i>
                     </span>
                   </div>
                 </div>
@@ -168,7 +184,7 @@ const FooterFour = ({ style_2 = false }) => {
                         <a href="#">Política de privacidad</a>
                       </li>
                       <li>
-                        <a href="#">Precios</a>
+                        <a href="#">Precios 222</a>
                       </li>
                     </ul>
                   </div>
