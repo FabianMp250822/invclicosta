@@ -58,6 +58,14 @@ const menu_data = [
     active: "",
   },
   {
+    id: 6,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Noticias",
+    link: "/blog",
+    active: "",
+  },
+  {
     id: 7,
     mega_menu: false,
     has_dropdown: false,

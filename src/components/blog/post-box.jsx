@@ -10,7 +10,6 @@ import RecentPost from "./recent-post";
 import Tags from "./tags";
 import { getBlogs } from "../services/firebaseService"; // Asegúrate de que la ruta sea correcta
 
-
 // Configuración del slider (si lo usas)
 const setting = {
   slidesPerView: 1,
@@ -28,9 +27,9 @@ const setting = {
 const getSummary = (html, maxChars = 250) => {
   if (!html) return ""; // Manejo de caso en que html sea null o undefined
   try {
-    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const doc = new DOMParser().parseFromString(html, "text/html");
     const plainText = doc.body.textContent || "";
-     if (plainText.length > maxChars) {
+    if (plainText.length > maxChars) {
       return plainText.substring(0, maxChars) + "...";
     }
     return plainText;
@@ -46,26 +45,37 @@ const PostBox = () => {
   const [error, setError] = useState(null); // Estado para manejar errores
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const data = await getBlogs();
         if (!data) {
-          setError("No se encontraron blogs."); // Establece un mensaje de error
+          setError("No se encontraron blogs.");
           setLoading(false);
           return;
         }
-        const mappedBlogs = data.map((blog) => ({
+
+        // Filtra solo los que tengan lugar === "centro"
+        const filteredData = data.filter((blog) => blog.lugar === "centro");
+
+        if (filteredData.length === 0) {
+          setError("No se encontraron blogs con lugar 'centro'.");
+          setLoading(false);
+          return;
+        }
+
+        // Mapeo para mantener la estructura que usas en el componente
+        const mappedBlogs = filteredData.map((blog) => ({
           ...blog,
           user: blog.author,
           img: blog.image,
           des: blog.content,
         }));
+
         setBlogs(mappedBlogs);
       } catch (err) {
         console.error("Error al cargar los blogs:", err);
-        setError("Error al cargar los blogs. Por favor, inténtalo de nuevo más tarde."); // Mensaje de error más descriptivo
+        setError("Error al cargar los blogs. Por favor, inténtalo de nuevo más tarde.");
         setLoading(false);
       } finally {
         setLoading(false);
@@ -75,10 +85,9 @@ const PostBox = () => {
     fetchBlogs();
   }, []);
 
-
   if (loading) return <p>Cargando blogs...</p>;
   if (error) return <p>{error}</p>; // Muestra el mensaje de error
-  if (blogs.length === 0) return <p>No hay blogs para mostrar.</p>; //Mensaje si no se encuentran blogs
+  if (blogs.length === 0) return <p>No hay blogs para mostrar.</p>;
 
   return (
     <>
@@ -92,14 +101,16 @@ const PostBox = () => {
                     key={article.id}
                     className="postbox__item format-image mb-60 transition-3"
                   >
-                    {/* ... (resto del código para mostrar imágenes, videos, etc. -  sin cambios significativos) ... */}
-                     {article.img && (
+                    {/* Si hay imagen principal */}
+                    {article.img && (
                       <div className="postbox__thumb w-img mb-35">
                         <Link href={`/blog-details/${article.id}`}>
                           <img src={article.img} alt="blog-thumbnail" />
                         </Link>
                       </div>
                     )}
+
+                    {/* Si hay imágenes en slider */}
                     {article.slider_img && (
                       <Swiper
                         {...setting}
@@ -114,7 +125,7 @@ const PostBox = () => {
                             </div>
                           </SwiperSlide>
                         ))}
-                        {/*Botones de navegacion del swiper, configuracion opcional*/}
+                        {/* Botones de navegación del swiper, configuración opcional */}
                         <div className="postbox-nav">
                           <button className="postbox-slider-button-next">
                             <i className="fa-solid fa-chevron-right"></i>
@@ -125,6 +136,8 @@ const PostBox = () => {
                         </div>
                       </Swiper>
                     )}
+
+                    {/* Si hay videos */}
                     {article.video &&
                       article.video.map((item, i) => (
                         <div
@@ -148,6 +161,7 @@ const PostBox = () => {
                         </div>
                       ))}
 
+                    {/* Contenido del post */}
                     <div className="postbox__content">
                       <div className="postbox__meta mb-40">
                         <span>
@@ -159,14 +173,14 @@ const PostBox = () => {
                         <span>
                           <i className="fa-regular fa-clock"></i> {article.date}
                         </span>
-                         <span>
+                        <span>
                           <Link href={`/blog-details/${article.id}`}>
-                           <i className="fa-regular fa-message-dots"></i>
+                            <i className="fa-regular fa-message-dots"></i>
                             {article.comments}
                           </Link>
                         </span>
                         <span>
-                           <i className="fa-light fa-eye"></i> {article.views}
+                          <i className="fa-light fa-eye"></i> {article.views}
                         </span>
                       </div>
                       <h3 className="postbox__title mb-40">
@@ -175,7 +189,6 @@ const PostBox = () => {
                         </Link>
                       </h3>
                       <div className="postbox__text mb-40">
-                        {/* Se muestra solo un resumen del contenido */}
                         <p>{getSummary(article.des)}</p>
                       </div>
                       <div className="postbox__read-more">
@@ -189,7 +202,7 @@ const PostBox = () => {
 
                 {/* Paginación (si la necesitas) */}
                 <div className="basic-pagination">
-                  {/* ... (tu código de paginación) ... */}
+                  {/* ... (tu código de paginación, si corresponde) ... */}
                 </div>
               </div>
             </div>
@@ -197,10 +210,9 @@ const PostBox = () => {
             {/* Sidebar */}
             <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-12">
               <div className="sidebar__wrapper pl-25 pb-50">
-                <BlogSearch />
-                <Category />
+               
                 <RecentPost />
-                <Tags />
+              
               </div>
             </div>
           </div>
