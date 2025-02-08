@@ -1,7 +1,43 @@
 import SocialLinks from "@/common/social-links";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+
+const footer_content = {
+  footer_info: [
+    {
+      id: 1,
+      title: "Enlaces útiles",
+      cls: "footer-col-2",
+      links: [
+        { name: "Contáctanos", link: "/contacto" },
+        { name: "Sobre nosotros", link: "/about" },
+        { name: "Servicios", link: "/servicios" },
+        { name: "Política de privacidad", link: "/privacidad" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Información de contacto",
+      cls: "footer-col-3",
+      links: [
+        { name: "Carrera 50 #80-209, Barranquilla, Colombia" },
+        { name: "+57 605 336 9940 Ext. 0" },
+        { name: "+57 605 356 3156" },
+        { name: "investigación@clinicadelacosta.co" },
+        { name: "Horario de oficina: 8AM - 6PM" },
+      ],
+    },
+  ],
+  copy_right_text: (
+    <>
+      © Copyright © {new Date().getFullYear()}
+      <Link href="/"> Clinica de Costa / Fabian Muñoz Puello & Leidy Vega Anaya </Link>. <i>Todos los derechos reservados</i>
+    </>
+  ),
+};
+
+const { footer_info, copy_right_text } = footer_content;
 
 const FooterTwo = () => {
   return (
@@ -125,3 +161,4 @@ const FooterTwo = () => {
 };
 
 export default FooterTwo;
+
