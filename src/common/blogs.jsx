@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getBlogs } from "../services/firebaseService"; // Asegúrate que la ruta sea correcta
+//cargar blogs 
+import { getBlogs } from "@/components/services/firebaseService";
+
 
 const BlogCards = () => {
   const [blogs, setBlogs] = useState([]);
@@ -60,6 +62,7 @@ const BlogCards = () => {
             <div key={blog.id} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
               <div className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
                 <Link href={`/blog-details/${blog.id}`}>
+                    
                     <img
                         className="w-full h-56 object-cover object-center"
                         src={blog.image}

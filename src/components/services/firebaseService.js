@@ -1,72 +1,108 @@
-// firebaseService.js 
-import { db } from "@/firebaseConfig";
-import { 
-  collection, 
-  getDocs, 
-  query, 
-  where, 
-  doc,       // Agregado
-  getDoc     // Agregado
-} from "firebase/firestore"; 
+// services/firebaseService.js
+import { db } from "@/firebaseConfig"; // Importa la instancia de la base de datos desde tu archivo de configuración
+import {
+  collection,
+  getDocs,
+  query,
+  where,
+  doc,
+  getDoc,
+} from "firebase/firestore";
 
-// Función para obtener todos los investigadores
+/**
+ * Obtiene todos los investigadores de la colección "researchers".
+ *
+ * @returns {Promise<Array<Object>>} Un array de objetos, donde cada objeto representa un investigador.
+ *   Cada objeto investigador incluye su ID y todos sus campos.
+ *   Retorna un array vacío si no hay investigadores.
+ * @throws {Error} Si ocurre un error al obtener los datos de Firestore.
+ */
 export const getResearchers = async () => {
   try {
-    // Accede a la colección "researchers"
-    const querySnapshot = await getDocs(collection(db, "researchers"));
-    
-    // Recorre los documentos obtenidos y almacena los datos en un array
+    const researchersRef = collection(db, "researchers");
+    const querySnapshot = await getDocs(researchersRef);
+
     const researchers = [];
     querySnapshot.forEach((doc) => {
+      // Añade el ID del documento al objeto de datos del investigador.
       researchers.push({ id: doc.id, ...doc.data() });
     });
-    
-    return researchers;  // Retorna los datos obtenidos
+
+    return researchers;
   } catch (error) {
-    console.error("Error obteniendo investigadores: ", error);
-    throw new Error(error);
+    console.error("Error al obtener los investigadores:", error);
+    throw new Error(
+      "Error al obtener los investigadores de Firestore: " + error.message
+    ); // Mensaje de error más descriptivo
   }
 };
 
-// Función para obtener todos los blogs cuyo campo "lugar" es "Centro"
-export const getBlogs = async () => {
-  try {
-    // Accede a la colección "blogs"
-    const blogsRef = collection(db, "blogs");
-    // Crea un query que filtra los documentos donde el campo "lugar" es "Centro"
-    const q = query(blogsRef, where("lugar", "==", "Centro"));
-    // Obtiene los documentos que cumplen la condición
-    const querySnapshot = await getDocs(q);
-    
-    // Recorre los documentos obtenidos y almacena los datos en un array
-    const blogs = [];
-    querySnapshot.forEach((doc) => {
-      blogs.push({ id: doc.id, ...doc.data() });
-    });
-    
-    return blogs;  // Retorna los datos obtenidos
-  } catch (error) {
-    console.error("Error obteniendo blogs: ", error);
-    throw new Error(error);
-  }
-};
+/**
+ * Obtiene todos los blogs de la colección "blogs".
+ *  Puede filtrar por el campo "lugar" si se proporciona el parámetro `lugar`.
+ * @param {string} [lugar] - Opcional. Si se proporciona, filtra los blogs por el valor del campo "lugar".
+ *
+ * @returns {Promise<Array<Object>>} Un array de objetos, donde cada objeto representa un blog.
+ *   Cada objeto blog incluye su ID y todos sus campos.
+ *   Retorna un array vacío si no hay blogs.
+ * @throws {Error} Si ocurre un error al obtener los datos de Firestore.
+ */
+export const getBlogs = async (lugar) => {
+    try {
+      const blogsRef = collection(db, "blogs");
+      let q;
 
-// Función para obtener un blog por su id
+      if (lugar) {
+        // Si se proporciona el parámetro 'lugar', crea una consulta filtrada.
+        q = query(blogsRef, where("lugar", "==", lugar));
+      } else {
+        // Si no se proporciona 'lugar', obtiene todos los blogs.
+        q = blogsRef;
+      }
+      const querySnapshot = await getDocs(q);
+
+      const blogs = [];
+      querySnapshot.forEach((doc) => {
+        blogs.push({ id: doc.id, ...doc.data() });
+      });
+
+      return blogs;
+    } catch (error) {
+      console.error("Error al obtener los blogs:", error);
+      throw new Error(
+        "Error al obtener los blogs de Firestore: " + error.message
+      );
+    }
+  };
+
+/**
+ * Obtiene un blog específico por su ID de la colección "blogs".
+ *
+ * @param {string} id - El ID del blog que se quiere obtener.
+ * @returns {Promise<Object|null>} Un objeto que representa el blog, incluyendo su ID y todos sus campos.
+ *   Retorna `null` si no se encuentra un blog con el ID proporcionado.
+ * @throws {Error} Si ocurre un error al obtener los datos de Firestore.
+ */
 export const getBlogById = async (id) => {
   try {
-    // Crea una referencia al documento específico en la colección "blogs"
-    const blogRef = doc(db, "blogs", id);
-    // Obtiene el documento
-    const blogSnapshot = await getDoc(blogRef);
-    
-    if (!blogSnapshot.exists()) {
-      throw new Error(`No se encontró el blog con el id: ${id}`);
+    if (!id) {
+      throw new Error("Se requiere un ID para obtener un blog."); // Validación del ID
     }
-    
-    // Retorna el documento con su id
-    return { id: blogSnapshot.id, ...blogSnapshot.data() };
+
+    const blogRef = doc(db, "blogs", id);
+    const blogSnapshot = await getDoc(blogRef);
+
+    if (blogSnapshot.exists()) {
+      return { id: blogSnapshot.id, ...blogSnapshot.data() };
+    } else {
+      // En lugar de lanzar un error, retorna null.  Es más flexible.
+      console.warn(`No se encontró el blog con el id: ${id}`); // Advertencia en lugar de error
+      return null;
+    }
   } catch (error) {
-    console.error("Error obteniendo el blog: ", error);
-    throw new Error(error);
+    console.error("Error al obtener el blog por ID:", error);
+    throw new Error(
+      "Error al obtener el blog de Firestore: " + error.message
+    );
   }
 };
