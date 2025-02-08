@@ -52,7 +52,7 @@ const Blog = () => {
           return;
         }
         // Filtra los blogs para incluir solo los que tengan lugar: "Centro"
-        const filteredBlogs = data.filter((blog) => blog.lugar === "Centro");
+        const filteredBlogs = data.filter((blog) => blog.lugar === "centro");
         setBlogs(filteredBlogs);
       } catch (err) {
         console.error("Error al cargar los blogs:", err);

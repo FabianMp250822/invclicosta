@@ -17,7 +17,7 @@ const RecentPost = () => {
           return;
         }
 
-        const filteredBlogs = data.filter((blog) => blog.lugar === "Centro");
+        const filteredBlogs = data.filter((blog) => blog.lugar === "centro");
         const sortedBlogs = filteredBlogs.sort(
           (a, b) => new Date(b.date) - new Date(a.date)
         );
