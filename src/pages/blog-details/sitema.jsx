@@ -6,7 +6,7 @@ import BlogDetails from "@/components/blog-details/[id]";
 const index = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Blog Details" />
+      <SEO pageTitle="Blog Centro de investigación" />
       <BlogDetails />
     </Wrapper>
   );
