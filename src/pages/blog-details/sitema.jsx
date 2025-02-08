@@ -1,7 +1,8 @@
 import React from "react";
-import BlogDetails from "@/components/blog-details/blog-details";
+
 import SEO from "@/components/seo";
 import Wrapper from "@/layout/wrapper";
+import BlogDetails from "@/components/blog-details/[id]";
 const index = () => {
   return (
     <Wrapper>

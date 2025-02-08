@@ -18,6 +18,7 @@
     "@popperjs/core": "^2.11.6",
     "antd": "^5.1.7",
     "bootstrap": "^5.2.3",
+    "dompurify": "^3.2.4",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "firebase": "^10.13.2",

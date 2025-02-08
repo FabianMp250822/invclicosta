@@ -8,6 +8,7 @@ import NavTab from "@/common/nav-tab";
 import Team from "@/common/team";
 import FooterFour from "@/layout/footer/footer-4";
 import Header from "@/layout/header/header";
+import BlogCards from "@/common/blogs";
 
 const About = () => {
   return (
@@ -19,6 +20,7 @@ const About = () => {
       <Specialists />
       <NavTab />
       <Team />
+    
       <FooterFour />
     </>
   );

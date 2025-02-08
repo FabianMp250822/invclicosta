@@ -12,15 +12,15 @@ const Banner = () => {
       >
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-7 col-12">
+            <div className="col-xl-6 col-lg-7 col-md-7 col-12">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">Noticias </h2>
+                <h2 className="tp-breadcrumb__title">Blog Details</h2>
               </div>
             </div>
-            <div className="col-lg-6 col-md-5 col-12">
+            <div className="col-xl-6 col-lg-5 col-md-5 col-12">
               <div className="tp-breadcrumb__link d-flex align-items-center">
                 <span>
-                  Centro de investigación : <Link href="/blog"> Clínica de la costa</Link>
+                  Bioxlab : <Link href="/blog-details"> Blog Detaails</Link>
                 </span>
               </div>
             </div>

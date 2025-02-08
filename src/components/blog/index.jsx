@@ -1,4 +1,4 @@
-import FooterFour from "@/layout/footer/footer-4";
+import Footer from "@/layout/footer/footer";
 import HeaderTwo from "@/layout/header/header-two";
 import React from "react";
 import Banner from "./banner";
@@ -11,7 +11,7 @@ const Blog = () => {
       <Header />
       <Banner />
       <PostBox />
-      <FooterFour />
+      <Footer />
     </>
   );
 };

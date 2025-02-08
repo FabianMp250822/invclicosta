@@ -1,3 +1,5 @@
+import SocialLinks from "@/common/social-links";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -5,115 +7,112 @@ const FooterThree = () => {
   return (
     <>
       <footer>
-        <div className="footer-area tp-common-area footer-white-content theme-bg pt-105">
-          <div className="tp-footer-top pb-25">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-7 col-md-6">
-                  <div
-                    className="footernewsletter mb-40 wow fadeInUp"
-                    data-wow-delay=".2s"
-                  >
-                    <h4 className="footernewsletter__title">
-                      Subscribe Newslatter
-                    </h4>
-                    <p>
-                      Exerci tation ullamcorper suscipit lobortis nisl aliquip{" "}
-                    </p>
+        <div className="footer-area theme-bg pt-100 pb-50">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  className="footer-widget footer-col-1 mb-50 wow fadeInUp"
+                  data-wow-delay=".2s"
+                >
+                  <h4 className="footer-widget__title mb-30">
+                    <Link href="/">
+                      <Image
+                        src="/assets/img/logo/logo.png"
+                        alt="logo"
+                        width={100}
+                        height={50}
+                      />
+                    </Link>
+                  </h4>
+                  <p>
+                    Somos un referente en la atención médica en Barranquilla,
+                    comprometidos con la excelencia en salud y la investigación
+                    clínica.
+                  </p>
+                  <div className="footer-widget__social">
+                    <SocialLinks />
                   </div>
                 </div>
-                <div className="col-lg-5 col-md-6">
+              </div>
+              {footer_info.map((item) => (
+                <div
+                  key={item.id}
+                  className="col-xl-3 col-lg-4 col-md-6"
+                >
                   <div
-                    className="footernewsletter__form p-relative wow fadeInUp"
+                    className={`footer-widget ${item.cls} mb-50 wow fadeInUp`}
                     data-wow-delay=".4s"
                   >
+                    <h4 className="footer-widget__title mb-20">
+                      {item.title}
+                    </h4>
+                    <div className="footer-widget__links">
+                      <ul>
+                        {item.links.map((link, i) => (
+                          <li key={i}>
+                            {link.link ? (
+                              <Link href={`${link.link}`}>
+                                {link.name}
+                              </Link>
+                            ) : (
+                              link.name
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <div className="col-xl-3 col-lg-6 col-md-6">
+                <div
+                  className="footer-widget footer-col-4 mb-50 wow fadeInUp"
+                  data-wow-delay=".8s"
+                >
+                  <h4 className="footer-widget__title mb-20">
+                    Suscríbete al Boletín
+                  </h4>
+                  <p>
+                    Recibe las últimas noticias y actualizaciones sobre
+                    nuestros servicios y estudios clínicos.
+                  </p>
+                  <div className="footer-widget__newsletter p-relative">
                     <form action="#">
-                      <input type="text" placeholder="Enter Mail" />
-                      <button className="footernewsletter__fw-news-btn">
+                      <input type="email" placeholder="Ingresa tu correo" />
+                      <button className="footer-widget__fw-news-btn">
                         <i className="fa-solid fa-paper-plane"></i>
                       </button>
                     </form>
                   </div>
                 </div>
               </div>
-              <div className="row pb-40 pt-50">
-                <div className="col-lg-4 col-md-6">
-                  <div
-                    className="footercontact mb-40 wow fadeInUp"
-                    data-wow-delay=".2s"
-                  >
-                    <div className="footercontact__icon">
-                      <i className="flaticon-placeholder"></i>
-                    </div>
-                    <div className="footercontact__content">
-                      <span className="footercontact__title">
-                        <Link href="/contact">
-                          Ta-134/A, Gulshan Badda Link Rd, <br /> Nya 10982 USA
-                        </Link>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                  <div
-                    className="footercontact mb-40 wow fadeInUp"
-                    data-wow-delay=".4s"
-                  >
-                    <div className="footercontact__icon fw-pink-icon">
-                      <i className="flaticon-mail"></i>
-                    </div>
-                    <div className="footercontact__content fw-pink-content">
-                      <a href="mailto:Rasalinawillam@gmail.com">
-                        Rasalinawillam@gmail.com
-                      </a>
-                      <a href="tel:+08987878773345">+08 98787 8773 345 </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                  <div
-                    className="footercontact mb-40 wow fadeInUp"
-                    data-wow-delay=".6s"
-                  >
-                    <div className="footercontact__icon fw-green-icon">
-                      <i className="flaticon-24-hours"></i>
-                    </div>
-                    <div className="footercontact__content">
-                      <span>Mon - Sat - 09:00PM - 06:00AM</span>
-                      <span>Sunday - Off Day</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-          <div className="footer-area-bottom-tp">
-            <div className="container">
-              <div className="footer-bottom-border">
-                <div className="row">
-                  <div className="col-xxl-6 col-xl-7 col-lg-6 col-md-12 col-12">
-                    <div className="footer-widget__copyright cpy-white-content">
-                      <span>
-                        © Copyright © {new Date().getFullYear()}
-                        <Link href="/">  Theme_pure</Link>.
-                        <i> All Rights Reserved Copyright</i>
-                      </span>
-                    </div>
-                  </div>
-                  <div className="col-xxl-6 col-xl-5 col-lg-6 col-md-12 col-12">
-                    <div className="footer-widget__copyright-info info-direction cpy-white-content-info">
-                      <ul className="d-flex align-items-center">
-                        <li>
-                          <a href="#">Terms and conditions</a>
-                        </li>
-                        <li>
-                          <a href="#">Privacy policy</a>
-                        </li>
-                        <li>
-                          <a href="#">Pricing</a>
-                        </li>
-                      </ul>
-                    </div>
+        </div>
+        <div className="footer-area-bottom theme-bg">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-xl-6 col-lg-6 col-md-12 col-12 text-center text-lg-start">
+                <div className="footer-widget__copyright">
+                  <span>{copy_right_text}</span>
+                </div>
+              </div>
+              <div className="col-xl-6 col-lg-6 col-md-12 col-12 text-center text-lg-end">
+                <div className="d-flex justify-content-center justify-content-lg-end align-items-center">
+                  <div className="footer-vigilado-logo me-3">
+                    <Link
+                      href="https://www.supersalud.gov.co/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src="/assets/img/logo/supersalud.svg"
+                        alt="Vigilado Supersalud"
+                        width={200}
+                        height={50}
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>
