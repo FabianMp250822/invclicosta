@@ -6,8 +6,8 @@ import { getBlogById } from "@/components/services/firebaseService.js";
 // Layout y componentes
 import Footer from "@/layout/footer/footer";
 import Header from "@/layout/header/header";
-import Banner from "@/components/blog-details222/banner";
-import PostBoxDetails from "@/components/blog-details222/PostBoxDetails";
+import Banner from "@/components/blog-details/banner";
+import PostBoxDetails from "@/components/blog-details/PostBoxDetails";
 
 // Ejemplo con SSR (en cada request)
 export async function getServerSideProps(context) {

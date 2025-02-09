@@ -2,7 +2,7 @@ import React from "react";
 
 import SEO from "@/components/seo";
 import Wrapper from "@/layout/wrapper";
-import BlogDetails from "@/components/blog-details222/[id]";
+import BlogDetails from "@/components/blog-details/[id]";
 const index = () => {
   return (
     <Wrapper>
