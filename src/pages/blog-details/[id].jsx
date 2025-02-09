@@ -33,11 +33,11 @@ export async function getServerSideProps(context) {
 // Componente principal
 const BlogDetails = ({ blog }) => {
   // Si no existiese blog.excerpt, podemos usar blog.title o un resumen corto
-  const excerpt = blog.excerpt || "Un breve resumen de tu artículo...";
+  const excerpt = blog.content || "Un breve resumen de tu artículo...";
 
   // Arma la URL canónica si tu dominio fuese, por ejemplo, https://misitio.com
   // Útil para SEO y redes sociales
-  const canonicalUrl = `https://tudominio.com/blog-details/${blog.id}`;
+  const canonicalUrl = `https://www.invclicosta.com//blog-details/${blog.id}`;
 
   return (
     <>
