@@ -22,23 +22,23 @@ const content = {
   ),
   des: (
     <ul style={{ color: colors.white, paddingLeft: "20px", listStyleType: "disc" }}>
-      <li>
-        Más de 20 años de experiencia en investigación clínica.
-      </li>
-      <li>
-        Certificaciones de buenas prácticas clínicas desde 2011 e ISO 9001:2015.
-      </li>
-      <li>
-        Cuatro sedes exclusivas para investigación con más de 300 camas.
-      </li>
-      <li>
-        Laboratorios de alta complejidad y tecnología avanzada.
-      </li>
-      <li>
-        Más de 100 ensayos clínicos realizados en áreas como vacunas, cardiología y nefrología.
-      </li>
-    
-    </ul>
+    <li>
+      Más de 20 años de experiencia en investigación clínica.
+    </li>
+    <li>
+      Certificaciones de buenas prácticas clínicas desde 2011 y acreditaciones que demuestran la calidad de nuestros procesos de gestión.
+    </li>
+    <li>
+      Cuatro sedes exclusivas para investigación con más de 300 camas.
+    </li>
+    <li>
+      Laboratorios de alta complejidad y tecnología avanzada.
+    </li>
+    <li>
+      Más de 100 ensayos clínicos realizados en áreas como vacunas, cardiología y nefrología.
+    </li>
+  
+  </ul>
   ),
   btn_text1: "Programar Consulta",
   btn_text2: "Descubrir Nuestro Trabajo",
