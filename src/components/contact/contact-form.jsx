@@ -14,7 +14,7 @@ const contact_info = {
   phone_2: "+57 5 3133894240",
   email_general: "infoestudios@clinicadelacosta.co",
   email_studies: "factibilidad@clinicadelacosta.co",
-  email_legal: "juridica@clinicadelacosta.co", // Este no fue solicitado cambiar, pero está incluido
+  email_legal: "juridica@clinicadelacosta.co", 
   open: (
     <>
       Lunes - Viernes <br />

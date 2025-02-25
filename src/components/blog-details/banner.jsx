@@ -25,7 +25,7 @@ const Banner = ({ title }) => {
               <span>
                 Clínica de la costa :{" "}
                 <Link href="/blog">Blog</Link>
-                {/* Cambia /blog por la ruta que quieras */}
+               
               </span>
             </div>
           </div>

@@ -18,13 +18,13 @@ const Index = () => {
   const author = "Clínica de la Costa";
   const siteUrl = "https://www.invclicosta.info";
 
-  // Componente para manejar reCAPTCHA
+  // Componente para manejar reCAPTCHA  correcion de estilos
   const ReCaptchaComponent = () => {
     const { executeRecaptcha } = useGoogleReCaptcha();
 
     const handleReCaptcha = async () => {
       if (!executeRecaptcha) {
-        console.error("reCAPTCHA no está listo");
+        console.error("reCAPTCHA no está listo debes cargarlo primero");
         return;
       }
 
@@ -58,7 +58,7 @@ const Index = () => {
         <Layout logoUrl={logoUrl}>
           <HomeOne />
         </Layout>
-        <ReCaptchaComponent /> {/* Agrega el componente para manejar reCAPTCHA */}
+        <ReCaptchaComponent />
       </Wrapper>
     </GoogleReCaptchaProvider>
   );
