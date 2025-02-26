@@ -39,7 +39,6 @@ const sliderSettings = {
 };
 
 const Recognitions = () => {
-  // Datos de ejemplo (puedes importarlos o recibirlos por props si gustas)
   const recognitionsData = {
     reconocimientosTitle: "Reconocimientos",
     recognitions: {
@@ -146,7 +145,7 @@ const Recognitions = () => {
           </div>
         </div>
 
-        {/* Reconocimientos en dos columnas     */}
+        {/* Reconocimientos en dos columnas */}
         <div className="row">
           <div className="col-lg-6">
             {recognitionsData.recognitions.textContent.map((item, index) => (
@@ -186,7 +185,7 @@ const Recognitions = () => {
                           <img
                             src={item.image}
                             alt={item.title}
-                            style={{ cursor: "pointer" }}
+                            style={{ cursor: "pointer", width: "55%" }} // <--- se agregó width: "35%"
                             onClick={() => handleImagePopup(index)}
                           />
                         </div>
