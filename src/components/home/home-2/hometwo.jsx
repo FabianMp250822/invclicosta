@@ -11,6 +11,7 @@ import Service from "./service";
 import Team from "./team";
 import Testimonial from "../../../common/testimonial";
 import Blog from "./blog";
+import Recognitions from "../home/Recognitions";
 
 const HomeTwo = () => {
   return (
@@ -22,6 +23,7 @@ const HomeTwo = () => {
       <Counter cls="pt-80 pb-100" />
       <Choose />
       <Appointment />
+      <Recognitions/>
       <Brands border_style={true} />
       <Team />
       <Testimonial bg_img={true} />

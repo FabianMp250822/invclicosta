@@ -10,7 +10,7 @@ const Appointment = () => {
             <div className="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
               <div className="appoinment-thumb">
                 <img
-                  src="/assets/img/banner/contacto.jpg"
+                  src="/assets/img/banner/contacto2.jpg"
                   alt="Imagen de programación de citas en el Centro de Investigación Clínica de la Costa"
                 />
               </div>
