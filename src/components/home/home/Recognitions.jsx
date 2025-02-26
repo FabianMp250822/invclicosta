@@ -146,7 +146,7 @@ const Recognitions = () => {
           </div>
         </div>
 
-        {/* Reconocimientos en dos columnas */}
+        {/* Reconocimientos en dos columnas     */}
         <div className="row">
           <div className="col-lg-6">
             {recognitionsData.recognitions.textContent.map((item, index) => (
