@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styles from './Brands.module.css';  // Usamos el CSS module
 
 const brands_img = [
@@ -28,19 +29,18 @@ const brands_img = [
   { img: "/assets/img/brand/Alumis Inc.-100.jpg", alt: "Brand 22" },
   { img: "/assets/img/brand/Eagle Pharmaceuticals,-100.jpg", alt: "Brand 23" },
   { img: "/assets/img/brand/Enanta Pharmaceuticals-100.jpg", alt: "Brand 24" },
-  { img: "/assets/img/brand/Biogen Idec Research Limited-100.jpg", alt: "Brand 25" },
+  { img: "/assets/img/brand/Biogen Idec Research Limited-100.jpg", alt: "Brand 25" }
 ];
 
-
-
-
 const Brands = ({ style_2 = false, border_style = false }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.brandArea}>
       <div className={styles.brandContainer}>
-        <h2 className={styles.brandTitle}>Nuestros Patrocinadores</h2>
+        <h2 className={styles.brandTitle}>{t("brands.title")}</h2>
         <p className={styles.brandDescription}>
-          Agradecemos el apoyo de nuestros patrocinadores, quienes hacen posible nuestras investigaciones y el avance en la atención médica.
+          {t("brands.description")}
         </p>
         <div className={styles.brandGrid}>
           {brands_img.map((item, i) => (

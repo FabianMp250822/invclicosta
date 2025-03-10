@@ -1,0 +1,342 @@
+{
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "ethics_committee": "Ethics Committee",
+      "studies": "Studies",
+      "cideacc": "CIDEACC",
+      "researchers": "Researchers",
+      "invclincosta": "Invclincosta",
+      "saim_research": "SAIM Research",
+      "saim_monitors": "SAIM Monitors",
+      "document_management": "Document Management",
+      "nephrology": "Nephrology",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "hero": {
+      "sub_title": "Passion for clinical research and innovation",
+      "title": "Leader in clinical research in Colombia",
+      "list": [
+        "Over 20 years of experience in clinical research.",
+        "Certifications in good clinical practices since 2011 and accreditations demonstrating the quality of our management processes.",
+        "Four exclusive research centers with over 300 beds.",
+        "High-complexity laboratories with advanced technology.",
+        "Over 100 clinical trials conducted in areas such as vaccines, cardiology, and nephrology."
+      ],
+      "btn_text1": "Schedule Consultation",
+      "btn_text2": "Discover Our Work",
+      "hero_box": {
+        "item1": "Pioneers in Clinical Research",
+        "item2": "Over 100 clinical trials",
+        "item3": "Collaboration with Global Leaders"
+      },
+      "scroll_text": "Scroll Down"
+    },
+    "service_area": {
+    "section_subtitle": "Medical Specialties of Our Research Center",
+    "section_title": "Discover our research areas dedicated to improving health and wellbeing.",
+    "read_more": "Read More",
+    "modal": {
+      "paragraph1": "This study focuses on the latest research and advances in {{title}}. Our team of specialists constantly works to offer innovative solutions and treatments, aiming to improve the quality of life of our patients.",
+      "paragraph2": "Additionally, we collaborate with various organizations to ensure that every treatment and study meets the highest standards of quality and safety."
+    },
+    "slider_items": [
+      {
+        "id": 1,
+        "icon": "flaticon-vaccine",
+        "title": "Vaccines",
+        "des": "We develop effective vaccines to protect your health and prevent diseases."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-cardiology",
+        "title": "Cardiology",
+        "des": "We provide precise diagnostics and innovative treatments for heart diseases."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-rheumatology",
+        "title": "Rheumatology",
+        "des": "We offer specialized treatments for managing rheumatic diseases."
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-nephrology",
+        "title": "Nephrology",
+        "des": "We improve your kidney health through advanced therapies and specialized care."
+      },
+      {
+        "id": 5,
+        "icon": "flaticon-oncology",
+        "title": "Oncology",
+        "des": "We offer advanced and personalized treatments to fight cancer."
+      },
+      {
+        "id": 6,
+        "icon": "flaticon-pulmonology",
+        "title": "Pulmonology",
+        "des": "Effective treatments to improve the health of your lungs and airways."
+      },
+      {
+        "id": 7,
+        "icon": "flaticon-neurology",
+        "title": "Neurology",
+        "des": "We address disorders of the nervous system with innovative and precise therapies."
+      },
+      {
+        "id": 8,
+        "icon": "flaticon-endocrinology",
+        "title": "Endocrinology",
+        "des": "We provide comprehensive care for hormonal and metabolic diseases."
+      },
+      {
+        "id": 9,
+        "icon": "flaticon-pediatrics",
+        "title": "Pediatrics",
+        "des": "We care for your children's health with dedicated research for pediatric wellbeing."
+      },
+      {
+        "id": 10,
+        "icon": "flaticon-immunology",
+        "title": "Immunology",
+        "des": "We investigate the immune system to develop innovative treatments."
+      },
+      {
+        "id": 11,
+        "icon": "flaticon-allergy",
+        "title": "Allergology",
+        "des": "We offer personalized diagnostics and treatments to control your allergies."
+      },
+      {
+        "id": 12,
+        "icon": "flaticon-internal-medicine",
+        "title": "Internal Medicine",
+        "des": "We address a wide range of pathologies with an integral and personalized approach."
+      },
+      {
+        "id": 13,
+        "icon": "flaticon-gastroenterology",
+        "title": "Gastroenterology",
+        "des": "We offer advanced treatments for digestive health and gastrointestinal diseases."
+      },
+      {
+        "id": 14,
+        "icon": "flaticon-infectology",
+        "title": "Infectiology",
+        "des": "We treat and prevent infectious diseases with effective therapies."
+      }
+    ]
+  },
+  "about": {
+  
+    "left_img": "/assets/img/about/principl3.jpeg",
+
+  
+    "title": "About Us",
+
+    
+    "section_title": "Clinical Research Center, Leader in the Caribbean Region",
+
+   
+    "section_sub_title": "The main clinical studies center in the Caribbean Region, with 35 years of experience in advanced medical research.",
+
+    
+    "section_des": "We conduct over 100 clinical studies and collaborate with renowned global pharmaceutical companies like Pfizer, Sanofi, and Novartis. Our focus is on integral patient care and innovative solutions to improve health and wellbeing across different specialties such as oncology, cardiology, nephrology, and more.",
+
+   
+    "experience_count_label": "Years of Experience",
+
+   
+    "about_info_list": [
+      "Effective Vaccine Development",
+      "Oncology and Cardiology Research",
+      "Certified by INVIMA and FDA",
+      "Partnerships with Pharmaceutical Leaders"
+    ],
+
+   
+    "read_more_button": "Our History"
+  },
+  "counter": {
+    "title": "Research Center Statistics",
+    "list": [
+      { "id": 2, "color": "#007bff", "counter": 60, "text": "Active Studies" },
+      { "id": 3, "color": "#007bff", "counter": 150, "text": "Completed Studies" },
+      { "id": 4, "color": "#007bff", "counter": 15, "text": "Therapeutic Areas" },
+      { "id": 5, "color": "#007bff", "useYearsService": true, "text": "Years of Experience" },
+      { "id": 6, "color": "#007bff", "counter": 5000, "text": "Annual Visits Completed" }
+    ]
+  },
+  "brands": {
+    "title": "Our Sponsors",
+    "description": "We appreciate the support of our sponsors, who make our research and advancements in healthcare possible."
+  },
+  "gallery": {
+    "subtitle": "Our Clinical Research Services",
+    "title": "Discover the Specialization Areas of the Costa Clinical Research Center",
+    "items": {
+      "1": {
+        "text1": "Cardiology Clinical Trials",
+        "text2": "Clinical trials conducted by expert cardiologists at the Costa Clinical Research Center"
+      },
+      "2": {
+        "text1": "Nephrology Research",
+        "text2": "Advanced nephrology research carried out by specialists at the Costa Clinical Research Center"
+      },
+      "3": {
+        "text1": "Oncology Studies",
+        "text2": "Clinical studies in oncology for the development of new cancer treatments"
+      },
+      "4": {
+        "text1": "Vaccine Research",
+        "text2": "Vaccine clinical trials conducted by infectious disease specialists at the Costa Clinical Research Center"
+      },
+      "5": {
+        "text1": "Neurological Studies",
+        "text2": "Advanced neurological research to better understand nervous system diseases"
+      }
+    }
+  },
+  "recognitions": {
+    "title": "Recognitions",
+    "sectionTitle": "Recognitions awarded to the research center",
+    "textContent": [
+      {
+        "title": "MSD",
+        "description": "Recognition to the CIC for excellent performance and quality management in clinical study execution. April 2017."
+      },
+      {
+        "title": "MSD",
+        "description": "Recognition to the CIC for its contribution to clinical research during the 75th anniversary commemoration."
+      },
+      {
+        "title": "November 2022",
+        "description": "MSD - Inventing for Life - Awards this recognition to Clínica de La Costa for its contribution to science and innovation in clinical research in Colombia."
+      }
+    ],
+    "textContentRight": [
+      {
+        "title": "May 2021",
+        "description": "MSD - Awards this recognition to Clínica de la Costa for its adaptability and efficiency in administrative and regulatory processes during the pandemic. Bogotá, Colombia."
+      },
+      {
+        "title": "May 9, 2024",
+        "description": "MSD - Excellent quality metrics during 2023 and the first quarter of 2024. Proudly presented to Clínica de la Costa. This certificate is awarded for honorable achievement."
+      },
+      {
+        "title": "May 2021",
+        "description": "MSD - Awards this recognition to Clínica de la Costa for the extraordinary efforts made to ensure patient safety and continuity during the pandemic. Bogotá, Colombia."
+      }
+    ],
+    "bottomRecognitions": [
+      {
+        "title": "Excellent performance and quality management in clinical study execution",
+     "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+       },
+      {
+        "title": "Contribution to the development of clinical research",
+     "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+      },
+      {
+        "title": "Excellent quality metrics during 2023 and the first quarter of 2024",
+        "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+    },
+      {
+        "title": "Contribution to science and innovation in clinical research in Colombia",
+        "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+    }
+    ]
+  },
+  "processArea": {
+    "sectionTitle": "Our Specialized Clinical Research Services",
+    "services": [
+      {
+        "id": 1,
+        "icon": "flaticon-cardiology",
+        "title": "Cardiology",
+        "des": "Advanced clinical studies in cardiology conducted by top experts."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-nephrology",
+        "title": "Nephrology",
+        "des": "Innovative research in nephrology for improved kidney health."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-oncology",
+        "title": "Oncology",
+        "des": "Cutting-edge oncology services for early cancer detection and treatment."
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-immunology",
+        "title": "Immunology",
+        "des": "Comprehensive immunology studies to develop advanced therapies."
+      }
+    ]
+  },
+  "specialists": {
+    "sectionSubtitle": "Our Research Team",
+    "sectionTitle": "Discover Our Competitive Advantages",
+    "advantages": [
+      {
+        "id": 1,
+        "icon": "flaticon-microscope",
+        "color": "",
+        "title": "Pioneers in<br>Clinical Research",
+        "des": "Extensive experience in clinical research,<br>supported by three decades of national and international achievements."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-thinking",
+        "color": "pink-icon",
+        "title": "Pioneering Studies in<br>Critical Medical Areas",
+        "des": "Advanced research in oncology,<br>cardiology, nephrology, and other critical health areas."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-24-hours-1",
+        "color": "green-icon",
+        "title": "Certifications<br>and International Recognitions",
+        "des": "Accredited by INVIMA and recognized by the FDA,<br>meeting the highest quality standards."
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-team",
+        "color": "sky-icon",
+        "title": "Multidisciplinary Team of<br>Expert Researchers",
+        "des": "Over 46 specialized researchers,<br>committed to excellence and innovation in health."
+      }
+    ],
+    "footerText": "The Clínica de la Costa Research Center is dedicated to developing innovative solutions in key areas such as oncology, cardiology, and nephrology, transforming lives and promoting health through cutting-edge scientific advances."
+  },
+  "appointment": {
+    "alt": "Appointment scheduling image at the Costa Clinical Research Center",
+    "title": "Schedule Your Appointment at the Costa Clinical Research Center",
+    "description": "Fill out the form below to schedule your visit. Our team of experts is ready to provide personalized care and answer all your questions."
+  },
+  "team": {
+    "sectionSubtitle": "Meet Our Research Team",
+    "sectionTitle": "Clinical Research Specialists for Advancing Health",
+    "prevTeam": "Previous team",
+    "nextTeam": "Next team",
+    "loading": "Loading team...",
+    "readMoreBio": "Read the full biography of the specialist",
+    "imageAlt": "Image of {{name}}",
+    "facebookAria": "Facebook of {{name}}"
+  },
+  "blog": {
+    "loading": "Loading blogs...",
+    "noBlogsFound": "No blogs found.",
+    "noBlogsCategory": "There are no blogs in the \"centro\" category.",
+    "sectionSubtitle": "Our Latest Research",
+    "sectionTitle": "Research Articles",
+    "readMore": "Read more",
+    "imageAlt": "Image of the research article: {{title}}",
+    "loadError": "Error loading blogs. Please try again."
+  }
+  
+  }
+  

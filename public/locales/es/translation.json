@@ -1,0 +1,343 @@
+{
+    "menu": {
+      "home": "Inicio",
+      "about": "Nosotros",
+      "ethics_committee": "Comité de Ética",
+      "studies": "Estudios",
+      "cideacc": "CIDEACC",
+      "researchers": "Investigadores",
+      "invclincosta": "Invclincosta",
+      "saim_research": "SAIM Investigación",
+      "saim_monitors": "SAIM Monitores",
+      "document_management": "Gestión Documental",
+      "nephrology": "Nefrología",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "sub_title": "Pasión por la investigación e innovación clínica",
+      "title": "Líder en investigación clínica en Colombia",
+      "list": [
+        "Más de 20 años de experiencia en investigación clínica.",
+        "Certificaciones en buenas prácticas clínicas desde 2011 y acreditaciones que demuestran la calidad de nuestros procesos de gestión.",
+        "Cuatro sedes exclusivas para investigación con más de 300 camas.",
+        "Laboratorios de alta complejidad con tecnología avanzada.",
+        "Más de 100 ensayos clínicos realizados en áreas como vacunas, cardiología y nefrología."
+      ],
+      "btn_text1": "Programar Consulta",
+      "btn_text2": "Descubrir Nuestro Trabajo",
+      "hero_box": {
+        "item1": "Pioneros en Investigación Clínica",
+        "item2": "Más de 100 ensayos clínicos",
+        "item3": "Colaboración con Líderes Globales"
+      },
+      "scroll_text": "Desplazar hacia abajo"
+    },
+    "service_area": {
+    "section_subtitle": "Especialidades Médicas de Nuestro Centro de Investigación",
+    "section_title": "Descubre nuestras áreas de investigación dedicadas a mejorar la salud y el bienestar.",
+    "read_more": "Leer Más",
+    "modal": {
+      "paragraph1": "Este estudio se centra en las últimas investigaciones y avances en {{title}}. Nuestro equipo de especialistas trabaja constantemente para ofrecer soluciones y tratamientos innovadores, con el objetivo de mejorar la calidad de vida de nuestros pacientes.",
+      "paragraph2": "Además, colaboramos con diversas organizaciones para asegurar que cada tratamiento y estudio cumpla con los más altos estándares de calidad y seguridad."
+    },
+    "slider_items": [
+      {
+        "id": 1,
+        "icon": "flaticon-vaccine",
+        "title": "Vacunas",
+        "des": "Desarrollamos vacunas efectivas para proteger su salud y prevenir enfermedades."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-cardiology",
+        "title": "Cardiología",
+        "des": "Proporcionamos diagnósticos precisos y tratamientos innovadores para enfermedades del corazón."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-rheumatology",
+        "title": "Reumatología",
+        "des": "Contamos con tratamientos especializados para el manejo de enfermedades reumáticas."
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-nephrology",
+        "title": "Nefrología",
+        "des": "Mejoramos su salud renal mediante terapias avanzadas y cuidados especializados."
+      },
+      {
+        "id": 5,
+        "icon": "flaticon-oncology",
+        "title": "Oncología",
+        "des": "Ofrecemos tratamientos avanzados y personalizados para combatir el cáncer."
+      },
+      {
+        "id": 6,
+        "icon": "flaticon-pulmonology",
+        "title": "Neumología",
+        "des": "Tratamientos efectivos para mejorar la salud de sus pulmones y vías respiratorias."
+      },
+      {
+        "id": 7,
+        "icon": "flaticon-neurology",
+        "title": "Neurología",
+        "des": "Abordamos trastornos del sistema nervioso con terapias innovadoras y precisas."
+      },
+      {
+        "id": 8,
+        "icon": "flaticon-endocrinology",
+        "title": "Endocrinología",
+        "des": "Brindamos atención integral para enfermedades hormonales y metabólicas."
+      },
+      {
+        "id": 9,
+        "icon": "flaticon-pediatrics",
+        "title": "Pediatría",
+        "des": "Cuidamos la salud de sus hijos con investigaciones dedicadas al bienestar infantil."
+      },
+      {
+        "id": 10,
+        "icon": "flaticon-immunology",
+        "title": "Inmunología",
+        "des": "Investigamos el sistema inmunológico para desarrollar tratamientos innovadores."
+      },
+      {
+        "id": 11,
+        "icon": "flaticon-allergy",
+        "title": "Alergología",
+        "des": "Ofrecemos diagnósticos y tratamientos personalizados para controlar sus alergias."
+      },
+      {
+        "id": 12,
+        "icon": "flaticon-internal-medicine",
+        "title": "Medicina Interna",
+        "des": "Abordamos una amplia gama de patologías con un enfoque integral y personalizado."
+      },
+      {
+        "id": 13,
+        "icon": "flaticon-gastroenterology",
+        "title": "Gastroenterología",
+        "des": "Ofrecemos tratamientos avanzados para la salud digestiva y enfermedades gastrointestinales."
+      },
+      {
+        "id": 14,
+        "icon": "flaticon-infectology",
+        "title": "Infectología",
+        "des": "Tratamos y prevenimos enfermedades infecciosas con terapias efectivas."
+      }
+    ]
+  },
+
+    "about": {
+      
+      "left_img": "/assets/img/about/principl3.jpeg",
+  
+      
+      "title": "Sobre Nosotros",
+  
+      
+      "section_title": "Centro de Investigación Clínica, Líder en la Región Caribe",
+  
+    
+      "section_sub_title": "El principal centro de estudios clínicos en la Región Caribe, con 35 años de experiencia en investigación médica avanzada.",
+  
+     
+      "section_des": "Realizamos más de 100 estudios clínicos y colaboramos con reconocidas farmacéuticas globales como Pfizer, Sanofi y Novartis. Nuestro enfoque se centra en la atención integral de los pacientes y en soluciones innovadoras para mejorar la salud y el bienestar en distintas especialidades como oncología, cardiología, nefrología y más.",
+  
+     
+      "experience_count_label": "Años de Experiencia",
+  
+     
+      "about_info_list": [
+        "Desarrollo Efectivo de Vacunas",
+        "Investigación en Oncología y Cardiología",
+        "Certificación por INVIMA y FDA",
+        "Alianzas con Líderes Farmacéuticos"
+      ],
+  
+     
+      "read_more_button": "Nuestra Historia"
+    },
+    "counter": {
+    "title": "Estadísticas del Centro de Investigación",
+    "list": [
+      { "id": 2, "color": "#007bff", "counter": 60, "text": "Estudios activos" },
+      { "id": 3, "color": "#007bff", "counter": 150, "text": "Estudios realizados" },
+      { "id": 4, "color": "#007bff", "counter": 15, "text": "Áreas terapéuticas" },
+      { "id": 5, "color": "#007bff", "useYearsService": true, "text": "Años de experiencia" },
+      { "id": 6, "color": "#007bff", "counter": 5000, "text": "Visitas anuales completadas" }
+    ]
+  },
+  "brands": {
+    "title": "Nuestros Patrocinadores",
+    "description": "Agradecemos el apoyo de nuestros patrocinadores, quienes hacen posible nuestras investigaciones y el avance en la atención médica."
+  },"gallery": {
+    "subtitle": "Nuestros Servicios de Investigación Clínica",
+    "title": "Conozca las Áreas de Especialización del Centro de Investigación Clínica de la Costa",
+    "items": {
+      "1": {
+        "text1": "Ensayos Clínicos en Cardiología",
+        "text2": "Ensayos clínicos realizados por cardiólogos expertos en el Centro de Investigación Clínica de la Costa"
+      },
+      "2": {
+        "text1": "Investigación en Nefrología",
+        "text2": "Investigaciones avanzadas en nefrología llevadas a cabo por especialistas en el Centro de Investigación Clínica de la Costa"
+      },
+      "3": {
+        "text1": "Estudios Oncológicos",
+        "text2": "Estudios clínicos en oncología para el desarrollo de nuevos tratamientos contra el cáncer"
+      },
+      "4": {
+        "text1": "Investigación en Vacunas",
+        "text2": "Ensayos clínicos de vacunas realizados por infectólogos en el Centro de Investigación Clínica de la Costa"
+      },
+      "5": {
+        "text1": "Estudios Neurológicos",
+        "text2": "Investigaciones neurológicas avanzadas para comprender mejor las enfermedades del sistema nervioso"
+      }
+    }
+  },
+  "recognitions": {
+    "title": "Reconocimientos",
+    "sectionTitle": "Reconocimientos otorgados al centro de investigación",
+    "textContent": [
+      {
+        "title": "MSD",
+        "description": "Reconocimiento al CIC por excelente desempeño y gestión de calidad en la ejecución de estudios clínicos. Abril 2017."
+      },
+      {
+        "title": "MSD",
+        "description": "Reconocimiento al CIC por contribución al desarrollo de la investigación clínica, durante la conmemoración de los 75 años."
+      },
+      {
+        "title": "Noviembre 2022",
+        "description": "MSD - Inventing for Life - Otorga el presente reconocimiento a Clínica de La Costa por su contribución a la ciencia e innovación en la investigación clínica en Colombia."
+      }
+    ],
+    "textContentRight": [
+      {
+        "title": "Mayo 2021",
+        "description": "MSD - Otorga el presente reconocimiento a Clínica de la Costa por su adaptabilidad y eficiencia en los procesos administrativos y regulatorios llevados a cabo durante la pandemia. Bogotá, Colombia."
+      },
+      {
+        "title": "9 de Mayo de 2024",
+        "description": "MSD - Excelentes métricas de calidad durante el año 2023 y el primer trimestre del año 2024. Orgullosamente presentado a Clínica de la Costa. Este certificado se presenta por logro honorable."
+      },
+      {
+        "title": "Mayo 2021",
+        "description": "MSD - Otorga el presente reconocimiento a Clínica de la Costa por los esfuerzos extraordinarios realizados para garantizar la seguridad y continuidad en el estudio de todos los pacientes durante la pandemia. Bogotá, Colombia."
+      }
+    ],
+    "bottomRecognitions": [
+      {
+        "title": "Excelente desempeño y gestión de calidad en la ejecución de estudios clínicos",
+        "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+      },
+      {
+        "title": "Contribución al desarrollo de la investigación clínica",
+        "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+      },
+      {
+        "title": "Excelentes métricas de calidad durante el año 2023 y el primer trimestre del año 2024",
+        "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+      },
+      {
+        "title": "Contribución a la ciencia e innovación en la investigación clínica en Colombia",
+        "image": "https://firebasestorage.googleapis.com/v0/b/clinica-de-la-costa.appspot.com/o/web%20imagen%2FWhatsApp%20Image%202024-12-04%20at%2010.48.16%20AM(1).jpeg?alt=media&token=dca190ac-8059-43e6-b6e3-2b6497ce85c7"
+      }
+    ]
+  },
+  "processArea": {
+    "sectionTitle": "Nuestros Servicios Especializados en Investigación Clínica",
+    "services": [
+      {
+        "id": 1,
+        "icon": "flaticon-cardiology",
+        "title": "Cardiología",
+        "des": "Estudios clínicos avanzados en cardiología realizados por expertos de primer nivel."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-nephrology",
+        "title": "Nefrología",
+        "des": "Investigación innovadora en nefrología para mejorar la salud renal."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-oncology",
+        "title": "Oncología",
+        "des": "Servicios de oncología de vanguardia para la detección y tratamiento temprano del cáncer."
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-immunology",
+        "title": "Inmunología",
+        "des": "Estudios integrales en inmunología para desarrollar terapias avanzadas."
+      }
+    ]
+  },
+  "specialists": {
+    "sectionSubtitle": "Nuestro Equipo de Investigación",
+    "sectionTitle": "Conozca Nuestras Ventajas Competitivas",
+    "advantages": [
+      {
+        "id": 1,
+        "icon": "flaticon-microscope",
+        "color": "",
+        "title": "Pioneros en<br>Investigación Clínica",
+        "des": "Amplia experiencia en investigación clínica,<br>respaldada por tres décadas de logros nacionales e internacionales."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-thinking",
+        "color": "pink-icon",
+        "title": "Estudios Pioneros en<br>Áreas Médicas Críticas",
+        "des": "Investigaciones avanzadas en oncología,<br>cardiología, nefrología y otras áreas críticas para la salud."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-24-hours-1",
+        "color": "green-icon",
+        "title": "Certificaciones<br>y Reconocimientos Internacionales",
+        "des": "Avalados por INVIMA y reconocidos por la FDA,<br>cumpliendo con los más altos estándares de calidad."
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-team",
+        "color": "sky-icon",
+        "title": "Equipo Multidisciplinario de<br>Expertos Investigadores",
+        "des": "Más de 46 investigadores especializados,<br>comprometidos con la excelencia y la innovación en la salud."
+      }
+    ],
+    "footerText": "El Centro de Investigación de la Clínica de la Costa se dedica a desarrollar soluciones innovadoras en áreas clave como oncología, cardiología y nefrología, transformando vidas y promoviendo la salud a través de avances científicos de vanguardia."
+  },
+  "appointment": {
+    "alt": "Imagen de programación de citas en el Centro de Investigación Clínica de la Costa",
+    "title": "Programe su Cita en el Centro de Investigación Clínica de la Costa",
+    "description": "Complete el siguiente formulario para programar su visita. Nuestro equipo de expertos está listo para ofrecerle atención personalizada y responder a todas sus inquietudes."
+  },
+  "team": {
+    "sectionSubtitle": "Conoce a Nuestro Equipo de Investigación",
+    "sectionTitle": "Especialistas en Investigación Clínica para el Avance de la Salud",
+    "prevTeam": "Equipo anterior",
+    "nextTeam": "Siguiente equipo",
+    "loading": "Cargando equipo...",
+    "readMoreBio": "Leer la biografía completa del especialista",
+    "imageAlt": "Imagen de {{name}}",
+    "facebookAria": "Facebook de {{name}}"
+  },
+  "blog": {
+    "loading": "Cargando blogs...",
+    "noBlogsFound": "No se encontraron blogs.",
+    "noBlogsCategory": "No hay blogs en la categoría \"Centro\".",
+    "sectionSubtitle": "Nuestras Últimas Investigaciones",
+    "sectionTitle": "Artículos de Investigación",
+    "readMore": "Leer más",
+    "imageAlt": "Imagen del artículo de investigación: {{title}}",
+    "loadError": "Error al cargar blogs. Intenta de nuevo."
+  }
+  }
+  
+  
+  

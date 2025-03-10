@@ -1,0 +1,17 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "ethics_committee": "Comité de Ética",
+    "studies": "Estudios",
+    "cideacc": "CIDEACC",
+    "researchers": "Investigadores",
+    "invclincosta": "Invclincosta",
+    "saim_research": "SAIM Investigación",
+    "saim_monitors": "SAIM Monitores",
+    "document_management": "Gestión Documental",
+    "nephrology": "Nefrología",
+    "blog": "Blog",
+    "contact": "Contacto"
+  }
+}

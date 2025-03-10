@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import { Navigation } from "swiper";
+import { useTranslation } from "react-i18next";
 import { getResearchers } from "@/components/services/firebaseService";
 
 // Configuración del slider
@@ -13,21 +14,11 @@ const setting = {
     disableOnInteraction: true,
   },
   breakpoints: {
-    1200: {
-      slidesPerView: 3,
-    },
-    992: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    576: {
-      slidesPerView: 1,
-    },
-    0: {
-      slidesPerView: 1,
-    },
+    1200: { slidesPerView: 3 },
+    992: { slidesPerView: 2 },
+    768: { slidesPerView: 2 },
+    576: { slidesPerView: 1 },
+    0: { slidesPerView: 1 },
   },
   navigation: {
     nextEl: ".team-n",
@@ -36,6 +27,7 @@ const setting = {
 };
 
 const Team = () => {
+  const { t } = useTranslation();
   const [isLoop, setIsLoop] = useState(false);
   const [teamData, setTeamData] = useState([]);
   const [expandedBiography, setExpandedBiography] = useState({});
@@ -84,13 +76,12 @@ const Team = () => {
           return nivelA - nivelB;
         });
     
-        setTeamData(sortedData); // Actualiza el estado con los datos ordenados
+        setTeamData(sortedData);
       } catch (error) {
         console.error("Error al obtener los investigadores: ", error);
       }
     };
     
-
     fetchTeamData();
   }, []);
 
@@ -111,19 +102,19 @@ const Team = () => {
           <div className="col-lg-8 col-md-8 col-12">
             <div className="tp-section">
               <span className="tp-section__sub-title left-line mb-25">
-                Conoce a Nuestro Equipo de Investigación
+                {t("team.sectionSubtitle")}
               </span>
               <h2 className="tp-section__title mb-75">
-                Especialistas en Investigación Clínica para el Avance de la Salud
+                {t("team.sectionTitle")}
               </h2>
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-12">
             <div className="tp-team-arrow d-flex align-items-center">
-              <div className="team-p" aria-label="Equipo anterior">
+              <div className="team-p" aria-label={t("team.prevTeam")}>
                 <i className="fa-regular fa-arrow-left"></i>
               </div>
-              <div className="team-n" aria-label="Siguiente equipo">
+              <div className="team-n" aria-label={t("team.nextTeam")}>
                 <i className="fa-regular fa-arrow-right"></i>
               </div>
             </div>
@@ -160,7 +151,9 @@ const Team = () => {
                               item.informacion_personal?.foto ||
                               "/assets/img/default-avatar.jpg"
                             }
-                            alt={`Imagen de ${item.informacion_personal?.nombre_completo}`}
+                            alt={t("team.imageAlt", {
+                              name: item.informacion_personal?.nombre_completo,
+                            })}
                             style={{
                               width: "100%",
                               height: "100%",
@@ -176,7 +169,9 @@ const Team = () => {
                           </Link>
                         </h3>
                         <h4 className="tp-team__position mb-30">
-                          {item.nivel || item.informacion_personal?.nivel || "Investigador  Asociado"}
+                          {item.nivel ||
+                            item.informacion_personal?.nivel ||
+                            "Investigador Asociado"}
                         </h4>
                         <p>
                           {expandedBiography[item.id]
@@ -185,11 +180,16 @@ const Team = () => {
                         </p>
                         <Link href={`/team-details/${item.id}`}>
                           <button className="tp-btn-link">
-                            Leer la biografía completa del especialista
+                            {t("team.readMoreBio")}
                           </button>
                         </Link>
                         <div className="tp-team__social">
-                          <Link href="#" aria-label="Facebook de {item.informacion_personal?.nombre_completo}">
+                          <Link
+                            href="#"
+                            aria-label={t("team.facebookAria", {
+                              name: item.informacion_personal?.nombre_completo,
+                            })}
+                          >
                             <i className="fa-brands fa-facebook-f"></i>
                           </Link>
                         </div>
@@ -199,7 +199,7 @@ const Team = () => {
                 </SwiperSlide>
               ))
             ) : (
-              <p>Cargando equipo...</p>
+              <p>{t("team.loading")}</p>
             )}
           </Swiper>
         </div>

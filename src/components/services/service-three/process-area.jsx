@@ -1,6 +1,8 @@
-import service_three_data from "@/data/service-three-data";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
 
 // Configuración del slider
 const setting = {
@@ -10,45 +12,41 @@ const setting = {
     disableOnInteraction: true,
   },
   breakpoints: {
-    1200: {
-      slidesPerView: 4,
-    },
-    992: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    576: {
-      slidesPerView: 1,
-    },
-    0: {
-      slidesPerView: 1,
-    },
+    1200: { slidesPerView: 4 },
+    992: { slidesPerView: 2 },
+    768: { slidesPerView: 2 },
+    576: { slidesPerView: 1 },
+    0: { slidesPerView: 1 },
   },
 };
 
 const ProcessArea = () => {
+  const { t } = useTranslation();
+
+  // Se obtiene la información de los servicios desde la traducción
+  const serviceThreeData = t("processArea.services", { returnObjects: true });
+
   return (
     <>
-    <div className="container">
-    <div className="row">
-  <div className="col-lg-12 text-center mb-50">
-    <h2 className="tp-section__title title-white" style={{ color: "black" }}>
-      Nuestros Servicios Especializados en Investigación Clínica
-    </h2>
-    
-  </div>
-</div>
-
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12 text-center mb-50">
+            <h2
+              className="tp-section__title title-white"
+              style={{ color: "black" }}
+            >
+              {t("processArea.sectionTitle")}
+            </h2>
+          </div>
         </div>
+      </div>
+
       <section
         className="process-area process-bg"
         style={{ backgroundImage: `url(/assets/img/banner/process-bg-01.jpg)` }}
       >
-        
         <Swiper {...setting} className="container-fluid p-0 process-active">
-          {service_three_data.map((item) => (
+          {serviceThreeData.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="swiper-slide">
                 <div className="fea-box">

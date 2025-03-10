@@ -2,9 +2,10 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { useTranslation } from "react-i18next";
 import ImagePopup from "@/modals/ImagePopup";
 
-// slider setting
+// Slider setting
 const setting = {
   slidesPerView: 4,
   spaceBetween: 30,
@@ -34,61 +35,52 @@ const setting = {
   },
 };
 
-// gallery_content mejorado
+// Array de contenido de la galería (imágenes y alt se mantienen fijos)
 const gallery_content = [
   {
     id: 1,
     img: "assets/img/gallery/gal-thum-01.jpg",
-    text1: "Ensayos Clínicos en Cardiología",
-    text2: "Ensayos clínicos realizados por cardiólogos expertos en el Centro de Investigación Clínica de la Costa",
-    alt: "Ensayos clínicos realizados por cardiólogos expertos en el Centro de Investigación Clínica de la Costa",
+    alt: "Ensayos clínicos en Cardiología",
   },
   {
     id: 2,
     img: "assets/img/gallery/gal-thum-02.jpg",
-    text1: "Investigación en Nefrología",
-    text2: "Investigaciones avanzadas en nefrología llevadas a cabo por especialistas en el Centro de Investigación Clínica de la Costa",
-    alt: "Investigaciones avanzadas en nefrología llevadas a cabo por especialistas en el Centro de Investigación Clínica de la Costa",
+    alt: "Investigación en Nefrología",
   },
   {
     id: 3,
     img: "assets/img/gallery/gal-thum-03.jpg",
-    text1: "Estudios Oncológicos",
-    text2: "Estudios clínicos en oncología para el desarrollo de nuevos tratamientos contra el cáncer",
-    alt: "Estudios clínicos en oncología para el desarrollo de nuevos tratamientos contra el cáncer",
+    alt: "Estudios Oncológicos",
   },
   {
     id: 4,
     img: "assets/img/gallery/gal-thum-04.jpg",
-    text1: "Investigación en Vacunas",
-    text2: "Ensayos clínicos de vacunas realizados por infectólogos en el Centro de Investigación Clínica de la Costa",
-    alt: "Ensayos clínicos de vacunas realizados por infectólogos en el Centro de Investigación Clínica de la Costa",
+    alt: "Investigación en Vacunas",
   },
   {
     id: 5,
     img: "assets/img/gallery/gal-thum-05.jpg",
-    text1: "Estudios Neurológicos",
-    text2: "Investigaciones neurológicas avanzadas para comprender mejor las enfermedades del sistema nervioso",
-    alt: "Investigaciones neurológicas avanzadas para comprender mejor las enfermedades del sistema nervioso",
-  },
+    alt: "Estudios Neurológicos",
+  }
 ];
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [isLoop, setIsLoop] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     setIsLoop(true);
   }, []);
 
-  // photoIndex
-  const [photoIndex, setPhotoIndex] = useState(null);
-  // image open state
-  const [isOpen, setIsOpen] = useState(false);
-  // handleImagePopup
+  // Abre el popup de imagen
   const handleImagePopup = (i) => {
     setPhotoIndex(i);
     setIsOpen(true);
   };
-  // images
+
+  // Extraemos el arreglo de imágenes para el popup
   const images = gallery_content.map((item) => item.img);
 
   return (
@@ -102,10 +94,10 @@ const Gallery = () => {
             <div className="col-lg-12">
               <div className="tp-section text-center">
                 <span className="tp-section__sub-title left-line right-line mb-25">
-                  Nuestros Servicios de Investigación Clínica
+                  {t("gallery.subtitle")}
                 </span>
                 <h3 className="tp-section__title mb-70">
-                  Conozca las Áreas de Especialización del Centro de Investigación Clínica de la Costa
+                  {t("gallery.title")}
                 </h3>
               </div>
             </div>
@@ -135,11 +127,15 @@ const Gallery = () => {
                       </div>
                       <div className="tp-gallery__content">
                         <h4 className="tp-gallery__title">
-                          <Link href="/portfolio-details">{item.text1}</Link>
+                          <Link href="/portfolio-details">
+                            {t(`gallery.items.${item.id}.text1`)}
+                          </Link>
                         </h4>
                         <span>
                           <i className="fa-solid fa-tag"></i>
-                          <Link href="/services-details">{item.text2}</Link>
+                          <Link href="/services-details">
+                            {t(`gallery.items.${item.id}.text2`)}
+                          </Link>
                         </span>
                       </div>
                     </div>
@@ -151,7 +147,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* image light box start */}
+      {/* Popup de imagen */}
       {isOpen && (
         <ImagePopup
           images={images}
@@ -160,7 +156,6 @@ const Gallery = () => {
           setPhotoIndex={setPhotoIndex}
         />
       )}
-      {/* image light box end */}
     </>
   );
 };

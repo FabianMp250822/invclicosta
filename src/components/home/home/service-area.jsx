@@ -3,6 +3,8 @@ import Swal from "sweetalert2";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
+// Importa el hook de traducción
+import { useTranslation } from "react-i18next";
 
 // Importa los estilos de Swiper
 import "swiper/css";
@@ -11,98 +13,17 @@ import "swiper/css/navigation";
 // Instala los módulos que vas a usar
 SwiperCore.use([Autoplay, Navigation]);
 
-// Contenido del slider
-const slider_content = [
-  {
-    id: 1,
-    icon: "flaticon-vaccine",
-    title: "Vacunas",
-    des: "Desarrollamos vacunas efectivas para proteger su salud y prevenir enfermedades.",
-  },
-  {
-    id: 2,
-    icon: "flaticon-cardiology",
-    title: "Cardiología",
-    des: "Proporcionamos diagnósticos precisos y tratamientos innovadores para enfermedades del corazón.",
-  },
-  {
-    id: 3,
-    icon: "flaticon-rheumatology",
-    title: "Reumatología",
-    des: "Contamos con tratamientos especializados para el manejo de enfermedades reumáticas.",
-  },
-  {
-    id: 4,
-    icon: "flaticon-nephrology",
-    title: "Nefrología",
-    des: "Mejoramos su salud renal mediante terapias avanzadas y cuidados especializados.",
-  },
-  {
-    id: 5,
-    icon: "flaticon-oncology",
-    title: "Oncología",
-    des: "Ofrecemos tratamientos avanzados y personalizados para combatir el cáncer.",
-  },
-  {
-    id: 6,
-    icon: "flaticon-pulmonology",
-    title: "Neumología",
-    des: "Tratamientos efectivos para mejorar la salud de sus pulmones y vías respiratorias.",
-  },
-  {
-    id: 7,
-    icon: "flaticon-neurology",
-    title: "Neurología",
-    des: "Abordamos trastornos del sistema nervioso con terapias innovadoras y precisas.",
-  },
-  {
-    id: 8,
-    icon: "flaticon-endocrinology",
-    title: "Endocrinología",
-    des: "Brindamos atención integral para enfermedades hormonales y metabólicas.",
-  },
-  {
-    id: 9,
-    icon: "flaticon-pediatrics",
-    title: "Pediatría",
-    des: "Cuidamos la salud de sus hijos con investigaciones dedicadas al bienestar infantil.",
-  },
-  {
-    id: 10,
-    icon: "flaticon-immunology",
-    title: "Inmunología",
-    des: "Investigamos el sistema inmunológico para desarrollar tratamientos innovadores.",
-  },
-  {
-    id: 11,
-    icon: "flaticon-allergy",
-    title: "Alergología",
-    des: "Ofrecemos diagnósticos y tratamientos personalizados para controlar sus alergias.",
-  },
-  {
-    id: 12,
-    icon: "flaticon-internal-medicine",
-    title: "Medicina Interna",
-    des: "Abordamos una amplia gama de patologías con un enfoque integral y personalizado.",
-  },
-  {
-    id: 13,
-    icon: "flaticon-gastroenterology",
-    title: "Gastroenterología",
-    des: "Ofrecemos tratamientos avanzados para la salud digestiva y enfermedades gastrointestinales.",
-  },
-  {
-    id: 14,
-    icon: "flaticon-infectology",
-    title: "Infectología",
-    des: "Tratamos y prevenimos enfermedades infecciosas con terapias efectivas.",
-  },
-];
-
 const ServiceArea = () => {
+  const { t } = useTranslation();
+
+  // Obtenemos del JSON de traducción los items del slider
+  // Nota: { returnObjects: true } permite retornar el array completo
+  const slider_content = t("service_area.slider_items", { returnObjects: true });
+
   // Función para abrir el modal con SweetAlert2
   const handleReadMore = (item) => {
     Swal.fire({
+      // Usamos template strings para interpolar la traducción y los valores
       html: `
         <div style="text-align: left; padding: 20px;">
           <h2 style="color: #0D92F4; font-size: 28px; margin-bottom: 15px;">${item.title}</h2>
@@ -110,10 +31,10 @@ const ServiceArea = () => {
             ${item.des}
           </p>
           <p style="color: #555; font-size: 15px; line-height: 1.6;">
-            Este estudio se centra en las últimas investigaciones y avances en ${item.title}. Nuestro equipo de especialistas trabaja constantemente para ofrecer soluciones y tratamientos innovadores, con el objetivo de mejorar la calidad de vida de nuestros pacientes.
+            ${t("service_area.modal.paragraph1", { title: item.title })}
           </p>
           <p style="color: #555; font-size: 15px; line-height: 1.6;">
-            Además, colaboramos con diversas organizaciones para asegurar que cada tratamiento y estudio cumpla con los más altos estándares de calidad y seguridad.
+            ${t("service_area.modal.paragraph2")}
           </p>
         </div>
       `,
@@ -137,15 +58,17 @@ const ServiceArea = () => {
                   className="tp-section__sub-title left-line mb-20"
                   style={{ color: "#77CDFF" }}
                 >
-                  Especialidades Médicas de Nuestro Centro de Investigación
+                  {/* Traducción del subtítulo */}
+                  {t("service_area.section_subtitle")}
                 </span>
                 <h3 className="tp-section__title" style={{ color: "#0D92F4" }}>
-                  Descubre nuestras áreas de investigación dedicadas a mejorar la salud y el
-                  bienestar.
+                  {/* Traducción del título */}
+                  {t("service_area.section_title")}
                 </h3>
               </div>
             </div>
           </div>
+
           <Swiper
             spaceBetween={30}
             slidesPerView={4}
@@ -201,14 +124,15 @@ const ServiceArea = () => {
                           cursor: "pointer",
                         }}
                       >
-                        Leer Más
+                        {t("service_area.read_more")}
                       </button>
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
-            {/* Botones de navegación (opcional) */}
+
+            {/* Botones de navegación (puedes traducirlos si lo deseas) */}
             <div className="services-n">Next</div>
             <div className="services-p">Prev</div>
           </Swiper>
@@ -241,7 +165,6 @@ const ServiceArea = () => {
           color: #c62e2e;
         }
 
-        /* Estilos para la navegación (opcional) */
         .services-n,
         .services-p {
           position: absolute;

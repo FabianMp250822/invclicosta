@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import VideoPopup from "@/modals/video-popup";
 
 // Paleta de colores principal
@@ -12,64 +13,27 @@ const colors = {
   background: "#0c1841", // Fondo oscuro
 };
 
-// Contenido específico para el centro de investigación
-const content = {
-  sub_title: "Pasión por la investigación e innovación Clínica",
-  title: (
-    <>
-      líder en investigación clínica en Colombia <br />
-    </>
-  ),
-  des: (
-    <ul style={{ color: colors.white, paddingLeft: "20px", listStyleType: "disc" }}>
-    <li>
-      Más de 20 años de experiencia en investigación clínica.
-    </li>
-    <li>
-      Certificaciones de buenas prácticas clínicas desde 2011 y acreditaciones que demuestran la calidad de nuestros procesos de gestión.
-    </li>
-    <li>
-      Cuatro sedes exclusivas para investigación con más de 300 camas.
-    </li>
-    <li>
-      Laboratorios de alta complejidad y tecnología avanzada.
-    </li>
-    <li>
-      Más de 100 ensayos clínicos realizados en áreas como vacunas, cardiología y nefrología.
-    </li>
-  
-  </ul>
-  ),
-  btn_text1: "Programar Consulta",
-  btn_text2: "Descubrir Nuestro Trabajo",
-};
-
-
-const { sub_title, title, des, btn_text1, btn_text2 } = content;
-
-// hero_box con ítems que destacan los valores y fortalezas del centro
+// Definición de items para el hero_box (se utilizarán las claves de traducción)
 const hero_box = [
   {
     id: 1,
     icon: "flaticon-science",
-    des: "Pioneros en Investigación Clínica",
     color: colors.primary,
   },
   {
     id: 2,
     icon: "flaticon-certificate",
-    des: "Más de 100 ensayos clínicos",
     color: colors.accent,
   },
   {
     id: 3,
     icon: "flaticon-teamwork",
-    des: "Colaboración con Líderes Globales",
     color: colors.secondary,
   },
 ];
 
 const HeroBanner = () => {
+  const { t } = useTranslation();
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
@@ -86,16 +50,30 @@ const HeroBanner = () => {
                   className="banner__sub-title mb-20 text-3xl font-bold"
                   style={{ color: colors.white }}
                 >
-                  {sub_title}
+                  {t("hero.sub_title")}
                 </span>
                 <h2
                   className="banner__title mb-30"
                   style={{ color: colors.white }}
                 >
-                  {title}
+                  {t("hero.title")}
                 </h2>
-                {/* Nuevo formato como lista */}
-                <div>{des}</div>
+                {/* Lista de características */}
+                <div>
+                  <ul
+                    style={{
+                      color: colors.white,
+                      paddingLeft: "20px",
+                      listStyleType: "disc",
+                    }}
+                  >
+                    <li>{t("hero.list.0")}</li>
+                    <li>{t("hero.list.1")}</li>
+                    <li>{t("hero.list.2")}</li>
+                    <li>{t("hero.list.3")}</li>
+                    <li>{t("hero.list.4")}</li>
+                  </ul>
+                </div>
                 <div className="banner__btn mt-4">
                   <Link
                     className="tp-btn"
@@ -105,7 +83,7 @@ const HeroBanner = () => {
                       backgroundColor: colors.primary,
                     }}
                   >
-                    {btn_text1}
+                    {t("hero.btn_text1")}
                   </Link>
                   <Link
                     className="tp-btn-second ml-25"
@@ -115,7 +93,7 @@ const HeroBanner = () => {
                       backgroundColor: colors.accent,
                     }}
                   >
-                    {btn_text2}
+                    {t("hero.btn_text2")}
                   </Link>
                 </div>
               </div>
@@ -138,7 +116,9 @@ const HeroBanner = () => {
                           <i className={item.icon}></i>
                         </div>
                         <div className="banner__item-content">
-                          <span style={{ color: colors.white }}>{item.des}</span>
+                          <span style={{ color: colors.white }}>
+                            {t(`hero.hero_box.item${item.id}`)}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -159,7 +139,7 @@ const HeroBanner = () => {
                 className="fa-light fa-computer-mouse"
                 style={{ color: colors.white }}
               ></i>
-              <span>Desplazar hacia abajo</span>
+              <span>{t("hero.scroll_text", "Desplazar hacia abajo")}</span>
             </a>
           </div>
         </div>
@@ -183,16 +163,14 @@ const HeroBanner = () => {
           </div>
         </div>
       </section>
-      {/* video modal start */}
+      {/* Video modal */}
       <VideoPopup
         isVideoOpen={isVideoOpen}
         setIsVideoOpen={setIsVideoOpen}
         videoId={"d8w5SICzzxc"}
       />
-      {/* video modal end */}
     </>
   );
 };
 
 export default HeroBanner;
-
