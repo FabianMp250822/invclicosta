@@ -310,10 +310,11 @@ const ProjectDetailsArea = () => {
           margin-bottom: 40px;
         }
         .contact-card {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
+          background: #ffffff;
+          color: #333333;
           border-radius: 15px;
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          border: 1px solid #e0e0e0;
           position: relative;
           overflow: hidden;
         }
@@ -324,31 +325,32 @@ const ProjectDetailsArea = () => {
           left: -50%;
           width: 200%;
           height: 200%;
-          background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(0,123,255,0.03) 0%, transparent 70%);
           transform: rotate(45deg);
           pointer-events: none;
         }
         .contact-icon {
           font-size: 3rem;
-          color: #ffd700;
+          color: #007bff;
           margin-bottom: 20px;
         }
         .contact-title {
           font-size: 2rem;
           font-weight: 600;
           margin-bottom: 20px;
+          color: #333333;
         }
         .contact-description {
           font-size: 1.1rem;
           line-height: 1.6;
-          opacity: 0.9;
+          color: #666666;
         }
         .contact-details {
-          background: rgba(255, 255, 255, 0.1);
+          background: #f8f9fa;
           border-radius: 10px;
           padding: 30px;
           margin: 30px 0;
-          backdrop-filter: blur(10px);
+          border: 1px solid #e9ecef;
         }
         .contact-item {
           margin-bottom: 20px;
@@ -357,28 +359,33 @@ const ProjectDetailsArea = () => {
           font-size: 1.2rem;
           font-weight: 500;
           margin-bottom: 10px;
-          color: #ffd700;
+          color: #007bff;
         }
         .contact-info {
           font-size: 1.3rem;
           font-weight: 600;
           margin: 0;
+          color: #333333;
         }
         .phone-link {
-          color: white;
+          color: #007bff;
           text-decoration: none;
           transition: color 0.3s ease;
         }
         .phone-link:hover {
-          color: #ffd700;
+          color: #0056b3;
           text-decoration: none;
         }
         .contact-footer {
-          border-top: 1px solid rgba(255, 255, 255, 0.2);
+          border-top: 1px solid #e9ecef;
           padding-top: 20px;
         }
         .fas {
           margin-right: 8px;
+          color: #007bff;
+        }
+        .text-muted {
+          color: #6c757d !important;
         }
       `}</style>
     </>
