@@ -212,6 +212,45 @@ const ProjectDetailsArea = () => {
           </div>
         </div>
 
+        <div className="contact-section mt-5">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 col-md-10">
+              <div className="contact-card text-center p-5">
+                <div className="contact-icon mb-3">
+                  <i className="fas fa-phone-alt"></i>
+                </div>
+                <h4 className="contact-title mb-3">Información de Contacto</h4>
+                <p className="contact-description mb-4">
+                  Para consultas, información sobre procesos de evaluación ética o para someter propuestas de investigación, 
+                  nuestro Comité de Ética en Investigación está disponible para brindarle la orientación profesional que necesita.
+                </p>
+                <div className="contact-details">
+                  <div className="contact-item mb-3">
+                    <h5 className="contact-label">Número de Contacto</h5>
+                    <p className="contact-info">
+                      <i className="fas fa-phone mr-2"></i>
+                      <a href="tel:3369999" className="phone-link">336-9999</a>
+                    </p>
+                  </div>
+                  <div className="contact-item">
+                    <h5 className="contact-label">Extensiones</h5>
+                    <p className="contact-info">
+                      <i className="fas fa-phone-volume mr-2"></i>
+                      <span>280 - 281</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="contact-footer mt-4">
+                  <p className="text-muted">
+                    <i className="fas fa-clock mr-2"></i>
+                    Horario de atención: Lunes a Viernes, 8:00 AM - 5:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <VideoPopup isVideoOpen={isVideoOpen} setIsVideoOpen={setIsVideoOpen} videoId="d8w5SICzzxc" />
       </section>
 
@@ -265,6 +304,81 @@ const ProjectDetailsArea = () => {
           font-size: 0.9rem;
           color: #666;
           margin: 2px 0;
+        }
+        .contact-section {
+          margin-top: 50px;
+          margin-bottom: 40px;
+        }
+        .contact-card {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          border-radius: 15px;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+          position: relative;
+          overflow: hidden;
+        }
+        .contact-card::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+          transform: rotate(45deg);
+          pointer-events: none;
+        }
+        .contact-icon {
+          font-size: 3rem;
+          color: #ffd700;
+          margin-bottom: 20px;
+        }
+        .contact-title {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .contact-description {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          opacity: 0.9;
+        }
+        .contact-details {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          padding: 30px;
+          margin: 30px 0;
+          backdrop-filter: blur(10px);
+        }
+        .contact-item {
+          margin-bottom: 20px;
+        }
+        .contact-label {
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-bottom: 10px;
+          color: #ffd700;
+        }
+        .contact-info {
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin: 0;
+        }
+        .phone-link {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+        .phone-link:hover {
+          color: #ffd700;
+          text-decoration: none;
+        }
+        .contact-footer {
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+          padding-top: 20px;
+        }
+        .fas {
+          margin-right: 8px;
         }
       `}</style>
     </>
