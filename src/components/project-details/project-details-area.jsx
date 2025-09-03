@@ -77,11 +77,11 @@ const ProjectDetailsArea = () => {
       role: "Presidente",
     },
     {
-      name: "Cynthia Patricia Manotas Altamar",
+      name: "María José Viera Contreras",
       profession: "Médico",
       postgrad: [
-        "Especialista en Bioética",
-        "Magíster en Bioética",
+        "Especialista en Gerencia de la Salud",
+        "Estudiante de medicina interna",
       ],
       role: "Presidente Suplente",
     },
@@ -92,16 +92,15 @@ const ProjectDetailsArea = () => {
       role: "Secretaria",
     },
     {
-      name: "María José Viera Contreras",
+      name: "Gustavo Fernando Varón Suarez",
       profession: "Médico",
       postgrad: [
-        "Especialista en Gerencia de la Salud",
-        "Estudiante de Medicina Interna",
+        "Estudiante de medicina interna",
       ],
       role: "Representante Científico",
     },
     {
-      name: "Reina Bawab Miguel",
+      name: "Reina María Bawab Miguel",
       profession: "Bacterióloga",
       postgrad: ["Especialista en Gerencia Social"],
       role: "Representante Científico",
@@ -110,21 +109,21 @@ const ProjectDetailsArea = () => {
       name: "Alberto Carlos Espinosa Garavito",
       profession: "Químico Farmacéutico",
       postgrad: [
-        "Especialista en Estadística Aplicada",
-        "Magíster en Estadística Aplicada",
+        "Especialista en estadística Aplicada",
+        "Magíster en estadística Aplicada",
         "Doctor en Genética y Biología Molecular",
       ],
       role: "Representante Científico",
     },
     {
-      name: "Yesica Daniela Giraldo Ramírez",
-      profession: "Abogado",
+      name: "José Ignacio Guerrero Peña",
+      profession: "Licenciado en educación básica",
       postgrad: [],
       role: "Representante No Científico",
     },
     {
-      name: "José Ignacio Guerrero Peña",
-      profession: "Licenciado en Educación Básica con Énfasis en Ciencias Naturales y Educación Ambiental",
+      name: "Yesica Daniela Giraldo Ramírez",
+      profession: "Abogada",
       postgrad: [],
       role: "Representante No Científico",
     },
@@ -135,16 +134,22 @@ const ProjectDetailsArea = () => {
       role: "Representante No Científico",
     },
     {
-      name: "Alan David Aníbal Orozco",
-      profession: "Técnico en Riesgo Crediticio y su Administración",
-      postgrad: [],
-      role: "Representante de la Comunidad",
-    },
-    {
       name: "Kelvin Fernando Navarro Quiroz",
-      profession: "Tecnólogo en Mantenimiento de Equipo Biomédico",
+      profession: "Tecnólogo en mantenimiento de equipo-biomédico",
       postgrad: [],
       role: "Representante No Científico",
+    },
+    {
+      name: "Jhon Jairo Suarez Hincapié",
+      profession: "Técnico en Mercadeo y Ventas",
+      postgrad: [],
+      role: "Miembro de la comunidad",
+    },
+    {
+      name: "Ana Mariela De Moya Gutiérrez",
+      profession: "Técnico en Asistencia Administrativa",
+      postgrad: [],
+      role: "Miembro de la comunidad",
     },
   ];
   
