@@ -198,6 +198,13 @@ const ProjectDetailsArea = () => {
                   <h5>{member.name}</h5>
                   <p><strong>{member.role}</strong></p>
                   <p>{member.profession}</p>
+                  {member.postgrad && member.postgrad.length > 0 && (
+                    <div className="specialties">
+                      {member.postgrad.map((specialty, idx) => (
+                        <p key={idx} className="specialty-item"><em>{specialty}</em></p>
+                      ))}
+                    </div>
+                  )}
                   {member.email && <p><a href={`mailto:${member.email}`}>{member.email}</a></p>}
                 </div>
               </div>
@@ -250,6 +257,14 @@ const ProjectDetailsArea = () => {
           background: #f9f9f9;
           padding: 20px;
           border-radius: 8px;
+        }
+        .specialties {
+          margin-top: 10px;
+        }
+        .specialty-item {
+          font-size: 0.9rem;
+          color: #666;
+          margin: 2px 0;
         }
       `}</style>
     </>
